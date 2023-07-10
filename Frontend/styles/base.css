@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "vazir";
+    src: url(/Frontend/fonts/Vazir.eot)format("eot"),url(/Frontend/fonts/Vazir.woff)format("woff"),url(/Frontend/fonts/Vazir.woff2)format("woff2");
+}
+@font-face {
+    font-family: "vazir-light";
+    src: url(/Frontend/fonts/Vazir-Light.eot)format("eot"),url(/Frontend/fonts/Vazir-Light.woff)format("woff"),url(/Frontend/fonts/Vazir-Light.woff2)format("woff2");
+}
+@font-face {
+    font-family: "vazir-medium";
+    src: url(/Frontend/fonts/Vazir-Medium.eot)format("eot"),url(/Frontend/fonts/Vazir-Medium.woff)format("woff"),url(/Frontend/fonts/Vazir-Medium.woff2)format("woff2");
+}
+@font-face {
+    font-family: "vazir-thin";
+    src: url(/Frontend/fonts/Vazir-Thin.eot)format("eot"),url(/Frontend/fonts/Vazir-Thin.woff)format("woff"),url(/Frontend/fonts/Vazir-Thin.woff2)format("woff2");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(201, 201, 201);
+}
+.container{
+    background-color: white;
+    width: 95%;
+    height: 90vh;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.side-menu{
+    width: 20%;
+    height: 100%;
+    background-color: #f2f2f2;
+    border-radius: 20px 0 0 20px ;
+}
