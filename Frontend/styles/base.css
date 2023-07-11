@@ -1,3 +1,10 @@
+/* start of projects need */
+:root{
+    color:#58BAAB;
+    color:#FB6B58;
+    color:#F6BA05;
+    color:#FDBBBD;
+}
 @font-face {
     font-family: "vazir";
     src: url(/Frontend/fonts/Vazir.eot)format("eot"), url(/Frontend/fonts/Vazir.woff)format("woff"), url(/Frontend/fonts/Vazir.woff2)format("woff2");
@@ -19,6 +26,7 @@
 }
 
   @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+  /* start of projects need */
 
 * {
     margin: 0;
@@ -30,6 +38,7 @@ body {
     background-color: rgb(201, 201, 201);
 }
 
+/* start of side menu by saba */
 .container {
     background-color: white;
     width: 95%;
@@ -59,7 +68,6 @@ body {
     position: absolute;
     top: 0;
 }
-
 
 .side-menu {
     width: 20%;
@@ -156,3 +164,156 @@ body {
     }
 
 }
+/* end of side menu by saba */
+
+/* start of first page by rastin design */
+h2{
+    text-align: left;
+}
+#popular-courses{
+    width: 33%;
+    padding:25px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap:10px;
+    box-sizing: border-box;
+}
+.dropdown-center{
+    position: absolute;
+    float: right;
+    background-color: white;
+}
+.course{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding: 15px;
+    justify-content: space-between;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+.course:hover{
+    transform: scale(1.05);
+}
+.courseicon{
+    width:60px;
+    height:60px;
+    background-color:black;
+    color:white;
+    text-align: center;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+    border-radius:5px;
+}
+.description{
+    margin-top: 5px;
+    line-height: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.coursetitle{
+    padding-left: 10px;
+}
+.grey{
+    padding-left: 10px;
+    font-size: 15px;
+    color: grey;
+}
+.coursebtn{
+    /* height: 40px; */
+    background-color: aquamarine;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 8px;
+}
+#current-activity{
+    width: 37%;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:5px;
+    box-sizing: border-box;
+}
+.big-activity{
+    background-color: #58BAAB;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+    width: 100%;
+    height: 25vh;
+    border-radius:25px;
+}
+.small-activity{
+    padding: 20px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+    width: 49%;
+    height:20vh;
+    border-radius:25px;
+}
+.avtivitytitle{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.activityDes{
+    color: white;
+    font-size: 15px;
+}
+.activitybtn{
+    width: 25px;
+    padding:5px;
+    border-radius: 100%;
+    float: right;
+}
+.first{
+    background-color: #F6BA05;
+}
+.second{
+    background-color: #FB6B58;
+}
+#best-instructors{
+    width: 30%;
+    padding:25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap:15px;
+    box-sizing: border-box;
+}
+.Instructor{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding: 3px;
+    justify-content: space-between;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+    border-radius: 5px;
+}
+.Instructor:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+#seeAll{
+    position: absolute;
+    float: right;
+}
+.avatar{
+    height: 40px;
+    width: 45px;
+    border-radius: 100%;
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/Frontend/images/Profilepic.png);
+}
+.Instructortitle{
+    padding-left: 5px;
+   }
+/* end of first page by rastin design */
