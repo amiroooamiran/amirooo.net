@@ -167,11 +167,20 @@ body {
 /* end of side menu by saba */
 
 /* start of first page by rastin design */
+.header-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 h2{
+    color: black;
     text-align: left;
 }
+#allcourses{
+    width: 90px;
+}
 #popular-courses{
-    width: 33%;
+    width: 35%;
     padding:25px;
     margin-top: 20px;
     display: flex;
@@ -182,8 +191,6 @@ h2{
     box-sizing: border-box;
 }
 .dropdown-center{
-    position: absolute;
-    float: right;
     background-color: white;
 }
 .course{
@@ -193,7 +200,7 @@ h2{
     padding: 15px;
     justify-content: space-between;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
-    border-radius: 5px;
+    border-radius: 10px;
     transition: 0.5s ease-in-out;
 }
 .course:hover{
@@ -210,11 +217,11 @@ h2{
 }
 .description{
     margin-top: 5px;
-    line-height: 10px;
     align-items: center;
     justify-content: center;
 }
 .coursetitle{
+    color: black;
     padding-left: 10px;
 }
 .grey{
@@ -223,8 +230,7 @@ h2{
     color: grey;
 }
 .coursebtn{
-    /* height: 40px; */
-    background-color: aquamarine;
+    background-color: #FB6B58;
     padding-top: 0px;
     padding-bottom: 0px;
     padding-right: 15px;
@@ -232,14 +238,26 @@ h2{
     border: none;
     border-radius: 8px;
 }
+.morebtn{
+    width: 25px;
+    color: rgb(181, 179, 179);
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+}
+.morebtn:hover{
+    background-color: rgb(181, 179, 179);
+    border: 0.5px solid black;
+    border-radius: 8px;
+}
 #current-activity{
-    width: 37%;
-    padding: 15px;
+    width: 35%;
+    height: 65vh;
+    padding-top: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap:5px;
     box-sizing: border-box;
 }
 .big-activity{
@@ -258,7 +276,7 @@ h2{
 }
 .avtivitytitle{
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
 }
 .activityDes{
@@ -266,8 +284,10 @@ h2{
     font-size: 15px;
 }
 .activitybtn{
+    color: #f06e6e;
     width: 25px;
     padding:5px;
+    border: none;
     border-radius: 100%;
     float: right;
 }
@@ -279,7 +299,7 @@ h2{
 }
 #best-instructors{
     width: 30%;
-    padding:25px;
+    padding:40px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -291,29 +311,39 @@ h2{
     display: flex;
     width: 100%;
     height: fit-content;
-    padding: 3px;
+    padding: 15px;
     justify-content: space-between;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
-    border-radius: 5px;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+}
+#seeAll{
+    color: black;
 }
 .Instructor:hover{
     transform: scale(1.05);
     transition: 0.5s ease-in-out;
 }
-#seeAll{
-    position: absolute;
-    float: right;
+.Instructorbtn{
+    background-color:white;
+    margin: 5px;
+    padding: 2px 15px;
+    border: 0.5px solid black;
+    border-radius: 8px;
+}
+.Instructorbtn:hover{
+    border: none;
+    color: white;
+    background-color: #f06e6e;
 }
 .avatar{
     height: 40px;
     width: 45px;
     border-radius: 100%;
     margin: 0px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(/Frontend/images/Profilepic.png);
 }
 .Instructortitle{
+    color: black;
     padding-left: 5px;
    }
 /* end of first page by rastin design */
