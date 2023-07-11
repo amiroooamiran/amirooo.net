@@ -1,42 +1,154 @@
 @font-face {
     font-family: "vazir";
-    src: url(/Frontend/fonts/Vazir.eot)format("eot"),url(/Frontend/fonts/Vazir.woff)format("woff"),url(/Frontend/fonts/Vazir.woff2)format("woff2");
-}
-@font-face {
-    font-family: "vazir-light";
-    src: url(/Frontend/fonts/Vazir-Light.eot)format("eot"),url(/Frontend/fonts/Vazir-Light.woff)format("woff"),url(/Frontend/fonts/Vazir-Light.woff2)format("woff2");
-}
-@font-face {
-    font-family: "vazir-medium";
-    src: url(/Frontend/fonts/Vazir-Medium.eot)format("eot"),url(/Frontend/fonts/Vazir-Medium.woff)format("woff"),url(/Frontend/fonts/Vazir-Medium.woff2)format("woff2");
-}
-@font-face {
-    font-family: "vazir-thin";
-    src: url(/Frontend/fonts/Vazir-Thin.eot)format("eot"),url(/Frontend/fonts/Vazir-Thin.woff)format("woff"),url(/Frontend/fonts/Vazir-Thin.woff2)format("woff2");
+    src: url(/Frontend/fonts/Vazir.eot)format("eot"), url(/Frontend/fonts/Vazir.woff)format("woff"), url(/Frontend/fonts/Vazir.woff2)format("woff2");
 }
 
-*{
+@font-face {
+    font-family: "vazir-light";
+    src: url(/Frontend/fonts/Vazir-Light.eot)format("eot"), url(/Frontend/fonts/Vazir-Light.woff)format("woff"), url(/Frontend/fonts/Vazir-Light.woff2)format("woff2");
+}
+
+@font-face {
+    font-family: "vazir-medium";
+    src: url(/Frontend/fonts/Vazir-Medium.eot)format("eot"), url(/Frontend/fonts/Vazir-Medium.woff)format("woff"), url(/Frontend/fonts/Vazir-Medium.woff2)format("woff2");
+}
+
+@font-face {
+    font-family: "vazir-thin";
+    src: url(/Frontend/fonts/Vazir-Thin.eot)format("eot"), url(/Frontend/fonts/Vazir-Thin.woff)format("woff"), url(/Frontend/fonts/Vazir-Thin.woff2)format("woff2");
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: rgb(201, 201, 201);
 }
-.container{
+
+.container {
     background-color: white;
     width: 95%;
-    height: 90vh;
+    height: 95vh;
     border-radius: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
 }
-.side-menu{
+.container .title i{
+    font-size: 2rem;
+    color: #f06e6e;
+    cursor: pointer;
+}
+.container .title h1{
+    font-size: 1.5rem;
+}
+.container .title{
+    padding: 20px;
+    font-size: small;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+}
+
+
+.side-menu {
     width: 20%;
     height: 100%;
     background-color: #f2f2f2;
-    border-radius: 20px 0 0 20px ;
+    border-radius: 20px 0 0 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    font-family: cursive;
+    font-size: x-small;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.title i {
+    font-size: x-large;
+    color: #f06e6e;
+}
+
+.items {
+    margin-bottom: 20px;
+    direction: rtl;
+    margin-top: 50px;
+}
+
+.item {
+    padding: 10px;
+    width: fit-content;
+    transition: 0.5s;
+    margin-right: 50px;
+}
+
+.item a {
+    text-decoration: none;
+    color: black;
+    font-family: "vazir";
+    font-size: small;
+}
+
+.item i {
+    font-size: large;
+    margin-right: 5px;
+}
+
+.item:hover {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.089);
+}
+
+.image button {
+    position: absolute;
+    top: 88%;
+    left: 65px;
+    width: 50%;
+    padding: 7px;
+    border: none;
+    transition: 0.5s;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    font-family: "vazir-medium";
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.692);
+}
+
+.image button:hover {
+    color: #f06e6e;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.397);
+
+}
+
+.image img {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width:500px) {
+    .side-menu{
+        width: 70%;
+        display: none;
+        font-size: x-large;
+        
+    }
+
 }
