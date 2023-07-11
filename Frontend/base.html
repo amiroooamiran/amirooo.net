@@ -64,11 +64,14 @@
         let menu = document.getElementById("menu")
 
         function openMenu() {
-            if (menu.style.display === "none") {
-                menu.style.display = "flex";
+            if (menu.style.width === "0px") {
+                menu.style.width = "70%" ;
+                menu.style.overflow = "visible";
             }
             else {
-                menu.style.display = "none";
+                menu.style.width = "0px";
+                menu.style.overflow = "hidden"
+
             }
 
         }

@@ -71,6 +71,8 @@ body {
     position: fixed;
     display: flex;
     flex-direction: column;
+    transition: width .3s linear;
+
 }
 
 .title {
@@ -147,8 +149,8 @@ body {
 
 @media only screen and (max-width:500px) {
     .side-menu{
-        width: 70%;
-        display: none;
+        width: 0px;
+        overflow: hidden;
         font-size: x-large;
         
     }
