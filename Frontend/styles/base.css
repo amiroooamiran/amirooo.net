@@ -26,7 +26,7 @@
 }
 
   @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-  /* start of projects need */
+  /* end of projects need */
 
 * {
     margin: 0;
@@ -58,6 +58,7 @@ body {
 }
 .container .title h1{
     font-size: 1.5rem;
+    color: black;
 }
 .container .title{
     padding: 20px;
@@ -120,6 +121,7 @@ body {
 .item i {
     font-size: large;
     margin-right: 5px;
+    color: black;
 }
 
 .item:hover {
