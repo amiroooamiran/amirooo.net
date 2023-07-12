@@ -122,8 +122,8 @@ body {
 
 .image button {
     position: absolute;
-    top: 88%;
-    left: 65px;
+    top: 80%;
+    left: 17%;
     width: 50%;
     padding: 7px;
     border: none;
@@ -140,11 +140,16 @@ body {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.397);
 
 }
+.image{
+    height: 40vh;
+    position: relative;
 
+}
 .image img {
-    width: 200px;
-    height: 250px;
+    width: 85%;
+    height: 100%;
     border-radius: 20px;
+    position: relative;
 }
 
 @media only screen and (max-width:500px) {
