@@ -162,15 +162,6 @@ body {
     position: relative;
 }
 
-@media only screen and (max-width:500px) {
-    .side-menu{
-        width: 0px;
-        overflow: hidden;
-        font-size: x-large;
-        
-    }
-
-}
 /* end of side menu by saba */
 
 /* start of first page by rastin design */
@@ -180,9 +171,14 @@ body {
     width: 80%;
     height: 100%;
     display: flex;
+    flex-shrink: 0;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 .header-section{
+    /* margin-top: 50%; */
+    margin-bottom: 30%;
+    padding: 0px 13px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -197,7 +193,7 @@ h2{
 #popular-courses{
     width: 37%;
     padding:25px;
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -212,7 +208,7 @@ h2{
     display: flex;
     width: 100%;
     height: fit-content;
-    padding: 15px;
+    padding: 10px;
     justify-content: space-between;
     border-radius: 10px;
     transition: 0.5s ease-in-out;
@@ -230,7 +226,7 @@ h2{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     border-radius:5px;
 }
-.courseicon:nth-child(1){
+/* .courseicon:nth-child(1){
     background-color:#F6BA05;
 }
 .courseicon:nth-child(2){
@@ -241,7 +237,7 @@ h2{
 }
 .courseicon:nth-child(4){
     background-color:#FDBBBD;
-}
+} */
 .description{
     margin-top: 5px;
     margin-left: 0px;
@@ -266,7 +262,7 @@ h2{
     border: none;
     border-radius: 8px;
 }
-.coursebtn:nth-child(1n){
+/* .coursebtn:nth-child(1n){
     background-color:#F6BA05;
 }
 .coursebtn:nth-child(2n){
@@ -277,7 +273,7 @@ h2{
 }
 .coursebtn:nth-child(4n){
     background-color:#FDBBBD;
-}
+} */
 .morebtn{
     width: 25px;
     height: 35px;
@@ -301,26 +297,27 @@ h2{
 }
 #current-activity{
     width: 30%;
-    height: 65vh;
+    height: 50vh;
     padding-top: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 10px;
     box-sizing: border-box;
 }
 .big-activity{
     background-color: #58BAAB;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     width: 100%;
-    height: 25vh;
+    height: 180px;
     border-radius:25px;
 }
 .small-activity{
     padding: 20px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
-    width: 49%;
-    height:20vh;
+    width: 48%;
+    height:150px;
     border-radius:25px;
 }
 .avtivitytitle{
@@ -330,12 +327,13 @@ h2{
 }
 .activityDes{
     color: white;
-    font-size: 15px;
+    font-size: 14px;
 }
 .activitybtn{
     width: 30px;
     height: 30px;
     padding:5px;
+    margin-top: 30px;
     border: none;
     border-radius: 100%;
     float: right;
@@ -370,6 +368,9 @@ h2{
     transition: 0.5s ease-in-out;
 }
 #seeAll{
+    padding-top: 10px;
+    padding-right: 3cap;
+    font-size: 13px;
     color: black;
 }
 .Instructor:hover{
@@ -384,11 +385,10 @@ h2{
     padding:1px 10px;
     background-color:white;
     margin: 5px;
-    border: 0.5px solid black;
     border-radius: 8px;
 }
 .Instructorbtn:hover{
-    border: none;
+    border: none !important;
     color: white;
     background-color: #f06e6e;
 }
@@ -400,6 +400,62 @@ h2{
 }
 .Instructortitle{
     color: black;
-    padding-left: 5px;
    }
 /* end of first page by rastin design */
+
+@media only screen and (max-width:500px) {
+    /* .container{
+        position: relative;
+    } */
+    .side-menu{
+        width: 0px;
+        overflow: hidden;
+        font-size: x-large;
+    }
+    .firstpage{
+        /* position: absolute; */
+        height: 100vh;
+        overflow-y: scroll;
+        left: 35px;
+    }
+    .header-section{
+        margin-bottom: 10%;
+    }
+    #popular-courses{
+        margin-top: 20%;
+        width: 100%;
+    }
+    .courseicon{
+        width:50px;
+        height:50px;
+    }
+    .coursetitle{
+        font-size: 13px;
+    }
+    .grey{
+        font-size: 12px;
+    }
+    .coursebuttons{
+        margin-top: 10px;
+    }
+    #current-activity{
+        width: 100%;
+    }
+    #best-instructors{
+        margin-top: 160px;
+        width: 100%;
+    }
+    /* body::-webkit-scrollbar {
+        width: 1em;
+      }
+       
+      body::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+       
+      body::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+      } */
+
+}
