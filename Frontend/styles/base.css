@@ -167,6 +167,14 @@ body {
 /* end of side menu by saba */
 
 /* start of first page by rastin design */
+.firstpage{
+    position: absolute;
+    left: 260px;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
 .header-section{
     display: flex;
     flex-direction: row;
@@ -180,7 +188,7 @@ h2{
     width: 90px;
 }
 #popular-courses{
-    width: 35%;
+    width: 37%;
     padding:25px;
     margin-top: 20px;
     display: flex;
@@ -199,59 +207,93 @@ h2{
     height: fit-content;
     padding: 15px;
     justify-content: space-between;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     border-radius: 10px;
     transition: 0.5s ease-in-out;
 }
 .course:hover{
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     transform: scale(1.05);
 }
 .courseicon{
+    margin: 0px;
     width:60px;
     height:60px;
-    background-color:black;
     color:white;
     text-align: center;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     border-radius:5px;
 }
+.courseicon:nth-child(1){
+    background-color:#F6BA05;
+}
+.courseicon:nth-child(2){
+    background-color:#f06e6e;
+}
+.courseicon:nth-child(3){
+    background-color:#58BAAB;
+}
+.courseicon:nth-child(4){
+    background-color:#FDBBBD;
+}
 .description{
     margin-top: 5px;
+    margin-left: 0px;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .coursetitle{
     color: black;
-    padding-left: 10px;
+    padding-left: 0px;
 }
 .grey{
-    padding-left: 10px;
+    padding-left: 0px;
     font-size: 15px;
     color: grey;
 }
 .coursebtn{
-    background-color: #FB6B58;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-right: 15px;
-    padding-left: 15px;
+    width: 95px;
+    height: 40px;
+    font-size: 13px;
+    padding:1px 10px;
     border: none;
     border-radius: 8px;
 }
+.coursebtn:nth-child(1n){
+    background-color:#F6BA05;
+}
+.coursebtn:nth-child(2n){
+    background-color:#f06e6e;
+}
+.coursebtn:nth-child(3n){
+    background-color:#58BAAB;
+}
+.coursebtn:nth-child(4n){
+    background-color:#FDBBBD;
+}
 .morebtn{
     width: 25px;
-    color: rgb(181, 179, 179);
+    height: 35px;
     background-color: white;
     border: none;
     border-radius: 8px;
+}
+.morebtndetail{
+    color: rgb(181, 179, 179);
+}
+.coursebuttons{
+    margin-top: 15px;
 }
 .morebtn:hover{
     background-color: rgb(181, 179, 179);
     border: 0.5px solid black;
     border-radius: 8px;
 }
+.morebtndetail:hover{
+    color: white;
+}
 #current-activity{
-    width: 35%;
+    width: 30%;
     height: 65vh;
     padding-top: 40px;
     display: flex;
@@ -284,12 +326,16 @@ h2{
     font-size: 15px;
 }
 .activitybtn{
-    color: #f06e6e;
-    width: 25px;
+    width: 30px;
+    height: 30px;
     padding:5px;
     border: none;
     border-radius: 100%;
     float: right;
+    cursor: pointer;
+}
+.playbtn{
+    color: #f06e6e;
 }
 .first{
     background-color: #F6BA05;
@@ -298,7 +344,7 @@ h2{
     background-color: #FB6B58;
 }
 #best-instructors{
-    width: 30%;
+    width: 33%;
     padding:40px;
     display: flex;
     flex-direction: column;
@@ -313,7 +359,6 @@ h2{
     height: fit-content;
     padding: 15px;
     justify-content: space-between;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     border-radius: 10px;
     transition: 0.5s ease-in-out;
 }
@@ -321,13 +366,17 @@ h2{
     color: black;
 }
 .Instructor:hover{
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     transform: scale(1.05);
     transition: 0.5s ease-in-out;
 }
 .Instructorbtn{
+    width: 95px;
+    height: 40px;
+    font-size: 15px;
+    padding:1px 10px;
     background-color:white;
     margin: 5px;
-    padding: 2px 15px;
     border: 0.5px solid black;
     border-radius: 8px;
 }
