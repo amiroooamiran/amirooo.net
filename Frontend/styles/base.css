@@ -165,44 +165,55 @@ body {
 /* end of side menu by saba */
 
 /* start of first page by rastin design */
+
+.Sections_header{
+    width: 100%;
+    height: 40px;
+}
 .firstpage{
-    position: absolute;
+    position: relative;
     left: 260px;
     width: 80%;
-    height: 50%;
+    height: 30%;
+    padding: 35px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 .header-section{
     /* margin-top: 50%; */
-    margin-bottom: 30%;
+    margin-bottom: 2%;
     padding: 0px 13px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-family: "vazir";
     direction: rtl;
-    text-align: right;
+    text-align: center;
 }
 h2{
     font-family: "vazir";
     color: black;
-    text-align: right;
+    text-align: center;
 }
 #allcourses{
     width: 90px;
 }
 #popular-courses{
     width: 37%;
-    padding:25px;
-    margin-top: 10px;
+    padding:15px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap:10px;
     box-sizing: border-box;
+}
+
+.main_course{
+    padding: 15px;
+    background-color: #58baab13;
+    border-radius: 10px;
 }
 .dropdown-center{
     background-color: white;
@@ -214,17 +225,17 @@ h2{
     padding: 10px;
     justify-content: space-between;
     border-radius: 10px;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
     direction: rtl;
 }
 .course:hover{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 .courseicon{
     margin: 0px;
-    width:60px;
-    height:60px;
+    width:40px;
+    height:40px;
     color:white;
     text-align: center;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
@@ -250,6 +261,7 @@ h2{
     justify-content: center;
 }
 .coursetitle{
+    font-size: small;
     color: black;
     padding-left: 0px;
     font-family: "vazir";
@@ -258,54 +270,74 @@ h2{
     padding-left: 0px;
     font-size: 15px;
     color: grey;
+    font-size: x-small;
     font-family: "vazir-light";
 }
 .coursebtn{
-    width: 95px;
-    height: 40px;
-    font-size: 13px;
-    padding:1px 10px;
+    width: 90px;
+    height: 30px;
+    font-size: x-small !important;
+    padding:1px 1px;
     border: none;
     border-radius: 8px;
+    cursor: pointer;
     font-family: "vazir";
 }
-/* .coursebtn:nth-child(1n){
-    background-color:#F6BA05;
+
+.course:nth-child(1) .coursebuttons .coursebtn{
+    background-color:#f6ba054e;
 }
-.coursebtn:nth-child(2n){
-    background-color:#f06e6e;
+.course:nth-child(2) .coursebuttons .coursebtn{
+    background-color:#f06e6e3f;
 }
-.coursebtn:nth-child(3n){
-    background-color:#58BAAB;
+.course:nth-child(3) .coursebuttons .coursebtn{
+    background-color:#58baab3b;
 }
-.coursebtn:nth-child(4n){
-    background-color:#FDBBBD;
-} */
+.course:nth-child(4) .coursebuttons .coursebtn{
+    background-color:#fdbbbd3b;
+}
+
+/* Hower of btns */
+.course:nth-child(1):hover .coursebtn{
+    background-color: #F6BA05 ;
+}
+
+.course:nth-child(2):hover .coursebtn{
+    background-color: #f06e6e ;
+}
+
+
+.course:nth-child(3):hover .coursebtn{
+    background-color: #58BAAB ;
+}
+
+
+.course:nth-child(4):hover .coursebtn{
+    background-color: #FDBBBD ;
+}
+
 .morebtn{
     width: 25px;
     height: 35px;
-    background-color: white;
     border: none;
+    position: relative;
+    top: 0px;
     border-radius: 8px;
-}
-.morebtndetail{
-    color: rgb(181, 179, 179);
+    background: none;
 }
 .coursebuttons{
-    margin-top: 15px;
+    margin-top: 5px;
 }
-.morebtn:hover{
-    background-color: rgb(181, 179, 179);
-    border: 0.5px solid black;
-    border-radius: 8px;
+.course:hover .morebtn{
+    background-color: #a1a1a174;
+    border-radius: 12px;
 }
 .morebtndetail:hover{
     color: white;
 }
 #current-activity{
     width: 30%;
-    height: 50vh;
-    padding-top: 40px;
+    margin-top: 16px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -315,20 +347,21 @@ h2{
     text-align: right;
 }
 #activity-header{
-    margin-left: 176px;
+    margin-left: 0;
 }
 .big-activity{
     background-color: #58BAAB;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     width: 100%;
-    height: 180px;
+    height: 150px;
     border-radius:25px;
 }
 .small-activity{
-    padding: 20px;
+    margin-top: -15px;
+    padding: 15px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     width: 48%;
-    height:150px;
+    height:100px;
     border-radius:25px;
     direction: rtl;
 }
@@ -347,8 +380,9 @@ h2{
     width: 30px;
     height: 30px;
     padding:5px;
-    margin-top: 30px;
-    margin-right: 85px;
+    position: relative;
+    top: -70px;
+    left: -100px;
     border: none;
     border-radius: 100%;
     float: right;
@@ -365,7 +399,7 @@ h2{
 }
 #best-instructors{
     width: 33%;
-    padding:40px;
+    padding:15px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -373,11 +407,15 @@ h2{
     gap:15px;
     box-sizing: border-box;
 }
+
+.main_Instructor{
+    padding: 15px;
+}
 .Instructor{
     display: flex;
     width: 100%;
     height: fit-content;
-    padding: 15px;
+    padding: 10px;
     justify-content: space-between;
     border-radius: 10px;
     transition: 0.5s ease-in-out;
@@ -395,34 +433,54 @@ h2{
 }
 .Instructor:hover{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: 0.5s ease-in-out;
 }
 .avatar{
     height: 40px;
-    width: 45px;
+    width: 40px;
     border-radius: 100%;
     margin: 0px;
 }
 .Instructortitle{
+    position: relative;
+    right: 0;
+    font-size: small;
     color: black;
     font-family: "vazir";
 }
 .Instructorbtn{
-    width: 95px;
-    height: 40px;
-    font-size: 15px;
-    padding:1px 10px;
+    width: 90px;
+    height: 30px;
     background-color:white;
     margin: 5px;
+    font-size: x-small;
     border-radius: 8px;
     font-family: "vazir";
+    cursor: pointer;
 }
 .Instructorbtn:hover{
     border: none !important;
     color: white;
     background-color: #f06e6e;
 }
+
+.main_Instructor .Instructor:nth-child(1):hover .Instructorbtn{
+    background-color: #F6BA05;
+}
+
+.main_Instructor .Instructor:nth-child(2):hover .Instructorbtn{
+    background-color: #f06e6e;
+}
+
+.main_Instructor .Instructor:nth-child(3):hover .Instructorbtn{
+    background-color: #58BAAB;
+}
+
+.main_Instructor .Instructor:nth-child(4):hover .Instructorbtn{
+    background-color: #FDBBBD;
+}
+
 /* end of first page by rastin design */
 
 @media only screen and (max-width:500px) {
