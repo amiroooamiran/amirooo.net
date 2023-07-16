@@ -514,17 +514,32 @@ h2{
     .coursetitle{
         font-size: 13px;
     }
+    .course{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .grey{
         font-size: 12px;
+    }
+    .main_course{
+        padding: 0;
     }
     .coursebuttons{
         margin-top: 10px;
     }
+    .small-activity{
+        margin-top: 5px;
+    }
+    .activitybtn{
+        top: -750x;
+        left: -80px;
+    }
     #current-activity{
-        width: 85%;
+        width: 95%;
     }
     #best-instructors{
-        margin-top: 150px;
+        margin-top: 50px;
         width: 90%;
         padding: 0;
         margin-bottom: 50px;
