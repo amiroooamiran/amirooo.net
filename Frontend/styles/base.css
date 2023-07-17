@@ -491,13 +491,15 @@ h2{
         width: 0px;
         overflow: hidden;
         font-size: x-large;
+        padding: 0;
     }
     .firstpage{
         /* position: absolute; */
         height: 100vh;
         width: 100%;
         overflow-y: auto;
-        left: 35px;
+        left: 5px;
+        align-items: center;
     }
     .header-section{
         margin-bottom: 10%;
