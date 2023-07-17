@@ -281,15 +281,9 @@ h2{
     padding:1px 1px;
     border: none;
     border-radius: 8px;
-<<<<<<< HEAD
-<<<<<<< HEAD
     cursor: pointer;
-=======
-=======
     cursor: pointer;
->>>>>>> 975d16924069cce8bd7b5aa922197ba3eef87d90
     font-family: "vazir";
->>>>>>> 9c44625c5263e48f9b39b6254a295cdad3dc4462
 }
 
 .course:nth-child(1) .coursebuttons .coursebtn{
@@ -336,17 +330,15 @@ h2{
 .coursebuttons{
     margin-top: 5px;
 }
-<<<<<<< HEAD
 .morebtn:hover{
     background-color: rgb(181, 179, 179);
     border: 0.5px solid black;
     border-radius: 8px;
     cursor: pointer;
-=======
+}
 .course:hover .morebtn{
     background-color: #a1a1a174;
     border-radius: 12px;
->>>>>>> 975d16924069cce8bd7b5aa922197ba3eef87d90
 }
 .morebtndetail:hover{
     color: white;
