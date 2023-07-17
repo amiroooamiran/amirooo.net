@@ -1,4 +1,4 @@
-/* start of projects need */
+/* start of projects needs */
 :root{
     color:#58BAAB;
     color:#FB6B58;
@@ -26,7 +26,7 @@
 }
 
   @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-  /* end of projects need */
+  /* end of projects needs */
 
 * {
     margin: 0;
@@ -182,10 +182,14 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-family: "vazir";
+    direction: rtl;
+    text-align: right;
 }
 h2{
+    font-family: "vazir";
     color: black;
-    text-align: left;
+    text-align: right;
 }
 #allcourses{
     width: 90px;
@@ -212,6 +216,7 @@ h2{
     justify-content: space-between;
     border-radius: 10px;
     transition: 0.5s ease-in-out;
+    direction: rtl;
 }
 .course:hover{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
@@ -248,11 +253,13 @@ h2{
 .coursetitle{
     color: black;
     padding-left: 0px;
+    font-family: "vazir";
 }
 .grey{
     padding-left: 0px;
     font-size: 15px;
     color: grey;
+    font-family: "vazir-light";
 }
 .coursebtn{
     width: 95px;
@@ -261,7 +268,11 @@ h2{
     padding:1px 10px;
     border: none;
     border-radius: 8px;
+<<<<<<< HEAD
     cursor: pointer;
+=======
+    font-family: "vazir";
+>>>>>>> 9c44625c5263e48f9b39b6254a295cdad3dc4462
 }
 /* .coursebtn:nth-child(1n){
     background-color:#F6BA05;
@@ -308,6 +319,10 @@ h2{
     justify-content: flex-start;
     gap: 10px;
     box-sizing: border-box;
+    text-align: right;
+}
+#activity-header{
+    margin-left: 176px;
 }
 .big-activity{
     background-color: #58BAAB;
@@ -322,21 +337,25 @@ h2{
     width: 48%;
     height:150px;
     border-radius:25px;
+    direction: rtl;
 }
 .avtivitytitle{
     color: white;
     font-size: 30px;
     font-weight: bold;
+    font-family: "vazir";
 }
 .activityDes{
     color: white;
     font-size: 14px;
+    font-family: "vazir";
 }
 .activitybtn{
     width: 30px;
     height: 30px;
     padding:5px;
     margin-top: 30px;
+    margin-right: 85px;
     border: none;
     border-radius: 100%;
     float: right;
@@ -369,12 +388,17 @@ h2{
     justify-content: space-between;
     border-radius: 10px;
     transition: 0.5s ease-in-out;
+    direction: rtl;
 }
 #seeAll{
     padding-top: 10px;
     padding-right: 3cap;
     font-size: 13px;
     color: black;
+    font-family: "vazir-light";
+}
+#seeAll:hover{
+    color: rgb(28, 28, 158);
 }
 .Instructor:hover{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
@@ -382,6 +406,7 @@ h2{
     transition: 0.5s ease-in-out;
     cursor: pointer;
 }
+<<<<<<< HEAD
 .Instructorbtn{
     width: 95px;
     height: 40px;
@@ -397,6 +422,8 @@ h2{
     background-color: #f06e6e;
     cursor: pointer;
 }
+=======
+>>>>>>> 9c44625c5263e48f9b39b6254a295cdad3dc4462
 .avatar{
     height: 40px;
     width: 45px;
@@ -405,7 +432,23 @@ h2{
 }
 .Instructortitle{
     color: black;
-   }
+    font-family: "vazir";
+}
+.Instructorbtn{
+    width: 95px;
+    height: 40px;
+    font-size: 15px;
+    padding:1px 10px;
+    background-color:white;
+    margin: 5px;
+    border-radius: 8px;
+    font-family: "vazir";
+}
+.Instructorbtn:hover{
+    border: none !important;
+    color: white;
+    background-color: #f06e6e;
+}
 /* end of first page by rastin design */
 
 @media only screen and (max-width:500px) {
