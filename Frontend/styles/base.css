@@ -48,8 +48,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: row;
 }
 .container .title i{
     font-size: 2rem;
@@ -77,6 +75,7 @@ body {
     border-radius: 20px 0 0 20px;
     padding-top: 20px;
     padding-left: 30px;
+    float: left;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -164,6 +163,191 @@ body {
 
 /* end of side menu by saba */
 
+/* Starting heder section by amiran */
+
+.header_section{
+    position: absolute;
+    transform: translateX(-50%);
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    left: 50%;
+    padding-left: 25%;
+    text-align: center;
+    z-index: 999;
+    justify-content: space-between;
+}
+
+.header_section .section-heder-two{
+    display: flex;
+    gap: 15px;
+}
+
+.header_section .search{
+    font-size: larger;
+    position: relative;
+    top: 5px;
+    border-radius: 10px;
+}
+
+.header_section .search input{
+    width: 250px;
+    font-size: large;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    text-align: right;
+    direction: rtl;
+    border: none;
+    padding: 3px;
+    font-family: "vazir";
+}
+
+.header-section .search:hover{
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+}
+
+.header_section .search i{
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    color: black;
+}
+.header_section .icons{
+    display: flex;
+    gap: 15px;
+    position: relative;
+    top: 10px;
+    padding: 5px;
+    font-size: larger;
+    color: black;
+    border-radius: 10px;
+}
+
+.header_section .user_profile{
+    display: flex;
+    position: relative;
+    right: 10px;
+    align-items: center;
+    text-align: left;
+    padding: 5px;
+    font-family: "vazir";
+    gap: 10px;
+    font-size: small;
+    color: black;
+    
+    transition: 0.3s;
+}
+
+.header_section .user_profile:hover{
+    border-radius: 12px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+}
+
+.header_section .user_profile > div p{
+    position: relative;
+    top: 5px;
+}
+
+.header_section .user_profile > div span{
+    color: gray !important;
+    font-size: x-small;
+    position: relative;
+    top: -3px;
+}
+.header_section .user_profile .profile{
+    position: relative;
+    top: 3px;
+}
+.header_section .user_profile .profile img{
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+/* End of heder section by amiran */
+
+.main-banner{
+    float: right;
+    position: relative;
+    left: 32.5%;
+    top: 110px;
+    transform: translateX(-50%);
+    width: 73%;
+    height: 180px;
+    border-radius: 30px;
+    background-color: #58BAAB;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+    padding: 15px;
+}
+
+.main-banner .main-images{
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: -51px;
+}
+
+.main-banner .main-images img{
+    width: 130px;
+}
+
+.main-banner .banner-title{
+    width: 70%;
+    position: relative;
+    right: -20px;
+}
+
+.main-banner .banner-title h2{
+    text-align: right;
+}
+
+.main-banner .banner-title span{
+    position: relative;
+    text-align: right;
+    top: -15px;
+    color: gray;
+    font-family: "vazir";
+}
+
+.we-options{
+    display: flex;
+    gap: 60px;
+    position: relative;
+    left: 4%;
+    top: 10px;
+}
+.we-options .options{
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.we-options .options > div:nth-child(2){
+    margin-left: -15px;
+}
+
+.we-options .options img{
+    left: 50%;
+    background-color: #F6BA05;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+    top: 28%;
+    padding: 10px;
+    border-radius: 15px;
+    width: 50px;
+    transform: translate(-50%);
+}
+
+.we-options .options p{
+    font-size: x-small;
+    color: black;
+    font-family: "vazir";
+}
+
+.we-options .options span{
+    font-size: x-small;
+    color: black;
+    font-family: "vazir";
+}
 /* start of first page by rastin design */
 
 .Sections_header{
@@ -171,8 +355,9 @@ body {
     height: 40px;
 }
 .firstpage{
+    float: right;
+    top: 93px;
     position: relative;
-    left: 260px;
     width: 80%;
     height: 30%;
     padding: 35px;
