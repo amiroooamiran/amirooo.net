@@ -180,17 +180,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
 }
-.header-section{
-    /* margin-top: 50%; */
-    margin-bottom: 2%;
-    padding: 0px 13px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-family: "vazir";
-    direction: rtl;
-    text-align: center;
-}
 h2{
     font-family: "vazir";
     color: black;
@@ -215,9 +204,7 @@ h2{
     background-color: #58baab13;
     border-radius: 10px;
 }
-.dropdown-center{
-    background-color: white;
-}
+
 .course{
     display: flex;
     width: 100%;
@@ -241,18 +228,6 @@ h2{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     border-radius:5px;
 }
-/* .courseicon:nth-child(1){
-    background-color:#F6BA05;
-}
-.courseicon:nth-child(2){
-    background-color:#f06e6e;
-}
-.courseicon:nth-child(3){
-    background-color:#58BAAB;
-}
-.courseicon:nth-child(4){
-    background-color:#FDBBBD;
-} */
 .description{
     margin-top: 5px;
     margin-left: 0px;
