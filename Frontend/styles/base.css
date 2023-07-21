@@ -446,7 +446,6 @@ h2{
     transition: 0.5s ease-in-out;
     cursor: pointer;
 }
-<<<<<<< HEAD
 .Instructorbtn{
     width: 95px;
     height: 40px;
@@ -462,8 +461,6 @@ h2{
     background-color: #f06e6e;
     cursor: pointer;
 }
-=======
->>>>>>> 9c44625c5263e48f9b39b6254a295cdad3dc4462
 .avatar{
     height: 40px;
     width: 40px;
@@ -523,14 +520,11 @@ h2{
         /* position: absolute; */
         height: 100vh;
         width: 100%;
-<<<<<<< HEAD
         overflow-y: scroll;
         left: 35px;
-=======
         overflow-y: auto;
         left: 5px;
         align-items: center;
->>>>>>> 975d16924069cce8bd7b5aa922197ba3eef87d90
     }
     .header-section{
         margin-bottom: 10%;
