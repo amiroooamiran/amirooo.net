@@ -1,10 +1,11 @@
 /* start of projects needs */
-:root{
-    color:#58BAAB;
-    color:#FB6B58;
-    color:#F6BA05;
-    color:#FDBBBD;
+:root {
+    color: #58BAAB;
+    color: #FB6B58;
+    color: #F6BA05;
+    color: #FDBBBD;
 }
+
 @font-face {
     font-family: "vazir";
     src: url(/Frontend/fonts/Vazir.eot)format("eot"), url(/Frontend/fonts/Vazir.woff)format("woff"), url(/Frontend/fonts/Vazir.woff2)format("woff2");
@@ -25,8 +26,8 @@
     src: url(/Frontend/fonts/Vazir-Thin.eot)format("eot"), url(/Frontend/fonts/Vazir-Thin.woff)format("woff"), url(/Frontend/fonts/Vazir-Thin.woff2)format("woff2");
 }
 
-  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-  /* end of projects needs */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+/* end of projects needs */
 
 * {
     margin: 0;
@@ -36,7 +37,7 @@
 
 body {
     background-color: rgb(201, 201, 201);
-  
+
 }
 
 /* start of side menu by saba */
@@ -49,17 +50,21 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
 }
-.container .title i{
+
+.container .title i {
     font-size: 2rem;
     color: #f06e6e;
     cursor: pointer;
 }
-.container .title h1{
+
+.container .title h1 {
     font-size: 1.5rem;
     color: black;
 }
-.container .title{
+
+.container .title {
     padding: 20px;
     font-size: small;
     gap: 20px;
@@ -150,11 +155,13 @@ body {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.397);
 
 }
-.image{
+
+.image {
     height: 40vh;
     position: relative;
 
 }
+
 .image img {
     width: 85%;
     height: 100%;
@@ -166,12 +173,14 @@ body {
 
 /* Starting heder section by amiran */
 
-.header_section{
+.header_section {
     position: absolute;
     transform: translateX(-50%);
     padding: 15px;
     width: 100%;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     left: 50%;
     padding-left: 25%;
     text-align: center;
@@ -179,19 +188,19 @@ body {
     justify-content: space-between;
 }
 
-.header_section .section-heder-two{
+.header_section .section-heder-two {
     display: flex;
     gap: 15px;
 }
 
-.header_section .search{
+.header_section .search {
     font-size: larger;
     position: relative;
     top: 5px;
     border-radius: 10px;
 }
 
-.header_section .search input{
+.header_section .search input {
     width: 250px;
     font-size: large;
     background-color: #f2f2f2;
@@ -203,17 +212,18 @@ body {
     font-family: "vazir";
 }
 
-.header-section .search:hover{
+.header-section .search:hover {
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
 }
 
-.header_section .search i{
+.header_section .search i {
     position: absolute;
     left: 10px;
     top: 3px;
     color: black;
 }
-.header_section .icons{
+
+.header_section .icons {
     display: flex;
     gap: 15px;
     position: relative;
@@ -224,7 +234,7 @@ body {
     border-radius: 10px;
 }
 
-.header_section .user_profile{
+.header_section .user_profile {
     display: flex;
     position: relative;
     right: 10px;
@@ -235,31 +245,33 @@ body {
     gap: 10px;
     font-size: small;
     color: black;
-    
+
     transition: 0.3s;
 }
 
-.header_section .user_profile:hover{
+.header_section .user_profile:hover {
     border-radius: 12px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
 }
 
-.header_section .user_profile > div p{
+.header_section .user_profile>div p {
     position: relative;
     top: 5px;
 }
 
-.header_section .user_profile > div span{
+.header_section .user_profile>div span {
     color: gray !important;
     font-size: x-small;
     position: relative;
     top: -3px;
 }
-.header_section .user_profile .profile{
+
+.header_section .user_profile .profile {
     position: relative;
     top: 3px;
 }
-.header_section .user_profile .profile img{
+
+.header_section .user_profile .profile img {
     width: 35px;
     height: 35px;
     border-radius: 10px;
@@ -267,7 +279,7 @@ body {
 
 /* End of header section by amiran */
 
-.main-banner{
+.main-banner {
     float: right;
     position: relative;
     left: 32.5%;
@@ -281,29 +293,29 @@ body {
     padding: 15px;
 }
 
-.main-banner .main-images{
+.main-banner .main-images {
     display: flex;
     position: absolute;
     right: 20px;
     top: -51px;
 }
 
-.main-banner .main-images img{
+.main-banner .main-images img {
     width: 130px;
 }
 
-.main-banner .banner-title{
+.main-banner .banner-title {
     width: 70%;
     position: relative;
     right: -20px;
 }
 
-.main-banner .banner-title h2{
+.main-banner .banner-title h2 {
     text-align: right;
     font-size: 1.3rem;
 }
 
-.main-banner .banner-title span{
+.main-banner .banner-title span {
     position: relative;
     text-align: right;
     top: -15px;
@@ -313,24 +325,31 @@ body {
     float: right;
 }
 
-.we-options{
+.we-options {
     display: flex;
     gap: 60px;
     position: relative;
     left: 4%;
     top: 40px;
 }
-.we-options .options{
+
+.we-options .options {
     align-items: center;
+    width: 100%;
     display: flex;
+    flex-direction: row;
     cursor: pointer;
 }
-
-.we-options .options > div:nth-child(2){
+.we-options .options>div{
+    display: flex;
+    flex-direction: column;
+}
+.we-options .options>div:nth-child(2) {
     margin-left: -15px;
+
 }
 
-.we-options .options img{
+.we-options .options img {
     left: 50%;
     background-color: #F6BA05;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
@@ -341,24 +360,26 @@ body {
     transform: translate(-50%);
 }
 
-.we-options .options p{
+.we-options .options p {
     font-size: x-small;
     color: black;
     font-family: "vazir";
 }
 
-.we-options .options span{
+.we-options .options span {
     font-size: x-small;
     color: black;
     font-family: "vazir";
 }
+
 /* start of first page by rastin design */
 
-.Sections_header{
+.Sections_header {
     width: 100%;
     height: 40px;
 }
-.firstpage{
+
+.firstpage {
     float: right;
     top: 50px;
     position: relative;
@@ -369,31 +390,37 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
 }
-h2{
+
+h2 {
     font-family: "vazir";
     color: black;
     text-align: center;
 }
-#allcourses{
+
+#allcourses {
     width: 90px;
 }
-#popular-courses{
+
+#popular-courses {
     width: 37%;
-    padding:15px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap:10px;
+    gap: 10px;
     box-sizing: border-box;
 }
-#rightheader{
+
+#rightheader {
     float: right;
 }
-#courses-dropdown{
+
+#courses-dropdown {
     float: left;
 }
-select{
+
+select {
     margin: 50px;
     width: 130px;
     padding: 5px 35px 5px 5px;
@@ -406,17 +433,19 @@ select{
     appearance: none;
     background: url(/Frontend/images/icons/arrow-down-img.png) 96% / 15% no-repeat #eee;
 }
-option{
+
+option {
     text-align: center;
     background-color: #f2f2f2;
 }
-.main_course{
+
+.main_course {
     padding: 15px;
     background-color: #58baab13;
     border-radius: 10px;
 }
 
-.course{
+.course {
     display: flex;
     width: 100%;
     height: fit-content;
@@ -426,44 +455,50 @@ option{
     transition: 0.3s ease-in-out;
     direction: rtl;
 }
-.course:hover{
+
+.course:hover {
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     transform: scale(1.02);
 }
-.courseicon{
+
+.courseicon {
     margin: 0px;
-    width:40px;
-    height:40px;
-    color:white;
+    width: 40px;
+    height: 40px;
+    color: white;
     text-align: center;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
-    border-radius:5px;
+    border-radius: 5px;
 }
-.description{
+
+.description {
     margin-top: 5px;
     margin-left: 0px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.coursetitle{
+
+.coursetitle {
     font-size: small;
     color: black;
     padding-left: 0px;
     font-family: "vazir";
 }
-.grey{
+
+.grey {
     padding-left: 0px;
     font-size: 15px;
     color: grey;
     font-size: x-small;
     font-family: "vazir-light";
 }
-.coursebtn{
+
+.coursebtn {
     width: 90px;
     height: 30px;
     font-size: x-small !important;
-    padding:1px 1px;
+    padding: 1px 1px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -471,39 +506,42 @@ option{
     font-family: "vazir";
 }
 
-.course:nth-child(1) .coursebuttons .coursebtn{
-    background-color:#f6ba054e;
+.course:nth-child(1) .coursebuttons .coursebtn {
+    background-color: #f6ba054e;
 }
-.course:nth-child(2) .coursebuttons .coursebtn{
-    background-color:#f06e6e3f;
+
+.course:nth-child(2) .coursebuttons .coursebtn {
+    background-color: #f06e6e3f;
 }
-.course:nth-child(3) .coursebuttons .coursebtn{
-    background-color:#58baab3b;
+
+.course:nth-child(3) .coursebuttons .coursebtn {
+    background-color: #58baab3b;
 }
-.course:nth-child(4) .coursebuttons .coursebtn{
-    background-color:#fdbbbd3b;
+
+.course:nth-child(4) .coursebuttons .coursebtn {
+    background-color: #fdbbbd3b;
 }
 
 /* Hower of btns */
-.course:nth-child(1):hover .coursebtn{
-    background-color: #F6BA05 ;
+.course:nth-child(1):hover .coursebtn {
+    background-color: #F6BA05;
 }
 
-.course:nth-child(2):hover .coursebtn{
-    background-color: #f06e6e ;
-}
-
-
-.course:nth-child(3):hover .coursebtn{
-    background-color: #58BAAB ;
+.course:nth-child(2):hover .coursebtn {
+    background-color: #f06e6e;
 }
 
 
-.course:nth-child(4):hover .coursebtn{
-    background-color: #FDBBBD ;
+.course:nth-child(3):hover .coursebtn {
+    background-color: #58BAAB;
 }
 
-.morebtn{
+
+.course:nth-child(4):hover .coursebtn {
+    background-color: #FDBBBD;
+}
+
+.morebtn {
     width: 25px;
     height: 35px;
     border: none;
@@ -512,24 +550,29 @@ option{
     border-radius: 8px;
     background: none;
 }
-.coursebuttons{
+
+.coursebuttons {
     margin-top: 5px;
 }
-.morebtn:hover{
+
+.morebtn:hover {
     background-color: rgb(181, 179, 179);
     border: 0.5px solid black;
     border-radius: 8px;
     cursor: pointer;
 }
-.course:hover .morebtn{
+
+.course:hover .morebtn {
     background-color: #a1a1a174;
     border-radius: 12px;
 }
-.morebtndetail:hover{
+
+.morebtndetail:hover {
     color: white;
     cursor: pointer;
 }
-#current-activity{
+
+#current-activity {
     width: 30%;
     margin-top: 16px;
     display: flex;
@@ -540,40 +583,46 @@ option{
     box-sizing: border-box;
     text-align: right;
 }
-#activity-header{
+
+#activity-header {
     margin-left: 0;
 }
-.big-activity{
+
+.big-activity {
     background-color: #58BAAB;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     width: 100%;
     height: 150px;
-    border-radius:25px;
+    border-radius: 25px;
 }
-.small-activity{
+
+.small-activity {
     margin-top: -15px;
     padding: 15px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     width: 48%;
-    height:100px;
-    border-radius:25px;
+    height: 100px;
+    border-radius: 25px;
     direction: rtl;
 }
-.avtivitytitle{
+
+.avtivitytitle {
     color: white;
     font-size: 30px;
     font-weight: bold;
     font-family: "vazir";
 }
-.activityDes{
+
+.activityDes {
     color: white;
     font-size: 14px;
     font-family: "vazir";
 }
-.activitybtn{
+
+.activitybtn {
     width: 25px;
     height: 25px;
-    padding:5px;
+    padding: 5px;
     position: relative;
     top: 5px;
     left: -90px;
@@ -582,31 +631,36 @@ option{
     float: right;
     cursor: pointer;
 }
-.playbtn{
+
+.playbtn {
     font-size: 15px;
     color: #f06e6e;
 }
-.first{
+
+.first {
     background-color: #F6BA05;
 }
-.second{
+
+.second {
     background-color: #FB6B58;
 }
-#best-instructors{
+
+#best-instructors {
     width: 33%;
-    padding:15px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap:15px;
+    gap: 15px;
     box-sizing: border-box;
 }
 
-.main_Instructor{
+.main_Instructor {
     padding: 15px;
 }
-.Instructor{
+
+.Instructor {
     display: flex;
     width: 100%;
     height: fit-content;
@@ -616,147 +670,174 @@ option{
     transition: 0.5s ease-in-out;
     direction: rtl;
 }
-#seeAll{
+
+#seeAll {
     padding-top: 10px;
     padding-right: 3cap;
     font-size: 13px;
     color: black;
     font-family: "vazir-light";
 }
-#seeAll:hover{
+
+#seeAll:hover {
     color: rgb(28, 28, 158);
 }
-.Instructor:hover{
+
+.Instructor:hover {
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     transform: scale(1.02);
     transition: 0.5s ease-in-out;
     cursor: pointer;
 }
-.Instructorbtn{
+
+.Instructorbtn {
     width: 95px;
     height: 40px;
     font-size: 15px;
-    padding:1px 10px;
-    background-color:white;
+    padding: 1px 10px;
+    background-color: white;
     margin: 5px;
     border-radius: 8px;
 }
-.Instructorbtn:hover{
+
+.Instructorbtn:hover {
     border: none !important;
     color: white;
     background-color: #f06e6e;
     cursor: pointer;
 }
-.avatar{
+
+.avatar {
     height: 40px;
     width: 40px;
     border-radius: 100%;
     margin: 0px;
 }
-.Instructortitle{
+
+.Instructortitle {
     position: relative;
     right: 0;
     font-size: small;
     color: black;
     font-family: "vazir";
 }
-.Instructorbtn{
+
+.Instructorbtn {
     width: 90px;
     height: 30px;
-    background-color:white;
+    background-color: white;
     margin: 5px;
     font-size: x-small;
     border-radius: 8px;
     font-family: "vazir";
     cursor: pointer;
 }
-.Instructorbtn:hover{
+
+.Instructorbtn:hover {
     border: none !important;
     color: white;
     background-color: #f06e6e;
 }
 
-.main_Instructor .Instructor:nth-child(1):hover .Instructorbtn{
+.main_Instructor .Instructor:nth-child(1):hover .Instructorbtn {
     background-color: #F6BA05;
 }
 
-.main_Instructor .Instructor:nth-child(2):hover .Instructorbtn{
+.main_Instructor .Instructor:nth-child(2):hover .Instructorbtn {
     background-color: #f06e6e;
 }
 
-.main_Instructor .Instructor:nth-child(3):hover .Instructorbtn{
+.main_Instructor .Instructor:nth-child(3):hover .Instructorbtn {
     background-color: #58BAAB;
 }
 
-.main_Instructor .Instructor:nth-child(4):hover .Instructorbtn{
+.main_Instructor .Instructor:nth-child(4):hover .Instructorbtn {
     background-color: #FDBBBD;
 }
 
 /* end of first page by rastin design */
 
 @media only screen and (max-width:500px) {
-    
-    .side-menu{
+
+    .container {
+        padding: 0;
+        overflow-y: scroll;
+
+    }
+
+    .side-menu {
         width: 0px;
         overflow: hidden;
         font-size: x-large;
         padding: 0;
     }
-    .firstpage{
+
+    .firstpage {
         /* position: absolute; */
-        height: 100vh;
         width: 100%;
-        overflow-y: scroll;
         left: 35px;
-        overflow-y: auto;
         left: 5px;
         align-items: center;
+        padding: 10px;
     }
-    .header-section{
+
+    .header-section {
         margin-bottom: 10%;
     }
-    #popular-courses{
+
+    #popular-courses {
         margin-top: 20%;
         padding-left: 0;
         width: 100%;
     }
-    .courseicon{
-        width:50px;
-        height:50px;
+
+    .courseicon {
+        width: 50px;
+        height: 50px;
     }
-    .coursetitle{
+
+    .coursetitle {
         font-size: 13px;
     }
-    .course{
+
+    .course {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
     }
-    .grey{
+
+    .grey {
         font-size: 12px;
     }
-    .main_course{
+
+    .main_course {
         padding: 0;
     }
-    .coursebuttons{
+
+    .coursebuttons {
         margin-top: 10px;
     }
-    .small-activity{
+
+    .small-activity {
         margin-top: 5px;
     }
-    .activitybtn{
+
+    .activitybtn {
         top: -700x;
         left: -105px;
     }
-    #current-activity{
+
+    #current-activity {
         width: 95%;
     }
-    #best-instructors{
+
+    #best-instructors {
         margin-top: 50px;
         width: 90%;
         padding: 0;
         margin-bottom: 50px;
     }
+
     /* body::-webkit-scrollbar {
         width: 1em;
       }
@@ -769,5 +850,60 @@ option{
         background-color: darkgrey;
         outline: 1px solid slategrey;
       } */
+    .main-banner {
+        width: 90%;
+        height: fit-content;
+        top: 60px;
+        padding: 0;
+        right: 0 ;
+        left: 160px;
+
+      
+    }
+
+    .header_section {
+        flex-direction: column-reverse;
+        width: 100vw;
+        top: 15px;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        right: 0;
+    }
+
+    .header_section .search input {
+        width: 85%;
+        height: 50px;
+    }
+
+    .header_section .search i {
+        font-size: xx-large;
+        left: 10%;
+        top: 8px;
+    }
+
+    .header_section .section-heder-two {
+        margin-left: 50%;
+        top: 10px;
+
+    }
+
+    .banner-title {
+        margin-top: 200px;
+        width: 90% !important;
+        margin-right: 10px !important;
+    }
+
+    .we-options {
+        flex-wrap: wrap;
+        width: 100%;
+        top: 40px;
+        margin-bottom: 70px;
+        left: 15%;
+    }
+    .options{
+        width: fit-content !important;
+    }
+
 
 }
