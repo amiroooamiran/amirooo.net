@@ -13,19 +13,103 @@
     <script src="https://kit.fontawesome.com/dcea8a19ca.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link href="https://icons8.com/icon/UNLQZThgLcfv/user-circle">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
 </head>
 
 <body>
     <main class="container">
 
+        <!-- User Header Section -->
+        <div class="header_section">
+            <div class="search">
+                <input type="text">
+                <i class="uil uil-search-alt"></i>
+            </div>
+            <div class="section-heder-two">
+                <div class="icons">
+                    <div>
+                        <i class="uil uil-envelope"></i>
+                    </div>
+                    <div>
+                        <i class="uil uil-bell"></i>
+                    </div>
+                </div>
+                <div class="user_profile">
+                    <div class="profile">
+                        <img src="https://cdn2.f-cdn.com/files/download/40990929/88eaef.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>amirooo</p>
+                        <span>@amirooo42</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- end of first page by rastin design -->
+        <!-- Main Banner  -->
+        <div class="main-banner">
+            <div class="main-images">
+                <img style="margin-right: -20px;" src="/Frontend/images/banners/Main-poster2.png" alt="">
+                <img src="/Frontend/images/banners/Main-poster.png" alt="">
+            </div>
+            <div class="banner-title">
+                <h2>پروژه های برنامه نویسی خود را به <u>باحال ترین</u> تیم برنامه نویسی دنیا بسپارید</h2>
+                <br>
+                <span>آیا ما از نظر شما باحال ترین هستیم ؟ | <b style="color: #F6BA05;"> نظر خود را با ستاره دادن به ما
+                        اعلام کنید </b></span>
+            </div>
+            <div class="we-options">
+                <div class="options">
+                    <div>
+                        <img src="/Frontend/images/icons/icons8-web-design-64.png" alt="">
+                    </div>
+                    <div>
+                        <p>Web Design</p>
+                        <span>220+</span>
+                    </div>
+                </div>
+                <div class="options">
+                    <div>
+                        <img src="/Frontend/images/icons/icons8-hips-64.png" alt="">
+                    </div>
+                    <div>
+                        <p>Web Security</p>
+                        <span>31+</span>
+                    </div>
+                </div>
+                <div class="options">
+                    <div>
+                        <img src="/Frontend/images/icons/icons8-network-drive-64.png" alt="">
+                    </div>
+                    <div>
+                        <p>Clud Services</p>
+                        <span>5+</span>
+                    </div>
+                </div>
+                <div class="options">
+                    <div>
+                        <img src="/Frontend/images/icons/icons8-wacom-tablet-64.png" alt="">
+                    </div>
+                    <div>
+                        <p>Graphic Design</p>
+                        <span>480+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Main Banner -->
         <div class="firstpage">
-
             <!-- Populer Curses Section -->
             <div id="popular-courses">
                 <div class="Sections_header">
                     <h2>محبوب ترین دورها</h2>
+                    <div id="courses-dropdown">
+                        <select name="courses" id="courses">
+                            <option value="IT">IT</option>
+                            <option value="Hack">Hack</option>
+                            <option value="design">design</option>
+                            <option value="network">network</option>
+                          </select>
+                    </div>
                 </div>
                 <div class="main_course">
                     <div class="course">
@@ -149,7 +233,7 @@
 
         <!--start side menu made by Saba -->
         <div class="side-menu" id="menu">
-            
+
             <div class="items">
                 <div class="item">
                     <i class="uil uil-create-dashboard"></i>
@@ -191,9 +275,6 @@
 
     </main>
 
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script> -->
     <script>
         let icon = document.getElementById("menu-icon")
         let menu = document.getElementById("menu")
