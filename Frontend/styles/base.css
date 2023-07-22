@@ -210,7 +210,7 @@ body {
 .header_section .search i{
     position: absolute;
     left: 10px;
-    top: 7px;
+    top: 3px;
     color: black;
 }
 .header_section .icons{
@@ -265,7 +265,7 @@ body {
     border-radius: 10px;
 }
 
-/* End of heder section by amiran */
+/* End of header section by amiran */
 
 .main-banner{
     float: right;
@@ -384,7 +384,29 @@ h2{
     gap:10px;
     box-sizing: border-box;
 }
-
+#rightheader{
+    float: right;
+}
+#courses-dropdown{
+    float: left;
+}
+select{
+    margin: 50px;
+    width: 130px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(/Frontend/images/icons/arrow-down-img.png) 96% / 15% no-repeat #eee;
+}
+option{
+    text-align: center;
+    background-color: #f2f2f2;
+}
 .main_course{
     padding: 15px;
     background-color: #58baab13;
@@ -546,18 +568,19 @@ h2{
     font-family: "vazir";
 }
 .activitybtn{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     padding:5px;
     position: relative;
-    top: -70px;
-    left: -100px;
+    top: 5px;
+    left: -90px;
     border: none;
     border-radius: 100%;
     float: right;
     cursor: pointer;
 }
 .playbtn{
+    font-size: 15px;
     color: #f06e6e;
 }
 .first{
@@ -719,8 +742,8 @@ h2{
         margin-top: 5px;
     }
     .activitybtn{
-        top: -750x;
-        left: -80px;
+        top: -700x;
+        left: -105px;
     }
     #current-activity{
         width: 95%;
