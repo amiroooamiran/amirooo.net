@@ -271,7 +271,7 @@ body {
     float: right;
     position: relative;
     left: 32.5%;
-    top: 110px;
+    top: 90px;
     transform: translateX(-50%);
     width: 73%;
     height: 180px;
@@ -300,6 +300,7 @@ body {
 
 .main-banner .banner-title h2{
     text-align: right;
+    font-size: 1.3rem;
 }
 
 .main-banner .banner-title span{
@@ -308,6 +309,8 @@ body {
     top: -15px;
     color: gray;
     font-family: "vazir";
+    direction: rtl;
+    float: right;
 }
 
 .we-options{
@@ -315,7 +318,7 @@ body {
     gap: 60px;
     position: relative;
     left: 4%;
-    top: 10px;
+    top: 40px;
 }
 .we-options .options{
     align-items: center;
@@ -357,7 +360,7 @@ body {
 }
 .firstpage{
     float: right;
-    top: 93px;
+    top: 50px;
     position: relative;
     width: 80%;
     height: 30%;
