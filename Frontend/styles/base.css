@@ -765,12 +765,22 @@ option {
 .cards{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    float: right;
+    justify-content: flex-start;
+    position: relative;
+    width: 80%;
+    height: 100%;
+    padding: 10px;
+    overflow-y: scroll;
 }
+
 .product-card {
     width: 300px;
     height: 450px;
     position: relative;
-    box-shadow: 0 2px 7px #dfdfdf;
+    float: left;
+    box-shadow: 0 2px 10px #999;
     margin: 50px auto;
     background: #fafafa;
     border-radius: 15px;
@@ -828,6 +838,11 @@ option {
     border-radius: 50%;
 }
 
+.markbtn:hover{
+    border: none;
+    background-color: yellow;
+}
+
 .likebtn{
     position: absolute;
     top: 80px;
@@ -843,6 +858,11 @@ option {
     background-color: #FAFAFA;
     border: 1px solid #999;
     border-radius: 50%;
+}
+
+.likebtn:hover{
+    border: none;
+    background-color: rgb(246, 50, 50);
 }
 
 .product-details {
@@ -867,7 +887,7 @@ option {
     font-family: "vazir";
     text-decoration: none;
     display: block;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     color: #363636;
     transition: 0.3s;
 }
@@ -892,7 +912,7 @@ option {
 .buybtn{
     width: 100%;
     height: 40px;
-    margin-top: -5px;
+    margin-top: 5px;
     color: white;
     font-size: 15px;
     font-weight: bold;
