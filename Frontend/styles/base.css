@@ -376,12 +376,14 @@ body {
 
 .Sections_header{
     margin-top: 10px;
-    width: 100%;
+    width:95%;
     height: 40px;
     float: right;
     text-align: right;
-    padding-right: 20px;
-    font-size: 15px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
 }
 
 .firstpage {
@@ -686,6 +688,8 @@ option {
     font-size: 13px;
     color: black;
     font-family: "vazir-light";
+    direction: rtl;
+    text-decoration: underline;
 }
 
 #seeAll:hover {
@@ -765,6 +769,65 @@ option {
 }
 
 /* end of first page by rastin design */
+
+/*user profile styles start */
+.poster img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20vh;
+    width: 80%;
+    border-radius:0 20px  0 0 ;
+
+}
+.user-pic img{
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: #58BAAB;
+    position: absolute;
+    top: 12%;
+    right: 5%;
+}
+.user-info{
+    position: absolute;
+    top: 23%;
+    right: 15%;
+    font-family: "vazir";
+    color: black;
+    direction: rtl;
+
+}
+.sidebar{
+    position: absolute;
+    right: 15px;
+    top: 33%;
+    width: 20%;
+    height: 65%;
+    border-radius: 20px 0 20px 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
+}
+.sidebar h3{
+    font-family: "vazir-thin";
+    color: black;
+    direction: rtl;
+    margin: 10px;
+    font-size: medium;
+}
+.sidebar hr{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+}
+.sidebar ul{
+    color: black;
+    direction: rtl;
+margin-right: 50px;  
+margin-top: 50px;
+  line-height: 30px;
+    
+}
+
 
 @media only screen and (max-width:500px) {
 
