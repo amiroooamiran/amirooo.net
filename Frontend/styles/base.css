@@ -37,7 +37,6 @@
 
 body {
     background-color: rgb(201, 201, 201);
-
 }
 
 /* start of side menu by saba */
@@ -50,7 +49,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 .container .title i {
@@ -418,11 +416,6 @@ h2 {
     box-sizing: border-box;
 }
 
-#rightheader {
-    float: right;
-}
-
-
 #courses-dropdown{
     margin-top: -25px;
     float: left;
@@ -462,13 +455,15 @@ option {
     padding: 10px;
     justify-content: space-between;
     border-radius: 10px;
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
     direction: rtl;
 }
 
 .course:hover {
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
-    transform: scale(1.02);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199) !important; 
+    transform: scale(1.02) !important;
+    transition: 0.5s ease-in-out !important;
+    cursor: pointer !important;
 }
 
 .courseicon {
@@ -828,6 +823,146 @@ margin-top: 50px;
     
 }
 
+/* start of course-card by rastin design  */
+.cards{
+    display: flex;
+    flex-direction: row;
+}
+.product-card {
+    width: 300px;
+    height: 450px;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    margin: 50px auto;
+    background: #fafafa;
+    border-radius: 15px;
+}
+
+.badge {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    z-index: 2;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: "vazir";
+    background: yellow;
+    color: black;
+    padding: 3px 10px;
+}
+
+.product-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 300px;
+    border-radius: 15px 15px 0 0;
+}
+
+.product-tumb img {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 300px;
+    z-index: 1;
+    border-radius: 15px 15px 0 0;
+}
+
+.markbtn{
+    position: absolute;
+    top: 30px;
+    right: 8px;
+    width: 45px;
+    height: 45px;
+	flex-shrink: 0;
+	font-size: 1.25rem;
+	transition: .25s ease;
+	box-shadow: 0 0 0 1px rgba(#000, .05), 0 3px 8px 0 rgba(#000, .15);
+	z-index: 1;
+	cursor: pointer;
+    background-color: #FAFAFA;
+    border: 1px solid #999;
+    border-radius: 50%;
+}
+
+.likebtn{
+    position: absolute;
+    top: 80px;
+    right: 8px;
+    width: 45px;
+    height: 45px;
+	flex-shrink: 0;
+	font-size: 1.25rem;
+	transition: .25s ease;
+	box-shadow: 0 0 0 1px rgba(#000, .05), 0 3px 8px 0 rgba(#000, .15);
+	z-index: 1;
+	cursor: pointer;
+    background-color: #FAFAFA;
+    border: 1px solid #999;
+    border-radius: 50%;
+}
+
+.product-details {
+    height: 250px;
+    padding: 20px 30px 30px 30px;
+}
+
+.product-catagory {
+    direction: rtl;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "vazir";
+    color: #999;
+    margin-bottom: 18px;
+}
+
+.product-details h4 a {
+    direction: rtl;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "vazir";
+    text-decoration: none;
+    display: block;
+    margin-bottom: 18px;
+    color: #363636;
+    transition: 0.3s;
+}
+
+.product-details h4 a:hover{
+    color: #999;
+}
+
+.product-details p {
+    direction: rtl;
+    font-size: 14px;
+    font-family: "vazir";
+    line-height: 22px;
+    margin-bottom: 10px;
+    color: #999;
+}
+.product-price{
+    direction: rtl;
+    color: #253298;
+    font-family: "vazir";
+}
+.buybtn{
+    width: 100%;
+    height: 40px;
+    margin-top: -5px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "vazir";
+    border: none;
+    border-radius: 15px;
+}
+/* start of course-card by rastin design  */
 
 @media only screen and (max-width:500px) {
 
@@ -910,27 +1045,13 @@ margin-top: 50px;
         margin-bottom: 50px;
     }
 
-    /* body::-webkit-scrollbar {
-        width: 1em;
-      }
-       
-      body::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-      }
-       
-      body::-webkit-scrollbar-thumb {
-        background-color: darkgrey;
-        outline: 1px solid slategrey;
-      } */
     .main-banner {
         width: 90%;
         height: fit-content;
         top: 60px;
         padding: 0;
         right: 0 ;
-        left: 160px;
-
-      
+        left: 160px;      
     }
 
     .header_section {
