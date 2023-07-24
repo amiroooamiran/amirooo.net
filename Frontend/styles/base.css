@@ -837,6 +837,7 @@ margin-top: 50px;
     display: flex;
     flex-direction:column;
 }
+/*user profile styles end */
 
 /* start of course-card by rastin design  */
 .cards{
@@ -997,7 +998,31 @@ margin-top: 50px;
     border: none;
     border-radius: 15px;
 }
-/* start of course-card by rastin design  */
+/* end of course-card by rastin design  */
+
+/* start of CourseDetails by rastin design */
+.Course-poster img{
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    height: 30vh;
+    width: 75%;
+    border-radius:20px;
+    z-index: 1;
+}
+.teacher{
+    position: absolute;
+    right: 60px;
+    top: 20%;
+    width: 15%;
+    height: 65%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
+    background-color: whitesmoke;
+    z-index: 999;
+}
+/* end of CourseDetails by rastin design */
+
 
 @media only screen and (max-width:500px) {
 
@@ -1015,7 +1040,6 @@ margin-top: 50px;
     }
 
     .firstpage {
-        /* position: absolute; */
         width: 100%;
         left: 35px;
         left: 5px;
