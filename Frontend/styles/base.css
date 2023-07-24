@@ -820,22 +820,49 @@ option {
 margin-right: 50px;  
 margin-top: 50px;
   line-height: 30px;
+  font-family: "vazir";
     
 }
-.user-course .course{
+.sidebar ul li:hover{
+    text-decoration: underline;
+    color: #f06e6e;
+    cursor: pointer;
+}
+.user-crs{
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 20%;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    right: 24%;
+    top: 33%;
+    direction: rtl;
 
 }
-.user-course .course img{
+.user-crs .crs{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 70%;
+    height: fit-content;
+    
+    color: black;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.user-crs .crs:hover{
+    transform: scale(0.95);
+}
+.user-crs .crs img{
     width: 30%;
     height: 100%;
 }
-.user-course .course div{
+.user-crs .crs div{
     display: flex;
     flex-direction:column;
+    gap: 8px;
 }
 /*user profile styles end */
 
