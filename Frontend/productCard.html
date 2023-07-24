@@ -4,71 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="stylesheet" href="/Frontend/styles/base.css">
+    <link rel="stylesheet" href="./styles/base.css">
     <title>productCard</title>
 </head>
 <body>
-	<div class="cards">
-		<div class="product-card">
-			<div class="badge">جدید</div>
-			<div class="product-tumb">
-				<img src="./download.jpg" alt="">
-					<button class="markbtn"><i class="uil uil-star"></i></button>
-					<button class="likebtn"><i class="uil uil-thumbs-up"></i></button>
-			</div>
-			<div class="product-details">
-				<span class="product-catagory">نرم افزار,شبکه</span>
-				<h4><a href="">برنامه نویسی</a></h4>
-				<p>شاید برایتان اتفاق افتاده باشد که با واژه برنامه نویسی وب برخورد بکنید و ندانید معنی این واژه چیست!</p>
-				<h4 class="product-price" >قیمت دوره : 53,500 تومان</h4>
-				<button class="buybtn" style="background-color: #58BAAB;" >خرید دوره</button>
-			</div>
-		</div>
-		<div class="product-card">
-			<div class="badge">جدید</div>
-			<div class="product-tumb">
-				<img src="./download.jpg" alt="">
-					<button class="markbtn"><i class="uil uil-star"></i></button>
-					<button class="likebtn"><i class="uil uil-thumbs-up"></i></button>
-			</div>
-			<div class="product-details">
-				<span class="product-catagory">نرم افزار,شبکه</span>
-				<h4><a href="">برنامه نویسی</a></h4>
-				<p>شاید برایتان اتفاق افتاده باشد که با واژه برنامه نویسی وب برخورد بکنید و ندانید معنی این واژه چیست!</p>
-				<h4 class="product-price" >قیمت دوره : 53,500 تومان</h4>
-				<button class="buybtn" style="background-color: #FB6B58;" >خرید دوره</button>
-			</div>
-		</div>
-		<div class="product-card">
-			<div class="badge">جدید</div>
-			<div class="product-tumb">
-				<img src="./download.jpg" alt="">
-					<button class="markbtn"><i class="uil uil-star"></i></button>
-					<button class="likebtn"><i class="uil uil-thumbs-up"></i></button>
-			</div>
-			<div class="product-details">
-				<span class="product-catagory">نرم افزار,شبکه</span>
-				<h4><a href="">برنامه نویسی</a></h4>
-				<p>شاید برایتان اتفاق افتاده باشد که با واژه برنامه نویسی وب برخورد بکنید و ندانید معنی این واژه چیست!</p>
-				<h4 class="product-price" >قیمت دوره : 53,500 تومان</h4>
-				<button class="buybtn" style="background-color: #F6BA05;" >خرید دوره</button>
-			</div>
-		</div>
-		<div class="product-card">
-			<div class="badge">جدید</div>
-			<div class="product-tumb">
-				<img src="./download.jpg" alt="">
-					<button class="markbtn"><i class="uil uil-star"></i></button>
-					<button class="likebtn"><i class="uil uil-thumbs-up"></i></button>
-			</div>
-			<div class="product-details">
-				<span class="product-catagory">نرم افزار,شبکه</span>
-				<h4><a href="">برنامه نویسی</a></h4>
-				<p>شاید برایتان اتفاق افتاده باشد که با واژه برنامه نویسی وب برخورد بکنید و ندانید معنی این واژه چیست!</p>
-				<h4 class="product-price" >قیمت دوره : 53,500 تومان</h4>
-				<button class="buybtn" style="background-color: #FDBBBD;" >خرید دوره</button>
-			</div>
-		</div>
-	</div>
+    <main class="container">
+        <!--start side menu made by Saba -->
+        <div class="side-menu" id="menu">
+
+            <div class="items">
+                <div class="item">
+                    <i class="uil uil-create-dashboard"></i>
+                    <a href="#">داشبورد</a>
+                </div>
+                <div class="item">
+                    <i class="uil uil-book-reader"></i>
+                    <a href="#">کلاس های من</a>
+                </div>
+                <div class="item">
+                    <i class="uil uil-user"></i>
+                    <a href="#">مربیان</a>
+                </div>
+                <div class="item">
+                    <i class="uil uil-user-arrows"></i>
+                    <a href="#">چت گروهی </a>
+                </div>
+                <div class="item">
+                    <i class="uil uil-books"></i>
+                    <a href="#">درس ها</a>
+                </div>
+                <div class="item">
+                    <i class="uil uil-setting"></i>
+                    <a href="#">تنظیمات</a>
+                </div>
+
+            </div>
+            <div class="image">
+                <img src="/Frontend/images/JoineUs.png">
+                <button>عضویت در درس</button>
+            </div>
+
+        </div>
+        <div class="title" id="title">
+            <i class="uil uil-apps" id="menu-icon" onclick="openMenu()"></i>
+            <h1>amirooo</h1>
+        </div>
+        <!--end side menu made by Saba -->
+        <div class="cards">
+            <div class="product-card">
+                <div class="badge">جدید</div>
+                <div class="product-tumb">
+                    <img src="./images/examplePic.jpg" alt="">
+                        <button class="markbtn"><i class="uil uil-star"></i></button>
+                        <button class="likebtn"><i class="uil uil-thumbs-up"></i></button>
+                </div>
+                <div class="product-details">
+                    <span class="product-catagory">نرم افزار,شبکه</span>
+                    <h4><a href="">برنامه نویسی</a></h4>
+                    <p>شاید برایتان اتفاق افتاده باشد که با واژه برنامه نویسی وب برخورد بکنید و ندانید معنی این واژه چیست!</p>
+                    <h4 class="product-price" >قیمت دوره : 53,500 تومان</h4>
+                    <button class="buybtn" style="background-color: #58BAAB;" >خرید دوره</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="badge">جدید</div>
+                <div class="product-tumb">
+                    <img src="./images/examplePic.jpg" alt="">
+                        <button class="markbtn"><i class="uil uil-star"></i></button>
+                        <button class="likebtn"><i class="uil uil-thumbs-up"></i></button>
+                </div>
+                <div class="product-details">
+                    <span class="product-catagory">نرم افزار,شبکه</span>
+                    <h4><a href="">برنامه نویسی</a></h4>
+                    <p>شاید برایتان اتفاق افتاده باشد که با واژه برنامه نویسی وب برخورد بکنید و ندانید معنی این واژه چیست!</p>
+                    <h4 class="product-price" >قیمت دوره : 53,500 تومان</h4>
+                    <button class="buybtn" style="background-color: #FB6B58;" >خرید دوره</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="badge">جدید</div>
+                <div class="product-tumb">
+                    <img src="./images/examplePic.jpg" alt="">
+                        <button class="markbtn"><i class="uil uil-star"></i></button>
+                        <button class="likebtn"><i class="uil uil-thumbs-up"></i></button>
+                </div>
+                <div class="product-details">
+                    <span class="product-catagory">نرم افزار,شبکه</span>
+                    <h4><a href="">برنامه نویسی</a></h4>
+                    <p>شاید برایتان اتفاق افتاده باشد که با واژه برنامه نویسی وب برخورد بکنید و ندانید معنی این واژه چیست!</p>
+                    <h4 class="product-price" >قیمت دوره : 53,500 تومان</h4>
+                    <button class="buybtn" style="background-color: #F6BA05;" >خرید دوره</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="badge">جدید</div>
+                <div class="product-tumb">
+                    <img src="./images/examplePic.jpg" alt="">
+                        <button class="markbtn"><i class="uil uil-star"></i></button>
+                        <button class="likebtn"><i class="uil uil-thumbs-up"></i></button>
+                </div>
+                <div class="product-details">
+                    <span class="product-catagory">نرم افزار,شبکه</span>
+                    <h4><a href="">برنامه نویسی</a></h4>
+                    <p>شاید برایتان اتفاق افتاده باشد که با واژه برنامه نویسی وب برخورد بکنید و ندانید معنی این واژه چیست!</p>
+                    <h4 class="product-price" >قیمت دوره : 53,500 تومان</h4>
+                    <button class="buybtn" style="background-color: #FDBBBD;" >خرید دوره</button>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
