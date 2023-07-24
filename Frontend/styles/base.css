@@ -1056,5 +1056,12 @@ option {
         width: fit-content !important;
     }
 
+    .cards{
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 40px;
+        margin-right: 40px;
+    }
 
 }
