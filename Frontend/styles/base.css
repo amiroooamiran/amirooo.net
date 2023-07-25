@@ -1040,13 +1040,94 @@ margin-top: 50px;
 .teacher{
     position: absolute;
     right: 60px;
-    top: 20%;
+    top: 22%;
     width: 15%;
-    height: 65%;
+    height: 70%;
     border-radius: 20px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
     background-color: whitesmoke;
     z-index: 999;
+}
+
+.teacher-pic img{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #58BAAB;
+    position: absolute;
+    top: 2%;
+    right: 3%;
+}
+.teacher-info{
+    position: absolute;
+    top: 22%;
+    right: 3%;
+    line-height: 20px;
+    font-family: "vazir";
+    color: black;
+    direction: rtl;
+}
+
+.teacher-titr{
+    margin-right: 3px;
+    margin-top: 5px;
+}
+
+.teacher-description{
+    margin: 3px;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.chapters-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    right: 22%;
+    top: 40%;
+    direction: rtl;
+
+}
+
+.chapter{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 750px;
+    height: 100px;
+    color: black;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+    border-radius: 15px;
+    transition: 0.5s;
+    cursor: pointer;
+    font-family: "vazir";
+}
+
+.chapter:hover{
+    transform: scale(1.02);
+}
+
+.chapter i{
+    text-align: center;
+    padding-top: 12px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 50px;
+    width: 75px;
+    height: 75px;
+}
+
+.chapter-header{
+    padding: 7px 0px;
+    font-weight: 550;
+}
+
+.chapter-desc{
+    font-size: 13px;
+    color: #363636;
+    padding-top: 5px;
 }
 /* end of CourseDetails by rastin design */
 
