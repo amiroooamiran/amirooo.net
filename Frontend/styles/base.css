@@ -76,6 +76,7 @@ body {
     width: 20%;
     height: 100%;
     background-color: #f2f2f2;
+    z-index: 998;
     border-radius: 20px 0 0 20px;
     padding-top: 20px;
     padding-left: 30px;
@@ -92,6 +93,7 @@ body {
     flex-direction: row;
     font-size: x-small;
     gap: 10px;
+    z-index: 999;
     margin-bottom: 20px;
     font-family: 'Comfortaa', cursive;
 }
@@ -99,6 +101,7 @@ body {
 .title i {
     font-size: x-large;
     color: #f06e6e;
+    z-index: 999;
 }
 
 .items {
@@ -817,34 +820,62 @@ option {
 .sidebar ul{
     color: black;
     direction: rtl;
-margin-right: 50px;  
-margin-top: 50px;
+    list-style: none;
+    margin-right: 10px;
+    margin-left: 10px;
+margin-top: 20px;
   line-height: 30px;
   font-family: "vazir";
     
 }
+.sidebar ul li{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.295);
+   padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+}
 .sidebar ul li:hover{
-    text-decoration: underline;
-    color: #f06e6e;
     cursor: pointer;
+    background-color: #FDBBBD;
 }
 .user-crs{
     display: flex;
     flex-direction: column;
     gap: 20px;
     position: absolute;
-    right: 24%;
+    right: 22%;
     top: 33%;
     direction: rtl;
+    width: 55vw;
+    max-height: 60vh;
+    overflow-y: scroll;
+    padding: 10px;
+
+}
+.user-crs::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(228, 225, 225);
+
+}
+
+.user-crs::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    border-left: 0.1px solid white;
+    background-color: #FF6D59;
+    cursor: pointer;
 
 }
 .user-crs .crs{
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 20px;
-    width: 70%;
+    width: 100%;
     height: fit-content;
-    
+    font-family: "vazir-light";
+    font-size: small;
     color: black;
     padding: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
@@ -863,6 +894,14 @@ margin-top: 50px;
     display: flex;
     flex-direction:column;
     gap: 8px;
+}
+.main-div{
+    display: flex;
+    flex-direction: row;
+height: ;
+width: fit-content;
+    flex-wrap: wrap;
+
 }
 
 /* start of course-card by rastin design  */
@@ -1166,6 +1205,37 @@ margin-top: 50px;
         transform: translate(-50%);
         margin-top: 40px;
         margin-right: 40px;
+    }
+    .poster img{
+        width: 100%;
+        z-index: 997;
+    }
+    .user-pic img{
+        z-index: 997;
+        top: 13vh;
+    }
+    .user-info{
+        right: 35vw;
+        top: 21vh;
+    }
+    .sidebar{
+        width: 97%;
+        position: relative;
+        top: 280px;
+        right: 0;
+    }
+    .user-crs{
+        width: 97%;
+        position: relative;
+        top: 30vh;
+        right: 0;
+        padding: 0;
+    }
+    .main-div{
+        flex-direction: column;
+        gap: 50px;
+        right: 0;
+        padding-left: 10px;
     }
 
 }
