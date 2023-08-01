@@ -422,7 +422,7 @@ h2 {
 }
 
 #courses-dropdown {
-    margin-top: -25px;
+    margin-top: 0px;
     float: left;
 }
 
@@ -511,7 +511,6 @@ option {
     padding: 1px 1px;
     border: none;
     border-radius: 8px;
-    cursor: pointer;
     cursor: pointer;
     font-family: "vazir";
 }
@@ -1173,14 +1172,14 @@ option {
     right: 22%;
     width: 750px;
     height: 200px;
-    border-radius: 20px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
-    background-color: whitesmoke;
+    /* border-radius: 20px; */
+    /* background-color: rgba(201, 201, 201, 0.4); */
+    background-image: linear-gradient(to right, rgba(201, 201, 201, 0.1),  rgba(201, 201, 201, 0.4),  rgba(201, 201, 201, 0.1));
     line-height: 20px;
     font-family: "vazir";
     color: black;
     direction: rtl;
-    padding: 15px 10px;
+    padding: 15px 15px;
 }
 
 .chapter-summery p{
@@ -1188,7 +1187,7 @@ option {
     font-family: "vazir";
     color: black;
     direction: rtl;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .chapters-section{
