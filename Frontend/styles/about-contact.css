@@ -164,7 +164,7 @@ body {
 
 /* end of side menu by saba */
 
-
+/* start of about us by saba */
 .container .bg-about{
     width: 70%;
     height: 100%;
@@ -193,7 +193,6 @@ body {
     align-items: center;
     max-height: 99%;
     overflow-y: auto;
-
 }
 .info-section::-webkit-scrollbar {
     width: 10px;
@@ -314,3 +313,119 @@ body {
         width: 80%;
     }
 }
+/* end of about us by saba */
+
+/* start of contact us by rastin design */
+.container .bg-contact{
+    width: 70%;
+    height: 100%;
+    float: right;
+    border-radius: 0 20px 20px 0;
+}
+
+.contact-header{
+    width: 40vw;
+    height: 99%;
+    direction: rtl;
+    position: absolute;
+    right: 38%;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "vazir";
+    font-size: small;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.contact-section{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 32%;
+    right: 12%;
+    direction: rtl;
+}
+
+.help-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 450px;
+    height: 100px;
+    color: black;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+    border-radius: 15px;
+    transition: 0.5s;
+    font-family: "vazir";
+}
+.chat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 450px;
+    height: 100px;
+    color: black;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+    border-radius: 15px;
+    transition: 0.5s;
+    font-family: "vazir";
+}
+.email{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 450px;
+    height: 100px;
+    color: black;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+    border-radius: 15px;
+    transition: 0.5s;
+    font-family: "vazir";
+}
+
+.contact-detail{
+    display: flex;
+    flex-direction: row;
+}
+.icon-contact{
+    font-size: 60px;
+    padding-top: 5px;
+}
+
+.contact-text{
+    margin-top: 15px;
+    padding-right: 15px;
+}
+
+.contact-btn{
+    align-self: center;
+    width: 160px;
+    height: 35px;
+    border: none;
+    background-color: #FDBBBD;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "vazir";
+}
+/* start of contact us by rastin design */
