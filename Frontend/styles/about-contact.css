@@ -341,6 +341,20 @@ body {
     overflow-y: auto;
 }
 
+.contact-header::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(228, 225, 225);
+
+}
+
+.contact-header::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    border-left: 0.1px solid white;
+    background-color: #FF6D59;
+    cursor: pointer;
+
+}
+
 .contact-section{
     width: 30vw;
     display: flex;
@@ -428,4 +442,75 @@ body {
     cursor: pointer;
     font-family: "vazir";
 }
+
+.social-media{
+    width: 32vw;
+    height: 32vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 390px;
+}
+
+.social-media button{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    background:none;
+    font-size: 23px;
+}
+
+.social-media button:hover{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+}
+
+.Survey{
+    width: 32vw;
+    height: 45vh;
+    padding: 45px 20px;
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-family: "vazir";
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+    border-radius: 15px;
+}
+
+.Survey-details{
+    display: inline-block;
+    gap: 10px;
+}
+.Survey  input{
+    width: 15vw;
+    height: 4vh;
+    padding: 10px;
+}
+.Survey  textarea{
+    margin-top: 8px;
+    text-align: right;
+    padding: 10px;
+    width: 100%;
+}
+
+.Survey  button{
+    align-self: center;
+    width: 160px;
+    padding: 7px;
+    border: none;
+    background-color: #c2c2c2;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "vazir";
+}
+
 /* start of contact us by rastin design */
