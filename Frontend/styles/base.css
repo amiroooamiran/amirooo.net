@@ -1348,29 +1348,35 @@ option {
     position: absolute;
     padding-top: 8px;
     right: 40px;
-   
+
 }
-.order-details{
+
+.order-details {
     width: 75%;
     float: right;
     margin-right: 30px;
     margin-top: 100px;
-    color:black;
+    color: black;
     font-family: "vazir";
     font-size: small;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.type , .order-title , .time , .budget{
-    width: 50%;
+
+.type,
+.order-title,
+.time,
+.budget {
     display: flex;
+    gap: 10px;
     justify-content: space-between;
     direction: rtl;
     text-align: right;
-    
+
 }
-.order-description{
+
+.order-description {
     display: flex;
     flex-direction: column;
     direction: rtl;
@@ -1378,7 +1384,7 @@ option {
 }
 
 
-.type select{
+.type select {
     width: 400px;
     background-color: white;
     border-radius: 10px;
@@ -1391,15 +1397,27 @@ option {
     padding: 0;
 
 }
-.top-part{
+
+.top-part {
     display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
     flex-wrap: wrap;
-    width: fit-content;
+    direction: ltr;
+}
+
+.top-right-part {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
     direction: rtl;
 }
 
-.order-title input , .order-description textarea , .time input , .budget input{
+.order-title input,
+.order-description textarea,
+.time input,
+.budget input {
     width: 400px;
     background-color: white;
     border-radius: 10px;
@@ -1413,11 +1431,11 @@ option {
     font-family: "vazir";
 }
 
-.order-description textarea{
-    width: 50%;
+.order-description textarea {
+    width: 100%;
 }
 
-.order-details button{
+.order-details button {
     background-color: #F6BA05;
     color: black;
     font-size: medium;
@@ -1426,6 +1444,59 @@ option {
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;
+}
+
+.upload-img {
+    direction: rtl;
+    display: flex;
+    gap: 50px;
+}
+
+.upload-img input {
+    display: none;
+}
+
+.upload-img label {
+    background-color: #f06e6e;
+    width: fit-content;
+    height: fit-content;
+    font-size: small;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+
+.img-receiver {
+    width: 100%;
+    height: 68%;
+    background-color: #58baab1f;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.bottom-part {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.skills {
+    direction: rtl;
+    width: 40%;
+}
+
+.checkboxes {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: medium;
+    font-family: cursive;
 }
 
 

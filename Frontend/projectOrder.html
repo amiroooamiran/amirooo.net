@@ -77,35 +77,89 @@
         </div>
         <div class="order-details">
             <div class="top-part">
-                <div class="type">
-                    <h3>نوع پروژه :</h3>
-                    <select name="orderType" id="orderType">
-                        <option value="یک گزینه را انتخاب کنید">یک گزینه را انتخاب کنید</option>
-                        <option value="طراحی frontend">طراحی frontend</option>
-                        <option value="برنامه نویسی backend">برنامه نویسی backend</option>
-                        <option value="ایمن سازی وبسایت">ایمن سازی وبسایت</option>
-                        <option value="برنامه نویسی پایتون">برنامه نویسی پایتون</option>
-                        <option value="هک">هک</option>
-                        <option value="پردازش تصویر">پردازش تصویر</option>
-                    </select>
-                </div>
-                <div class="order-title">
-                    <h3>عنوان پروژه : </h3>
-                    <input type="text" placeholder="یک نام برای پروژه خود انتخاب کنید">
-                </div>
-                <div class="time">
-                    <h3>مهلت پروژه :</h3>
-                    <input type="text" placeholder="مهلت انجام پروژه را به روز وارد کنید">
-                </div>
-                <div class="budget">
-                    <h3>بودجه :</h3>
-                    <input type="text" placeholder="مبلغی که می خواهید برای پروژه بپردازید(تومان)">
+                <div class="top-right-part">
+                    <div class="type">
+                        <h3>نوع پروژه :</h3>
+                        <select name="orderType" id="orderType">
+                            <option value="یک گزینه را انتخاب کنید">یک گزینه را انتخاب کنید</option>
+                            <option value="طراحی frontend">طراحی frontend</option>
+                            <option value="برنامه نویسی backend">برنامه نویسی backend</option>
+                            <option value="ایمن سازی وبسایت">ایمن سازی وبسایت</option>
+                            <option value="برنامه نویسی پایتون">برنامه نویسی پایتون</option>
+                            <option value="هک">هک</option>
+                            <option value="پردازش تصویر">پردازش تصویر</option>
+                        </select>
+                    </div>
+                    <div class="order-title">
+                        <h3>عنوان پروژه : </h3>
+                        <input type="text" placeholder="یک نام برای پروژه خود انتخاب کنید">
+                    </div>
+                    <div class="time">
+                        <h3>مهلت پروژه :</h3>
+                        <input type="text" placeholder="مهلت انجام پروژه را به روز وارد کنید">
+                    </div>
+                    <div class="budget">
+                        <h3>بودجه :</h3>
+                        <input type="text" placeholder="مبلغی که می خواهید برای پروژه بپردازید(تومان)">
 
+                    </div>
+                </div>
+                <div class="upload-section">
+                    <div class="upload-img">
+                        <div>
+                            <h3>تصاویر نمونه :</h3>
+                            <p>نمونه کارهایی که میخواهید پروژه تان شبیه آن شود</p>
+                        </div>
+                        <label for="file">upload images</label>
+                        <input type="file" id="file" accept="image/*">
+                    </div>
+                    <div class="img-receiver"></div>
                 </div>
             </div>
-            <div class="order-description">
-                <h3>توضیحات پروژه :</h3>
-                <textarea name="description" id="description" cols="30" rows="8"></textarea>
+            <div class="bottom-part">
+                <div class="order-description">
+                    <h3>توضیحات پروژه :</h3>
+                    <textarea name="description" id="description" cols="57" rows="8"></textarea>
+                </div>
+                <div class="skills">
+                    <h3>مهارت های مورد نیاز برای انجام پروژه :</h3>
+                    <div class="checkboxes">
+                        <label for="python">python
+                            <input type="checkbox" id="python">
+                        </label>
+
+                        <label for="html">html
+                            <input type="checkbox" id="html">
+                        </label>
+
+                        <label for="css">css
+                            <input type="checkbox" id="css">
+                        </label>
+
+                        <label for="javascript">javascript
+                            <input type="checkbox" id="javascript">
+                        </label>
+
+                        <label for="react">react
+                            <input type="checkbox" id="react">
+                        </label>
+
+                        <label for="node js">node js
+                            <input type="checkbox" id="node js">
+                        </label>
+                        <label for="node js">node js
+                            <input type="checkbox" id="node js">
+                        </label>
+                        <label for="node js">node js
+                            <input type="checkbox" id="node js">
+                        </label>
+                        <label for="node js">node js
+                            <input type="checkbox" id="node js">
+                        </label>
+                     
+
+                    </div>
+                </div>
             </div>
             <button>ثبت پروژه</button>
 
