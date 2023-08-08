@@ -380,13 +380,14 @@ body {
 .Sections_header {
     margin-top: 10px;
     width: 95%;
-    height: 40px;
+    height: 20px;
     float: right;
     text-align: right;
     font-size: 12px;
     display: flex;
+    padding-left: 20px;
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .firstpage {
@@ -624,8 +625,8 @@ option {
 }
 
 .activityDes {
-    color: white;
-    font-size: 14px;
+    color: black;
+    font-size: 12px;
     font-family: "vazir";
 }
 
@@ -662,12 +663,15 @@ option {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
+
     gap: 15px;
     box-sizing: border-box;
 }
 
 .main_Instructor {
     padding: 15px;
+    background-color: #58baab13;
+    border-radius: 10px;
 }
 
 .Instructor {
@@ -910,6 +914,7 @@ option {
     flex-direction: column;
     gap: 8px;
 }
+
 /*user profile styles end */
 
 .main-div {
@@ -933,6 +938,7 @@ option {
     padding: 10px;
     overflow-y: scroll;
 }
+
 .cards::-webkit-scrollbar {
     width: 10px;
     background-color: rgb(228, 225, 225);
@@ -999,12 +1005,12 @@ option {
     right: 8px;
     width: 30px;
     height: 30px;
-	flex-shrink: 0;
-	font-size: 1.25rem;
-	transition: .25s ease;
-	box-shadow: 0 0 0 1px rgba(#000, .05), 0 3px 8px 0 rgba(#000, .15);
-	z-index: 1;
-	cursor: pointer;
+    flex-shrink: 0;
+    font-size: 1.25rem;
+    transition: .25s ease;
+    box-shadow: 0 0 0 1px rgba(#000, .05), 0 3px 8px 0 rgba(#000, .15);
+    z-index: 1;
+    cursor: pointer;
     background-color: #FAFAFA;
     border: 1px solid #999;
     border-radius: 50%;
@@ -1021,12 +1027,12 @@ option {
     right: 8px;
     width: 30px;
     height: 30px;
-	flex-shrink: 0;
-	font-size: 1.25rem;
-	transition: .25s ease;
-	box-shadow: 0 0 0 1px rgba(#000, .05), 0 3px 8px 0 rgba(#000, .15);
-	z-index: 1;
-	cursor: pointer;
+    flex-shrink: 0;
+    font-size: 1.25rem;
+    transition: .25s ease;
+    box-shadow: 0 0 0 1px rgba(#000, .05), 0 3px 8px 0 rgba(#000, .15);
+    z-index: 1;
+    cursor: pointer;
     background-color: #FAFAFA;
     border: 1px solid #999;
     border-radius: 50%;
@@ -1096,10 +1102,11 @@ option {
     border-radius: 15px;
     cursor: pointer;
 }
+
 /* end of course-card by rastin design  */
 
 /* start of CourseDetails by rastin design */
-.CoursesDetails{
+.CoursesDetails {
     position: relative;
     width: 100%;
     height: 100%;
@@ -1107,16 +1114,17 @@ option {
     overflow-y: scroll;
 }
 
-.Course-poster img{
+.Course-poster img {
     position: absolute;
     top: 30px;
     right: 45px;
     height: 30vh;
     width: 75%;
-    border-radius:20px;
+    border-radius: 20px;
     z-index: 1;
 }
-.teacher{
+
+.teacher {
     position: absolute;
     right: 60px;
     top: 22%;
@@ -1128,7 +1136,7 @@ option {
     z-index: 999;
 }
 
-.teacher-pic img{
+.teacher-pic img {
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -1137,7 +1145,8 @@ option {
     top: 2%;
     right: 3%;
 }
-.teacher-info{
+
+.teacher-info {
     position: absolute;
     top: 21%;
     right: 3%;
@@ -1147,25 +1156,25 @@ option {
     direction: rtl;
 }
 
-.teacher-titr{
+.teacher-titr {
     margin-right: 3px;
     margin-top: 7px;
 }
 
-.teacher-description{
+.teacher-description {
     margin: 3px;
     margin-left: 6px;
     margin-top: 8px;
     font-size: 12px;
 }
 
-.chapter-summery{
+.chapter-summery {
     position: absolute;
     top: 40%;
     right: 22%;
     width: 750px;
     height: 200px;
-    background-image: linear-gradient(to right, rgba(201, 201, 201, 0.1),  rgba(201, 201, 201, 0.4),  rgba(201, 201, 201, 0.1));
+    background-image: linear-gradient(to right, rgba(201, 201, 201, 0.1), rgba(201, 201, 201, 0.4), rgba(201, 201, 201, 0.1));
     line-height: 20px;
     font-family: "vazir";
     color: black;
@@ -1173,7 +1182,7 @@ option {
     padding: 15px 15px;
 }
 
-.chapter-summery p{
+.chapter-summery p {
     margin-top: 7px;
     font-family: "vazir";
     color: black;
@@ -1181,7 +1190,7 @@ option {
     font-size: 14px;
 }
 
-.chapters-section{
+.chapters-section {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1191,7 +1200,7 @@ option {
     direction: rtl;
 }
 
-.chapter{
+.chapter {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -1206,11 +1215,11 @@ option {
     font-family: "vazir";
 }
 
-.chapter:hover{
+.chapter:hover {
     transform: scale(1.02);
 }
 
-.chapter i{
+.chapter i {
     text-align: center;
     padding-top: 11px;
     padding-left: 3px;
@@ -1220,37 +1229,48 @@ option {
     height: 55px;
 }
 
-.chapter-header{
+.chapter-header {
     padding: 7px 0px;
     font-weight: 570;
 }
 
-.chapter-desc{
+.chapter-desc {
     font-size: 13px;
     color: #363636;
     padding-top: 5px;
 }
+
 /* end of CourseDetails by rastin design */
 
 
 /*  */
-.main-section{
-    display: flex;
-    flex-direction: column;
-    max-height: 70%;
+.main-section {
+    height: 100%;
     overflow-y: scroll;
 }
-.abzar-con{
-    width: 100%;
-    height: fit-content;
+
+.main-section::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(228, 225, 225);
+
+}
+
+.main-section::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    border-left: 0.1px solid white;
+    background-color: #636363;
+    cursor: pointer;
+
+}
+
+.abzar-con {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: right;
-    float: right;
 }
 
-.abzar-detail{
+.abzar-detail {
     position: absolute;
     right: 0;
     text-align: right;
@@ -1258,10 +1278,11 @@ option {
     padding-right: 20px;
 }
 
-.gray{
+.gray {
     color: rgb(108, 106, 106);
 }
-.tools{
+
+.tools {
     width: 65%;
     left: 55%;
     height: fit-content;
@@ -1276,7 +1297,8 @@ option {
     gap: 150px;
     transform: translateX(-50%);
 }
-.abzar{
+
+.abzar {
     top: 50%;
     position: relative;
     float: right;
@@ -1285,16 +1307,18 @@ option {
     flex-direction: row;
 }
 
-.abzar a{
+.abzar a {
     text-decoration: none;
 }
 
-.abzar-head{
+.abzar-head {
     direction: rtl;
 }
-.abzar-head h3{
+
+.abzar-head h3 {
     color: black;
 }
+
 /*  */
 
 @media only screen and (max-width:500px) {
