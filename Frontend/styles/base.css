@@ -395,8 +395,9 @@ body {
     top: 50px;
     position: relative;
     width: 80%;
-    height: 30%;
+    height: 65%;
     padding: 35px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -600,6 +601,7 @@ option {
 
 
 .big-activity {
+    margin-top: -30px;
     background-color: #58BAAB;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     width: 100%;
@@ -608,7 +610,7 @@ option {
 }
 
 .small-activity {
-    margin-top: -15px;
+    margin-top: -40px;
     padding: 15px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
     width: 48%;
@@ -1243,8 +1245,9 @@ option {
 /* end of CourseDetails by rastin design */
 
 
-/*  */
+/* start of system abzar by rastin design */
 .main-section {
+    position: relative;
     height: 100%;
     overflow-y: scroll;
 }
@@ -1264,6 +1267,12 @@ option {
 }
 
 .abzar-con {
+    width: 80%;
+    height: 60%;
+    left: 20%;
+    margin-right: 35px;
+    margin-bottom: 90px;
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -1275,30 +1284,34 @@ option {
     right: 0;
     text-align: right;
     float: right;
-    padding-right: 20px;
+    padding-right: 50px;
+    font-weight: bold;
 }
 
-.gray {
+.gray-a{
+    margin-top: 10px;
+    font-family: "vazir";
+    font-size: small;
     color: rgb(108, 106, 106);
 }
 
 .tools {
-    width: 65%;
-    left: 55%;
-    height: fit-content;
+    width: 85%;
+    left: 40%;
+    height: 40%;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: right;
     position: absolute;
     font-family: "vazir";
-    margin-top: 105px;
-    /* padding: 50px; */
-    gap: 150px;
+    gap: 80px;
     transform: translateX(-50%);
 }
 
 .abzar {
+    width: 150px;
+    height: 50px;
     top: 50%;
     position: relative;
     float: right;
@@ -1316,10 +1329,11 @@ option {
 }
 
 .abzar-head h3 {
+    font-size: medium;
     color: black;
 }
 
-/*  */
+/* end of system abzar by rastin design */
 
 /* ------------------------------ project order page styles is bellow here -----------------------------*/
 #header {
@@ -1519,7 +1533,6 @@ option {
 
     .firstpage {
         width: 100%;
-        left: 35px;
         left: 5px;
         align-items: center;
         padding: 10px;
@@ -1567,8 +1580,8 @@ option {
     }
 
     .activitybtn {
-        top: -700x;
-        left: -105px;
+        top: -600x;
+        left: -100px;
     }
 
     #current-activity {
@@ -1677,6 +1690,35 @@ option {
         flex-direction: column;
         right: 0;
         padding-left: 10px;
+    }
+
+    .abzar-con{
+        top: 805px;
+        width: 100%;
+        height: 80%;
+        left: 5px;
+    }
+
+    .tools{
+        height: 40%;
+        width: 80%;
+        gap: 60px;
+    }
+
+    .abzar{
+        width: 55px;
+    }
+
+    .abzar-head{
+        width: 90px;
+    }
+
+    .abzar-head h3 {
+        font-size: 13px;
+    }
+
+    .gray-a {
+        font-size: 10px;
     }
 
 }
