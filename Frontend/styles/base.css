@@ -1398,6 +1398,15 @@ option {
 
 }
 
+#orderType {
+    appearance: none;
+}
+
+.upload-img i {
+    height: fit-content;
+    font-size: x-large;
+}
+
 .top-part {
     display: flex;
     flex-direction: row-reverse;
@@ -1431,6 +1440,20 @@ option {
     font-family: "vazir";
 }
 
+.order-title input:focus,
+.order-description textarea:focus,
+.time input:focus,
+.budget input:focus {
+    border: 1px solid #58BAAB;
+}
+
+.order-title input:hover,
+.order-description textarea:hover,
+.time input:hover,
+.budget input:hover {
+    background-color: #58baab1f;
+}
+
 .order-description textarea {
     width: 100%;
 }
@@ -1444,12 +1467,18 @@ option {
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-details button:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.329);
+    color: white;
 }
 
 .upload-img {
     direction: rtl;
     display: flex;
-    gap: 50px;
+    gap: 40px;
 }
 
 .upload-img input {
@@ -1464,7 +1493,12 @@ option {
     border-radius: 10px;
     cursor: pointer;
     color: white;
-    padding: 10px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.upload-img label:hover {
+    background-color: #ffadad;
 }
 
 .img-receiver {
@@ -1497,6 +1531,11 @@ option {
     gap: 20px;
     font-size: medium;
     font-family: cursive;
+}
+
+input[type=checkbox]:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 
@@ -1678,5 +1717,72 @@ option {
         right: 0;
         padding-left: 10px;
     }
+
+    #header {
+        width: 100%;
+        z-index: 1;
+        top: 0;
+        right: 0;
+    }
+
+    .project-title {
+        top: 80px;
+    }
+
+    .order-details {
+        width: 100%;
+        margin-right: 10px;
+    }
+
+    .type,
+    .order-title,
+    .time,
+    .budget {
+        font-size: medium;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .type select,
+    .order-title input,
+    .time input,
+    .budget input {
+        width: 250px;
+        height: 40px;
+    }
+
+    .order-description textarea {
+        width: 95%;
+    }
+
+    .upload-section {
+        width: 95%;
+        gap: 5px;
+        margin-bottom: 20px;
+        font-size: medium;
+    }
+
+    .upload-img label {
+        direction: ltr;
+    }
+
+    .upload-section .img-receiver {
+        height: 20vh;
+    }
+    .order-description{
+        font-size: medium;
+    }
+    .order-details button{
+        width: 95%;
+        position: relative;
+        margin-bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .skills{
+        width: 100%;
+        font-size: medium;
+    }
+
 
 }
