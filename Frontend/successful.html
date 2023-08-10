@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Frontend/styles/base.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <title>نتیجه پرداخت</title>
+</head>
+
+<body>
+    <main class="container">
+        <!--start side menu made by Saba -->
+        <div class="side-menu" id="menu">
+
+            <div class="items">
+                <div class="item">
+                    <i class="uil uil-create-dashboard"></i>
+                    <a href="#">داشبورد</a>
+                </div>
+                <div class="item">
+                    <i class="uil uil-book-reader"></i>
+                    <a href="#">کلاس های من</a>
+                </div>
+                <div class="item">
+                    <i class="uil uil-user"></i>
+                    <a href="#">مربیان</a>
+                </div>
+                <div class="item">
+                    <i class="uil uil-user-arrows"></i>
+                    <a href="#">چت گروهی </a>
+                </div>
+                <div class="item">
+                    <i class="uil uil-books"></i>
+                    <a href="#">درس ها</a>
+                </div>
+                <div class="item">
+                    <i class="uil uil-setting"></i>
+                    <a href="#">تنظیمات</a>
+                </div>
+
+            </div>
+            <div class="image">
+                <img src="/Frontend/images/JoineUs.png">
+                <button>عضویت در درس</button>
+            </div>
+
+        </div>
+        <div class="title" id="title">
+            <i class="uil uil-apps" id="menu-icon" onclick="openMenu()"></i>
+            <h1>amirooo</h1>
+        </div>
+        <div class="main-div">
+            <div class="payment-details">
+                <h1>پرداخت موفق</h1>
+                <h2>200000 تومان</h2>
+                <div class="date">
+                    <h3>تاریخ:</h3>
+                    <h3>2023/10/8</h3>
+                </div>
+                <div class="time">
+                    <h3>زمان:</h3>
+                    <h3>19:23</h3>
+                </div>
+                <div class="p-number">
+                    <h3>شماره پیگیری :</h3>
+                    <h3>546574654545</h3>
+                </div>
+                <div class="owner">
+                    <h3>نام پذیرنده :</h3>
+                    <h3> امیرحسین امیران</h3>
+                </div>
+                <div class="owner-code">
+                    <h3> کد پذیرنده :</h3>
+                    <h3>1321547454</h3>
+                </div>
+                <div class="card-number">
+                    <h3>شماره کارت :</h3>
+                    <h3>6037 99** **** 5898</h3>
+                </div>
+                <div class="payer">
+                    <h3>پرداخت کننده :</h3>
+                    <h3>علی محمدی</h3>
+                </div>
+                <div class="payment-code">
+                    <h3>شناسه پرداخت :</h3>
+                    <h3>465746545245</h3>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="/Frontend/images/successful.jpg">
+            </div>
+        </div>
+    </main>
+    <script>
+        let icon = document.getElementById("menu-icon")
+        let menu = document.getElementById("menu")
+
+        function openMenu() {
+            if (menu.style.width === "0px") {
+                menu.style.width = "300px";
+                menu.style.overflow = "visible";
+            }
+            else {
+                menu.style.width = "0px";
+                menu.style.overflow = "hidden"
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

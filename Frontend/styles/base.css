@@ -1288,7 +1288,7 @@ option {
     font-weight: bold;
 }
 
-.gray-a{
+.gray-a {
     margin-top: 10px;
     font-family: "vazir";
     font-size: small;
@@ -1552,6 +1552,61 @@ input[type=checkbox]:hover {
     transform: scale(1.1);
 }
 
+/* ---------------------------------successfull payment page styles-------------------------------------- */
+
+.main-div {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 0;
+    width: 80%;
+    height: 90%;
+    align-items: center;
+    margin: 20px;
+}
+
+.payment-details {
+    width: 50%;
+    height: fit-content;
+    font-size: medium;
+    color: black;
+    float: right;
+    font-family: "vazir-thin";
+    direction: rtl;
+    text-align: center;
+}
+.payment-details h1{
+    color: green;
+}
+.payment-details h2 {
+    margin-top: 20px;
+}
+.date {
+    margin-top: 20px;
+}
+
+.date,
+.time,
+.p-number,
+.owner,
+.owner-code,
+.card-number,
+.payer,
+.payment-code {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px dotted black;
+    padding: 5px;
+}
+
+.picture img {
+    width: 400px;
+    height: 300px;
+}
+
 
 
 
@@ -1782,40 +1837,43 @@ input[type=checkbox]:hover {
     .upload-section .img-receiver {
         height: 20vh;
     }
-    .order-description{
+
+    .order-description {
         font-size: medium;
     }
-    .order-details button{
+
+    .order-details button {
         width: 95%;
         position: relative;
         margin-bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
+        left: 50%;
+        transform: translateX(-50%);
     }
-    .skills{
+
+    .skills {
         width: 100%;
         font-size: medium;
     }
 
 
-    .abzar-con{
+    .abzar-con {
         top: 805px;
         width: 100%;
         height: 80%;
         left: 5px;
     }
 
-    .tools{
+    .tools {
         height: 40%;
         width: 80%;
         gap: 60px;
     }
 
-    .abzar{
+    .abzar {
         width: 55px;
     }
 
-    .abzar-head{
+    .abzar-head {
         width: 90px;
     }
 
@@ -1825,6 +1883,19 @@ input[type=checkbox]:hover {
 
     .gray-a {
         font-size: 10px;
+    }
+    .main-div{
+        height: fit-content;
+        margin-top: 100px;
+        width: 90%;
+    }
+    .payment-details{
+        width: 100%;
+    }
+    .picture img{
+        width: 330px;
+        height: 230px;
+        margin-top: 30px;
     }
 
 }
