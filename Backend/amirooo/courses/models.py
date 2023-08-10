@@ -27,3 +27,14 @@ class Prerequisite(CourseProperty):
 
 class Learning(CourseProperty):
     pass
+
+# Courses Video Model
+class Video(models.Model):
+    title = models.CharField(max_length=100, null=False)
+    course = models.ForeignKey(Course, null=False, on_delete=models.CASCADE)
+    serial_number = models.IntegerField()
+    video_file = models.FileField(upload_to="course/videos")
+    is_prwview = models.BooleanField(default=False)
+    
+    def __str__(self):
+        return self.title
