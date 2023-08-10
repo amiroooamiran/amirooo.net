@@ -1500,7 +1500,7 @@ option {
 .upload-img {
     direction: rtl;
     display: flex;
-    gap: 40px;
+    gap: 20px;
 }
 
 .upload-img input {
@@ -1596,7 +1596,7 @@ input[type=checkbox]:hover {
 }
 
 .date,
-.time,
+.clock,
 .p-number,
 .owner,
 .owner-code,
