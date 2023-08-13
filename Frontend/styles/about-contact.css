@@ -352,7 +352,6 @@ body {
     border-left: 0.1px solid white;
     background-color: #FF6D59;
     cursor: pointer;
-
 }
 
 .contact-section{
@@ -360,9 +359,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    position: absolute;
-    top: 32%;
-    right: 12%;
+    position: relative;
     direction: rtl;
 }
 
@@ -447,10 +444,11 @@ body {
     width: 33vw;
     height: 33vh;
     display: flex;
+    position: relative;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-around;
-    margin-top: 390px;
+    margin-top: 20px;
 }
 
 .social-media i{
