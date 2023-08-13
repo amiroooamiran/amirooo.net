@@ -369,14 +369,14 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    width: 450px;
     height: 100px;
     color: black;
     padding: 10px;
     background-color: white;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199) !important;
+    transform: scale(1.02) !important;
+    transition: 0.5s ease-in-out !important;
     border-radius: 15px;
-    transition: 0.5s;
     font-family: "vazir";
 }
 .chat{
@@ -385,14 +385,14 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    width: 450px;
     height: 100px;
     color: black;
     padding: 10px;
     background-color: white;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199) !important;
+    transform: scale(1.02) !important;
+    transition: 0.5s ease-in-out !important;
     border-radius: 15px;
-    transition: 0.5s;
     font-family: "vazir";
 }
 .email{
@@ -401,14 +401,14 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    width: 450px;
     height: 100px;
     color: black;
     padding: 10px;
     background-color: white;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199) !important;
+    transform: scale(1.02) !important;
+    transition: 0.5s ease-in-out !important;
     border-radius: 15px;
-    transition: 0.5s;
     font-family: "vazir";
 }
 
@@ -417,13 +417,13 @@ body {
     flex-direction: row;
 }
 .icon-contact{
-    font-size: 60px;
+    font-size: 65px;
     padding-top: 5px;
 }
 
 .contact-text{
-    margin-top: 15px;
-    padding-right: 15px;
+    margin-top: 20px;
+    padding-right: 17px;
 }
 
 .contact-btn{
