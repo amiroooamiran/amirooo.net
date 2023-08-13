@@ -1346,32 +1346,21 @@ option {
 
 /* ------------------------------ project order page styles is bellow here -----------------------------*/
 #header {
-    background-color: #999;
+    gap: 30px;
+    flex-direction: row-reverse;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: center;
     width: 80%;
-    height: 80px;
-    background-color: #f2f2f2;
-    left: 100%;
-    transform: translateX(-100%);
-    border-radius: 0 20px 0 0;
-    display: flex;
-    justify-content: space-between;
+    left: 20%;
+    transform: none;
 }
 
-#header .section-heder-two {
-    position: absolute;
-    left: 0;
-}
-
-.project-title {
-    direction: rtl;
+#header h1 {
     color: black;
-    right: 0;
     font-family: "vazir";
-    font-size: 1.5rem;
-    position: absolute;
-    padding-top: 8px;
-    right: 40px;
-
+    font-size: large;
+    direction: rtl;
 }
 
 .order-details {
@@ -1381,7 +1370,7 @@ option {
     margin-top: 100px;
     color: black;
     font-family: "vazir";
-    font-size: small;
+    font-size: 0.8rem;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1396,7 +1385,6 @@ option {
     justify-content: space-between;
     direction: rtl;
     text-align: right;
-
 }
 
 .order-description {
@@ -1404,11 +1392,26 @@ option {
     flex-direction: column;
     direction: rtl;
     gap: 10px;
+    width: 48%;
 }
 
+.order-description textarea {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    outline: none;
+    /* border: 1px solid #cac8c8; */
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.205);
+    font-size: 1rem;
+    padding: 5px;
+    direction: rtl;
+    font-family: "vazir";
+}
 
 .type select {
-    width: 400px;
+    width: 80%;
     background-color: white;
     border-radius: 10px;
     border: none;
@@ -1433,32 +1436,41 @@ option {
 .top-part {
     display: flex;
     flex-direction: row-reverse;
-    gap: 50px;
     flex-wrap: wrap;
     direction: ltr;
+    justify-content: space-between;
+    position: relative;
+    right: 0;
+    height: 30vh;
 }
 
 .top-right-part {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 10px;
     direction: rtl;
+    width: 48%;
+    height: 100%;
+    margin-top: 35px;
+}
+
+.upload-section {
+    width: 48%;
 }
 
 .order-title input,
-.order-description textarea,
 .time input,
 .budget input {
-    width: 400px;
+    width: 80%;
     background-color: white;
     border-radius: 10px;
     outline: none;
     /* border: 1px solid #cac8c8; */
     border: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.205);
-    font-size: medium;
+    font-size: 1rem;
     padding: 5px;
+    height: fit-content;
     direction: rtl;
     font-family: "vazir";
 }
@@ -1491,6 +1503,11 @@ option {
     padding: 5px;
     cursor: pointer;
     transition: 0.3s;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    width: 78%;
+    height: 5%;
 }
 
 .order-details button:hover {
@@ -1501,6 +1518,7 @@ option {
 .upload-img {
     direction: rtl;
     display: flex;
+    justify-content: space-between;
     gap: 20px;
 }
 
@@ -1537,12 +1555,32 @@ option {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    gap: 50px;
+    justify-content: space-between;
+    height: 35vh;
 }
 
 .skills {
     direction: rtl;
-    width: 40%;
+    width: 48%;
+}
+
+.skills input[type="button"] {
+    border: none;
+    background-color: #58BAAB;
+    font-family: "vazir";
+    font-size: 0.9rem;
+    margin-top: 60px;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.37);
+    transition: 0.5s;
+}
+
+.skills input[type="button"]:hover {
+    background-color: white;
+    color: black;
 }
 
 .checkboxes {
@@ -1586,12 +1624,15 @@ input[type=checkbox]:hover {
     direction: rtl;
     text-align: center;
 }
-.payment-details h1{
+
+.payment-details h1 {
     color: green;
 }
+
 .payment-details h2 {
     margin-top: 20px;
 }
+
 .date {
     margin-top: 20px;
 }
@@ -1882,7 +1923,8 @@ input[type=checkbox]:hover {
     .abzar {
         width: 55px;
     }
-    .abzar{
+
+    .abzar {
         justify-content: center;
         align-items: center;
         width: 105px;
@@ -1900,15 +1942,18 @@ input[type=checkbox]:hover {
     .gray-a {
         font-size: 10px;
     }
-    .main-div{
+
+    .main-div {
         height: fit-content;
         margin-top: 100px;
         width: 90%;
     }
-    .payment-details{
+
+    .payment-details {
         width: 100%;
     }
-    .picture img{
+
+    .picture img {
         width: 330px;
         height: 230px;
         margin-top: 30px;
