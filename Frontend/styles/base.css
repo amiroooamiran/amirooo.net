@@ -1657,6 +1657,44 @@ input[type=checkbox]:hover {
     height: 300px;
 }
 
+.payment-details .pay-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.payment-details .pay-btns a {
+    text-decoration: none;
+    color: white;
+    background-color: #0E93B2;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    transform: scale(1);
+    margin-top: 10px;
+    
+}
+
+.factors {
+    margin-top: 2px;
+    background-color: #F85981;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    transform: scale(1);
+}
+
+.payment-details .pay-btns a:hover , .factors:hover{
+    font-weight: bolder;
+    transform: scale(0.98);
+}
+
 
 
 
