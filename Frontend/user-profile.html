@@ -68,44 +68,73 @@
 
         </div>
         <div class="main-div">
-        <div class="sidebar">
-            <h3>امتیازات و گواهینامه ها</h3>
-            <hr>
-            <ul>
-                <li>مدرک های من </li>
-                <li>مدرک های من </li>
-                <li>مدرک های من </li>
-                <li>مدرک های من </li>
-                <li>مدرک های من </li>
-            </ul>
+            <div class="sidebar">
+                <h3>امتیازات و گواهینامه ها</h3>
+                <hr>
+                <ul>
+                    <li>مدرک های من </li>
+                    <li>مدرک های من </li>
+                    <li>مدرک های من </li>
+                    <li>مدرک های من </li>
+                    <li>مدرک های من </li>
+                </ul>
+            </div>
+            <div class="profile-tabs">
+                <div class="profile-options">
+                    <a href="#" class="tabs active">دوره های من </a>
+                    <a href="#" class="tabs">دستاوردها</a>
+                    <a href="#" class="tabs">سوابق تراکنش ها</a>
+                    <a href="#" class="tabs">پیام ها</a>
+                </div>
+                <hr>
+                <div class="user-crs content active">
+                    <div class="crs">
+                        <img src="/Frontend/images/frontend.jpg" alt="">
+                        <div>
+                            <h2>آموزش پیشرفته html , css</h2>
+                            <div class="instructor">مدرس : امیرو</div>
+                            <div class="desc">در این دوره کار با المنت های مهم html و css که قابل پیاده اسزی در محیط کار
+                                است
+                                را آموزش می بینید .</div>
+                        </div>
+                    </div>
+                    <div class="crs">
+                        <img src="/Frontend/images/backend.jpg" alt="">
+                        <div>
+                            <h2>دوره صفر تا صد React</h2>
+                            <div class="instructor">مدرس : امیرو</div>
+                            <div class="desc">ریکت یکی از مقید ترین و پر استفاده رین کتابخانه جاوااسکریپت است که برای
+                                طراحی
+                                frontend از آن استفاده میشود که در این دوره هر آنچه باید درباره ریکت بدانید هست !!!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="crs">
+                        <img src="/Frontend/images/backend.jpg" alt="">
+                        <div>
+                            <h2>دوره صفر تا صد React</h2>
+                            <div class="instructor">مدرس : امیرو</div>
+                            <div class="desc">ریکت یکی از مقید ترین و پر استفاده رین کتابخانه جاوااسکریپت است که برای
+                                طراحی
+                                frontend از آن استفاده میشود که در این دوره هر آنچه باید درباره ریکت بدانید هست !!!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>دستاورد ها</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae doloremque necessitatibus delectus pariatur sunt quod excepturi! Doloremque delectus voluptatum adipisci quam! Obcaecati velit maiores suscipit hic sint modi ipsam temporibus.</p>
+                </div>
+                <div class="content">
+                    <h3>سوابق تراکنش ها</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae doloremque necessitatibus delectus pariatur sunt quod excepturi! Doloremque delectus voluptatum adipisci quam! Obcaecati velit maiores suscipit hic sint modi ipsam temporibus.</p>
+                </div>
+                <div class="content">
+                    <h3>پیام ها</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae doloremque necessitatibus delectus pariatur sunt quod excepturi! Doloremque delectus voluptatum adipisci quam! Obcaecati velit maiores suscipit hic sint modi ipsam temporibus.</p>
+                </div>
+            </div>
         </div>
-        <div class="user-crs">
-            <div class="crs">
-                <img src="/Frontend/images/frontend.jpg" alt="">
-                <div>
-                    <h2>آموزش پیشرفته html , css</h2>
-                    <div class="instructor">مدرس : امیرو</div>
-                    <div class="desc">در این دوره کار با المنت های مهم html و css که قابل پیاده اسزی در محیط کار است را آموزش می بینید .</div>
-                </div>
-            </div>
-            <div class="crs">
-                <img src="/Frontend/images/backend.jpg" alt="">
-                <div>
-                    <h2>دوره صفر تا صد React</h2>
-                    <div class="instructor">مدرس : امیرو</div>
-                    <div class="desc">ریکت یکی از مقید ترین و پر استفاده رین کتابخانه جاوااسکریپت است که برای طراحی frontend از آن استفاده میشود که در این دوره هر آنچه باید درباره ریکت بدانید هست !!!</div>
-                </div>
-            </div>
-            <div class="crs">
-                <img src="/Frontend/images/backend.jpg" alt="">
-                <div>
-                    <h2>دوره صفر تا صد React</h2>
-                    <div class="instructor">مدرس : امیرو</div>
-                    <div class="desc">ریکت یکی از مقید ترین و پر استفاده رین کتابخانه جاوااسکریپت است که برای طراحی frontend از آن استفاده میشود که در این دوره هر آنچه باید درباره ریکت بدانید هست !!!</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     </main>
@@ -126,6 +155,18 @@
             }
 
         }
+
+        const tabs = document.querySelectorAll(".tabs");
+        const content = document.querySelectorAll(".content");
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', (e) => {
+                tabs.forEach(tab => { tab.classList.remove('active') });
+                tab.classList.add('active');
+
+                content.forEach(con => { con.classList.remove('active') });
+                content[index].classList.add('active');
+            })
+        })
     </script>
 </body>
 

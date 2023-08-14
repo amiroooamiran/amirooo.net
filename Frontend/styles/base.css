@@ -790,7 +790,7 @@ option {
 
 /* end of first page by rastin design */
 
-/*user profile styles start */
+/*----------------------------------user profile styles start--------------------------------------- */
 .poster img {
     position: absolute;
     top: 0;
@@ -823,10 +823,10 @@ option {
 
 .sidebar {
     position: absolute;
-    right: 15px;
+    right: 0;
     top: 33%;
     width: 20%;
-    height: 65%;
+    height: 72%;
     border-radius: 20px 0 20px 0;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
 }
@@ -871,19 +871,70 @@ option {
     background-color: #FDBBBD;
 }
 
+.profile-tabs {
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    width: 56vw;
+    height: 62vh;
+    position: absolute;
+    right: 22%;
+    top: 33%;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+
+.profile-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.profile-options a {
+    text-decoration: none;
+    color: black;
+    font-family: "vazir";
+    font-size: large;
+    padding: 10px;
+    position: relative;
+}
+
+.profile-options a:hover {
+    border-bottom: 3px solid #f06e6e;
+    color: #f06e6e;
+}
+
 .user-crs {
     display: flex;
     flex-direction: column;
     gap: 20px;
     position: absolute;
-    right: 22%;
-    top: 33%;
+    top: 12%;
     direction: rtl;
     width: 55vw;
-    max-height: 60vh;
+    max-height: 54vh;
     overflow-y: scroll;
     padding: 10px;
 
+}
+
+.content {
+    display: none;
+    color: black;
+    font-family: "vazir";
+}
+
+.profile-options .tabs.active {
+    color: #f06e6e;
+}
+
+.profile-tabs .content.active {
+    display: block;
 }
 
 .user-crs::-webkit-scrollbar {
@@ -931,8 +982,6 @@ option {
     gap: 8px;
 }
 
-/*user profile styles end */
-
 .main-div {
     display: flex;
     flex-direction: row;
@@ -940,6 +989,10 @@ option {
     flex-wrap: wrap;
 
 }
+
+/*user profile styles end */
+
+
 
 /* start of course-card by rastin design  */
 .product-card-header{
@@ -1437,32 +1490,21 @@ option {
 
 /* ------------------------------ project order page styles is bellow here -----------------------------*/
 #header {
-    background-color: #999;
+    gap: 30px;
+    flex-direction: row-reverse;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: center;
     width: 80%;
-    height: 80px;
-    background-color: #f2f2f2;
-    left: 100%;
-    transform: translateX(-100%);
-    border-radius: 0 20px 0 0;
-    display: flex;
-    justify-content: space-between;
+    left: 20%;
+    transform: none;
 }
 
-#header .section-heder-two {
-    position: absolute;
-    left: 0;
-}
-
-.project-title {
-    direction: rtl;
+#header h1 {
     color: black;
-    right: 0;
     font-family: "vazir";
-    font-size: 1.5rem;
-    position: absolute;
-    padding-top: 8px;
-    right: 40px;
-
+    font-size: large;
+    direction: rtl;
 }
 
 .order-details {
@@ -1472,7 +1514,7 @@ option {
     margin-top: 100px;
     color: black;
     font-family: "vazir";
-    font-size: small;
+    font-size: 0.8rem;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1487,7 +1529,6 @@ option {
     justify-content: space-between;
     direction: rtl;
     text-align: right;
-
 }
 
 .order-description {
@@ -1495,11 +1536,26 @@ option {
     flex-direction: column;
     direction: rtl;
     gap: 10px;
+    width: 48%;
 }
 
+.order-description textarea {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    outline: none;
+    /* border: 1px solid #cac8c8; */
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.205);
+    font-size: 1rem;
+    padding: 5px;
+    direction: rtl;
+    font-family: "vazir";
+}
 
 .type select {
-    width: 400px;
+    width: 80%;
     background-color: white;
     border-radius: 10px;
     border: none;
@@ -1524,32 +1580,41 @@ option {
 .top-part {
     display: flex;
     flex-direction: row-reverse;
-    gap: 50px;
     flex-wrap: wrap;
     direction: ltr;
+    justify-content: space-between;
+    position: relative;
+    right: 0;
+    height: 30vh;
 }
 
 .top-right-part {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 10px;
     direction: rtl;
+    width: 48%;
+    height: 100%;
+    margin-top: 35px;
+}
+
+.upload-section {
+    width: 48%;
 }
 
 .order-title input,
-.order-description textarea,
 .time input,
 .budget input {
-    width: 400px;
+    width: 80%;
     background-color: white;
     border-radius: 10px;
     outline: none;
     /* border: 1px solid #cac8c8; */
     border: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.205);
-    font-size: medium;
+    font-size: 1rem;
     padding: 5px;
+    height: fit-content;
     direction: rtl;
     font-family: "vazir";
 }
@@ -1582,6 +1647,11 @@ option {
     padding: 5px;
     cursor: pointer;
     transition: 0.3s;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    width: 78%;
+    height: 5%;
 }
 
 .order-details button:hover {
@@ -1592,6 +1662,7 @@ option {
 .upload-img {
     direction: rtl;
     display: flex;
+    justify-content: space-between;
     gap: 20px;
 }
 
@@ -1628,12 +1699,32 @@ option {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    gap: 50px;
+    justify-content: space-between;
+    height: 35vh;
 }
 
 .skills {
     direction: rtl;
-    width: 40%;
+    width: 48%;
+}
+
+.skills input[type="button"] {
+    border: none;
+    background-color: #58BAAB;
+    font-family: "vazir";
+    font-size: 0.9rem;
+    margin-top: 60px;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.37);
+    transition: 0.5s;
+}
+
+.skills input[type="button"]:hover {
+    background-color: white;
+    color: black;
 }
 
 .checkboxes {
@@ -1677,12 +1768,15 @@ input[type=checkbox]:hover {
     direction: rtl;
     text-align: center;
 }
-.payment-details h1{
+
+.payment-details h1 {
     color: green;
 }
+
 .payment-details h2 {
     margin-top: 20px;
 }
+
 .date {
     margin-top: 20px;
 }
@@ -1705,6 +1799,45 @@ input[type=checkbox]:hover {
 .picture img {
     width: 400px;
     height: 300px;
+}
+
+.payment-details .pay-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.payment-details .pay-btns a {
+    text-decoration: none;
+    color: white;
+    background-color: #0E93B2;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    transform: scale(1);
+    margin-top: 10px;
+
+}
+
+.factors {
+    margin-top: 2px;
+    background-color: #F85981;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    transform: scale(1);
+}
+
+.payment-details .pay-btns a:hover,
+.factors:hover {
+    font-weight: bolder;
+    transform: scale(0.98);
 }
 
 
@@ -1899,16 +2032,21 @@ input[type=checkbox]:hover {
     .sidebar {
         width: 97%;
         position: relative;
-        top: 280px;
+        top: 150px;
         right: 0;
     }
 
-    .user-crs {
-        width: 97%;
+    
+    .profile-tabs {
+        width: 100%;
         position: relative;
-        top: 50vh;
+        top: 30vh;
         right: 0;
         padding: 0;
+    }
+    .user-crs{
+        width: 100%;
+        margin-top: 20px;
     }
 
     .main-div {
@@ -2002,6 +2140,11 @@ input[type=checkbox]:hover {
         right: -30%;
     }
 
+    .abzar {
+        width: 55px;
+    }
+
+    
     .abzar{
         justify-content: center;
         align-items: center;
@@ -2020,15 +2163,18 @@ input[type=checkbox]:hover {
     .gray-a {
         font-size: 10px;
     }
-    .main-div{
+
+    .main-div {
         height: fit-content;
         margin-top: 100px;
         width: 90%;
     }
-    .payment-details{
+
+    .payment-details {
         width: 100%;
     }
-    .picture img{
+
+    .picture img {
         width: 330px;
         height: 230px;
         margin-top: 30px;
