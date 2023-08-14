@@ -778,7 +778,7 @@ option {
 
 /* end of first page by rastin design */
 
-/*user profile styles start */
+/*----------------------------------user profile styles start--------------------------------------- */
 .poster img {
     position: absolute;
     top: 0;
@@ -811,10 +811,10 @@ option {
 
 .sidebar {
     position: absolute;
-    right: 15px;
+    right: 0;
     top: 33%;
     width: 20%;
-    height: 65%;
+    height: 72%;
     border-radius: 20px 0 20px 0;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
 }
@@ -859,19 +859,70 @@ option {
     background-color: #FDBBBD;
 }
 
+.profile-tabs {
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    width: 56vw;
+    height: 62vh;
+    position: absolute;
+    right: 22%;
+    top: 33%;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+
+.profile-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.profile-options a {
+    text-decoration: none;
+    color: black;
+    font-family: "vazir";
+    font-size: large;
+    padding: 10px;
+    position: relative;
+}
+
+.profile-options a:hover {
+    border-bottom: 3px solid #f06e6e;
+    color: #f06e6e;
+}
+
 .user-crs {
     display: flex;
     flex-direction: column;
     gap: 20px;
     position: absolute;
-    right: 22%;
-    top: 33%;
+    top: 12%;
     direction: rtl;
     width: 55vw;
-    max-height: 60vh;
+    max-height: 54vh;
     overflow-y: scroll;
     padding: 10px;
 
+}
+
+.content {
+    display: none;
+    color: black;
+    font-family: "vazir";
+}
+
+.profile-options .tabs.active {
+    color: #f06e6e;
+}
+
+.profile-tabs .content.active {
+    display: block;
 }
 
 .user-crs::-webkit-scrollbar {
@@ -919,8 +970,6 @@ option {
     gap: 8px;
 }
 
-/*user profile styles end */
-
 .main-div {
     display: flex;
     flex-direction: row;
@@ -928,6 +977,10 @@ option {
     flex-wrap: wrap;
 
 }
+
+/*user profile styles end */
+
+
 
 /* start of course-card by rastin design  */
 .cards {
@@ -1673,7 +1726,7 @@ input[type=checkbox]:hover {
     width: 100%;
     transform: scale(1);
     margin-top: 10px;
-    
+
 }
 
 .factors {
@@ -1690,7 +1743,8 @@ input[type=checkbox]:hover {
     transform: scale(1);
 }
 
-.payment-details .pay-btns a:hover , .factors:hover{
+.payment-details .pay-btns a:hover,
+.factors:hover {
     font-weight: bolder;
     transform: scale(0.98);
 }
@@ -1857,16 +1911,21 @@ input[type=checkbox]:hover {
     .sidebar {
         width: 97%;
         position: relative;
-        top: 280px;
+        top: 150px;
         right: 0;
     }
 
-    .user-crs {
-        width: 97%;
+    
+    .profile-tabs {
+        width: 100%;
         position: relative;
-        top: 50vh;
+        top: 30vh;
         right: 0;
         padding: 0;
+    }
+    .user-crs{
+        width: 100%;
+        margin-top: 20px;
     }
 
     .main-div {
