@@ -317,7 +317,7 @@ body {
 
 .main-banner .banner-title h2 {
     text-align: right;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .main-banner .banner-title span {
@@ -333,29 +333,28 @@ body {
 .we-options {
     display: flex;
     flex-direction: row-reverse;
-    gap: 60px;
+    gap: 50px;
     position: relative;
-    left: 4%;
-    top: 55px;
-    justify-content: center;
+    float: left;
+    margin-left: 25px;
+    width: fit-content;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .we-options .options {
     align-items: center;
-    width: 100%;
+    width: 25%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    justify-content: space-around;
     cursor: pointer;
 }
 
 .we-options .options>div {
     display: flex;
     flex-direction: column;
-}
-
-.we-options .options>div:nth-child(2) {
-    margin-left: -15px;
-
 }
 
 .we-options .options img {
@@ -365,23 +364,27 @@ body {
     top: 28%;
     padding: 10px;
     border-radius: 15px;
-    width: 50px;
+    width: 3.5vw;
     transform: translate(-50%);
 }
 
 .we-options .options p {
     direction: ltr;
     position: relative;
-    left: 70px;
+    width: 5vw;
+    height: fit-content;
+    right: 17px;
     font-size: x-small;
     color: black;
-    font-family: "vazir";
+    font-family: vazir;
 }
 
 .we-options .options span {
     direction: ltr;
     position: relative;
-    left: 70px;
+    width: 5vw;
+    height: fit-content;
+    right: 17px;
     font-size: x-small;
     color: black;
     font-family: "vazir";
@@ -422,10 +425,6 @@ h2 {
     color: black;
 }
 
-#allcourses {
-    width: 90px;
-}
-
 #popular-courses {
     width: 37%;
     padding: 15px;
@@ -438,18 +437,20 @@ h2 {
 }
 
 #courses-dropdown {
-    margin-top: 0px;
-    float: left;
+    justify-content: left !important;
+    margin-top: 0px !important;
+    float: left !important;
 }
 
 select {
-    margin: 50px;
-    width: 130px;
-    padding: 5px 35px 5px 5px;
-    font-size: 16px;
+    margin: 0px !important;
+    margin-left: 0px !important;
+    width: fit-content !important;
+    height: 34px !important;
+    padding: 5px 10px 5px 0px !important;
+    font-size: 13px;
     border: 1px solid #ccc;
     background-color: #f2f2f2;
-    height: 34px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -710,10 +711,11 @@ option {
     font-family: "vazir-light";
     direction: rtl;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 #seeAll:hover {
-    color: rgb(28, 28, 158);
+    color: #253298;
 }
 
 .Instructor:hover {
@@ -1398,6 +1400,7 @@ option {
     height: 100%;
     overflow-y: auto;
     direction: rtl;
+    overflow-y: scroll;
 }
 
 .main-section::-webkit-scrollbar {
@@ -1858,10 +1861,16 @@ input[type=checkbox]:hover {
         padding: 0;
     }
 
-    .firstpage {
+    .main-section {
         width: 100%;
+    }
+    
+    .firstpage {
+        width: 95%;
         left: 5px;
+        right: 0;
         align-items: center;
+        margin-right: 0;
         padding: 10px;
     }
 
@@ -1925,18 +1934,47 @@ input[type=checkbox]:hover {
     }
 
     .main-banner {
-        width: 100%;
+        width: 95%;
         height: fit-content;
         top: 60px;
         padding: 0;
-        right: -95px;
+        right: 0;
         left: 0;
+        margin-right: 0;
+        padding: 10px;
+        transform: translateX(0%);
     }
 
     .main-banner .banner-title {
         right: 0;
     }
 
+    .we-options {
+        flex-wrap: wrap;
+        top: 0px;
+        left: 15%;
+        width: 95%;
+        height: 20vh;
+        padding: 5px;
+        right: 5%;
+        gap: 50px;
+    }
+    
+    .we-options .options{
+        width: 29vw;
+        height: 5vh;
+    }
+
+    .we-options .options img {
+        left: 40%;
+        background-color: #F6BA05;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+        top: 28%;
+        padding: 10px;
+        border-radius: 15px;
+        width: 12vw;
+        transform: translate(0%);
+    }
     .we-options .options p {
         left: 85px;
     }
@@ -1944,11 +1982,7 @@ input[type=checkbox]:hover {
     .we-options .options span {
         left: 85px;
     }
-    .we-options {
-        padding: 5px;
-        right: 5%;
-    }
-    
+
     .header_section {
         flex-direction: column-reverse;
         height: 19vh;
@@ -1981,18 +2015,6 @@ input[type=checkbox]:hover {
         margin-top: 200px;
         width: 90% !important;
         margin-right: 10px !important;
-    }
-
-    .we-options {
-        flex-wrap: wrap;
-        width: 100%;
-        top: 40px;
-        margin-bottom: 70px;
-        left: 15%;
-    }
-
-    .options {
-        width: fit-content !important;
     }
 
     .cards {
@@ -2128,9 +2150,11 @@ input[type=checkbox]:hover {
     .abzar-con {
         position: relative;
         top: 925px;
-        width: 100%;
+        width: 88%;
         height: 80%;
         left: 5px;
+        right: 0;
+        margin-right: 0;
     }
 
     .tools {
