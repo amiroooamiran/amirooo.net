@@ -942,15 +942,28 @@ option {
 }
 
 /* start of course-card by rastin design  */
+.product-card-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 18vh;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    padding: 20px 40px;
+    color: #000;
+    font-family: "vazir";
+}
 .cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     float: right;
-    justify-content: flex-end;
+    justify-content: right;
     position: relative;
     width: 80%;
     height: 100%;
+    gap: 20px;
     padding: 10px;
     overflow-y: scroll;
     direction: rtl;
@@ -970,20 +983,21 @@ option {
 }
 
 .product-card {
-    width: 220px;
+    width: 24%;
     height: fit-content;
     position: relative;
     float: left;
     box-shadow: 0 2px 10px #999;
     margin: 50px auto;
+    padding: 15px;
     background: #fafafa;
     border-radius: 15px;
 }
 
 .badge {
     position: absolute;
-    left: 0;
-    top: 20px;
+    left: 18px;
+    top: 40px;
     z-index: 2;
     text-transform: uppercase;
     font-size: 11px;
@@ -992,15 +1006,16 @@ option {
     background: yellow;
     color: black;
     padding: 3px 10px;
+    margin-left: -3px;
 }
 
 .product-tumb {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 150px;
-    width: 220px;
-    border-radius: 15px 15px 0 0;
+    height: 160px;
+    width: 100%;
+    border-radius: 15px;
 }
 
 .product-tumb img {
@@ -1009,16 +1024,16 @@ option {
     justify-content: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 150px;
-    width: 220px;
+    height: 160px;
+    width: 100%;
+    border-radius: 15px;
     z-index: 1;
-    border-radius: 15px 15px 0 0;
 }
 
 .markbtn {
     position: absolute;
     top: 30px;
-    right: 8px;
+    right: 20px;
     width: 30px;
     height: 30px;
     flex-shrink: 0;
@@ -1040,7 +1055,7 @@ option {
 .likebtn {
     position: absolute;
     top: 65px;
-    right: 8px;
+    right: 20px;
     width: 30px;
     height: 30px;
     flex-shrink: 0;
@@ -1059,42 +1074,105 @@ option {
     background-color: rgb(246, 50, 50);
 }
 
+.level{
+    position: absolute;
+    width: 118px;
+    height: 25px;
+    top: 140px;
+    right: 25px;
+    padding: 1px 10px;
+    background-color: #FAFAFA;
+    border: 1px solid #999;
+    border-radius: 15px;
+    text-align: right;
+    z-index: 99;
+}
+
+.level p {
+    display: inline;
+    color: #000;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: "vazir";
+}
+
+.level i{
+    display: inline;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 5px;
+    padding: 0;
+    color: #000;
+    top: 5px;
+}
+
 .product-details {
-    height: 250px;
-    padding: 10px 20px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 0px;
 }
 
 .product-catagory {
     direction: rtl;
     display: block;
-    font-size: 11px;
+    position: relative;
+    font-size: 10px;
     font-weight: 700;
     font-family: "vazir";
     color: #999;
-    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .product-details h4 a {
     direction: rtl;
-    font-size: 16px;
+    font-size: 14.5px;
     font-weight: bold;
     font-family: "vazir";
     text-decoration: none;
     display: block;
-    margin-bottom: 10px;
     color: #363636;
     transition: 0.3s;
 }
 
 .product-details h4 a:hover {
-    color: #999;
+    color: #253298;
 }
 
+.product-owner{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:space-between;
+    align-items: center;
+    gap: 25px;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    float: left;
+    box-shadow: 0.2px 0.2px 1.5px rgba(0, 0, 0, 0.425);
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 3px;
+    top: -55px;
+}
+.product-owner img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.product-owner h5{
+    color: #000;
+    font-family: "vazir";
+    font-size: 12px;
+}
 .product-details p {
+    display: inline-block;
     direction: rtl;
     font-size: 12px;
     font-family: "vazir";
     line-height: 20px;
+    margin-top: -35px;
     margin-bottom: 10px;
     color: #999;
 }
@@ -1789,6 +1867,18 @@ input[type=checkbox]:hover {
         left: 50%;
         transform: translate(-50%);
         margin-top: 40px;
+    }
+
+    .product-card-header{
+        margin-top: 30px
+    }
+
+    .product-card {
+        width: 85%;
+    }
+
+    .product-owner{
+        margin-top: 5px;
     }
 
     .poster img {
