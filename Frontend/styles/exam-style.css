@@ -334,6 +334,87 @@ body {
     height: 350px;
 }
 
+.exam-head{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: small;
+    padding-bottom: 10px;
+    width: 75%;
+    position: absolute;
+    right: 20px;
+    top: 13vh;
+    font-family: "vazir";
+    border-bottom: 1px solid black;
+}
+
+
+
+.test-boxes{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    max-height: 75vh;
+    overflow-y: auto;
+    direction: rtl;
+    position: absolute;
+    right: 0;
+    top: 20vh;
+    padding: 20px;
+}
+.test-box{
+    width: 100%;
+    height: fit-content;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    background: rgb(229, 248, 250);
+    direction: rtl;
+    padding: 10px;
+    font-family: 'vazir';
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.test-boxes button{
+    background-color: #58BAAB;
+    border: none;
+    font-family: "vazir";
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.test-box p{
+    font-size: large;
+}
+.test-box .answers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.test-boxes::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    background-color: rgb(228, 225, 225);
+
+}
+
+.test-boxes::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    border-left: 0.1px solid white;
+    background-color: #FF6D59;
+    cursor: pointer;
+
+}
+
+
+
 @media only screen and (max-width:500px) {
 
     .container {
@@ -392,5 +473,14 @@ body {
         text-align: center;
         margin-top: 50px;
         gap: 30px;
+    }
+
+    .exam-head{
+        margin-top: 80px;
+    }
+    
+    .test-boxes{
+        width: 100%;
+        margin-top: 100px;
     }
 }
