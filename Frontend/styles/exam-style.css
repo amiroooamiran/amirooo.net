@@ -1,0 +1,396 @@
+@font-face {
+    font-family: "vazir";
+    src: url(/Frontend/fonts/Vazir.eot)format("eot"), url(/Frontend/fonts/Vazir.woff)format("woff"), url(/Frontend/fonts/Vazir.woff2)format("woff2");
+}
+
+@font-face {
+    font-family: "vazir-light";
+    src: url(/Frontend/fonts/Vazir-Light.eot)format("eot"), url(/Frontend/fonts/Vazir-Light.woff)format("woff"), url(/Frontend/fonts/Vazir-Light.woff2)format("woff2");
+}
+
+@font-face {
+    font-family: "vazir-medium";
+    src: url(/Frontend/fonts/Vazir-Medium.eot)format("eot"), url(/Frontend/fonts/Vazir-Medium.woff)format("woff"), url(/Frontend/fonts/Vazir-Medium.woff2)format("woff2");
+}
+
+@font-face {
+    font-family: "vazir-thin";
+    src: url(/Frontend/fonts/Vazir-Thin.eot)format("eot"), url(/Frontend/fonts/Vazir-Thin.woff)format("woff"), url(/Frontend/fonts/Vazir-Thin.woff2)format("woff2");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+/* end of projects needs */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(201, 201, 201);
+}
+
+/* start of side menu by saba */
+.container {
+    background-color: white;
+    width: 95%;
+    height: 95vh;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .title i {
+    font-size: 2rem;
+    color: #f06e6e;
+    cursor: pointer;
+}
+
+.container .title h1 {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.container .title {
+    padding: 20px;
+    font-size: small;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+}
+
+.side-menu {
+    width: 20%;
+    height: 100%;
+    background-color: #f2f2f2;
+    z-index: 998;
+    border-radius: 20px 0 0 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    float: left;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    transition: width .3s linear;
+
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    font-size: x-small;
+    gap: 10px;
+    z-index: 999;
+    margin-bottom: 20px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.title i {
+    font-size: x-large;
+    color: #f06e6e;
+    z-index: 999;
+}
+
+.items {
+    margin-bottom: 20px;
+    direction: rtl;
+    margin-top: 50px;
+}
+
+.item {
+    padding: 10px;
+    width: fit-content;
+    transition: 0.5s;
+    margin-right: 50px;
+}
+
+.item a {
+    text-decoration: none;
+    color: black;
+    font-family: "vazir";
+    font-size: small;
+}
+
+.item i {
+    font-size: large;
+    margin-right: 5px;
+    color: black;
+}
+
+.item:hover {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.089);
+}
+
+.image button {
+    position: absolute;
+    top: 80%;
+    left: 17%;
+    width: 50%;
+    padding: 7px;
+    border: none;
+    transition: 0.5s;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    font-family: "vazir-medium";
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.692);
+}
+
+.image button:hover {
+    color: #f06e6e;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.397);
+
+}
+
+.image {
+    height: 40vh;
+    position: relative;
+
+}
+
+.image img {
+    width: 85%;
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+}
+
+/* end of side menu by saba */
+
+/* Starting heder section by amiran */
+
+.header_section {
+    position: absolute;
+    transform: translateX(-50%);
+    padding: 2.5px;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    left: 50%;
+    padding-left: 25%;
+    text-align: center;
+    z-index: 989;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 25px 0px 0px 0px;
+}
+
+.header_section .section-heder-two {
+    display: flex;
+    gap: 15px;
+}
+
+.header_section .search {
+    font-size: larger;
+    position: relative;
+    top: 5px;
+    border-radius: 10px;
+}
+
+.header_section .search input {
+    width: 250px;
+    font-size: large;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    text-align: right;
+    direction: rtl;
+    border: none;
+    padding: 3px;
+    font-family: "vazir";
+}
+
+.header-section .search:hover {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+}
+
+.header_section .search i {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    color: black;
+}
+
+.header_section .icons {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    top: 10px;
+    padding: 5px;
+    font-size: larger;
+    color: black;
+    border-radius: 10px;
+}
+
+.header_section .user_profile {
+    display: flex;
+    position: relative;
+    right: 10px;
+    align-items: center;
+    text-align: left;
+    padding: 5px;
+    font-family: "vazir";
+    gap: 10px;
+    font-size: small;
+    color: black;
+
+    transition: 0.3s;
+}
+
+.header_section .user_profile:hover {
+    border-radius: 12px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+}
+
+.header_section .user_profile>div p {
+    position: relative;
+    top: 5px;
+}
+
+.header_section .user_profile>div span {
+    color: gray !important;
+    font-size: x-small;
+    position: relative;
+    top: -3px;
+}
+
+.header_section .user_profile .profile {
+    position: relative;
+    top: 3px;
+}
+
+.header_section .user_profile .profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+.exam-entry {
+    display: flex;
+    width: 80%;
+    padding: 20px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 20vh;
+}
+
+.right-part {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    direction: rtl;
+    text-align: justify;
+    font-family: "vazir";
+}
+
+.right-part button {
+    background: rgb(255, 200, 1);
+    background: linear-gradient(90deg, rgba(255, 200, 1, 1) 0%, rgba(88, 186, 171, 1) 56%, rgba(88, 186, 171, 1) 100%);
+    border: none;
+    padding: 5px;
+    font-size: medium;
+    font-family: "vazir";
+    border-radius: 10px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.right-part button:hover {
+    box-shadow: 2px 2px 3px rgb(88, 186, 171);
+}
+
+.right-part a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.right-part button i {
+    font-size: x-large;
+    color: white;
+}
+
+.left-part img {
+    width: 400px;
+    height: 350px;
+}
+
+@media only screen and (max-width:500px) {
+
+    .container {
+        padding: 0;
+        overflow-y: scroll;
+
+    }
+
+    .side-menu {
+        width: 0px;
+        overflow: hidden;
+        font-size: x-large;
+        padding: 0;
+    }
+
+    .header-section {
+        margin-bottom: 10%;
+    }
+
+    .header_section {
+        flex-direction: column-reverse;
+        height: 19vh;
+        width: 100vw;
+        top: 15px;
+        padding: 8px;
+        margin: 0;
+        position: relative;
+        right: 0;
+    }
+
+    .header_section .search input {
+        width: 85%;
+        height: 50px;
+    }
+
+    .header_section .search i {
+        font-size: xx-large;
+        left: 10%;
+        top: 8px;
+    }
+
+    .header_section .section-heder-two {
+        margin-left: 50%;
+        top: 10px;
+        width: fit-content;
+    }
+
+    .exam-entry {
+        padding: 0;
+        margin-right: 30px;
+        gap: 100px;
+    }
+
+    .right-part {
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+        gap: 30px;
+    }
+}
