@@ -1847,7 +1847,87 @@ input[type=checkbox]:hover {
     transform: scale(0.98);
 }
 
+/* ---------------------------------UNsuccessfull payment page styles-------------------------------------- */
 
+.un-main-div {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 0;
+    width: 80%;
+    height: 90%;
+    align-items: center;
+    margin: 20px;
+}
+
+.un-payment-details {
+    width: 50%;
+    height: fit-content;
+    font-size: medium;
+    color: black;
+    float: right;
+    font-family: "vazir-thin";
+    direction: rtl;
+    text-align: center;
+}
+
+.un-payment-details h1 {
+    color: red !important;
+}
+
+.un-payment-details h1 {
+    color: green;
+}
+
+.un-payment-details h2 {
+    margin-top: 20px;
+}
+
+.un-picture img {
+    width: 400px;
+    height: 380px;
+}
+
+.un-payment-details .pay-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.un-payment-details .pay-btns a {
+    text-decoration: none;
+    color: white;
+    background-color: #0E93B2;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    transform: scale(1);
+    margin-top: 10px;
+
+}
+
+.factors {
+    margin-top: 2px;
+    background-color: #F85981;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    transform: scale(1);
+}
+
+.un-payment-details .pay-btns a:hover,
+.factors:hover {
+    font-weight: bolder;
+    transform: scale(0.98);
+}
 
 
 @media only screen and (max-width:500px) {
@@ -2206,6 +2286,22 @@ input[type=checkbox]:hover {
         width: 330px;
         height: 230px;
         margin-top: 30px;
+    }
+
+    .un-main-div {
+        height: fit-content;
+        margin-top: 100px;
+        width: 90%;
+    }
+
+    .un-payment-details {
+        width: 100%;
+    }
+
+    .un-picture img {
+        width: 300px;
+        height: 300px;
+        margin-top: 15px;
     }
 
 }
