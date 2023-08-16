@@ -1874,13 +1874,15 @@ input[type=checkbox]:hover {
 }
 
 .un-payment-details h1 {
+    font-family: "vazir";
     color: red !important;
 }
 
-.un-payment-details h1 {
-    color: green;
+.un-payment-details p {
+    font-family: "vazir";
+    font-weight: 700;
+    color: red;
 }
-
 .un-payment-details h2 {
     margin-top: 20px;
 }
