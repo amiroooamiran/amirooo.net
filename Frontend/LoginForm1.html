@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <title>Login Form 1</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             font-family: "vazir";
+            overflow-y: hidden;
+            overflow-x: hidden;
         }
 
         @font-face {
@@ -36,6 +39,115 @@
             background-color: #f2f2f2;
         }
 
+        .LF-header_section {
+            position: relative;
+            padding: 2.5px;
+            padding-top: 7px;
+            width: 100%;
+            height: 8vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: center;
+            z-index: 989;
+            background-color: white;
+            border-radius: 20px 20px 0px 0px;
+            position: absolute;
+            justify-content: space-between;
+        }
+
+        .LF-header_section .title i {
+            font-size: 2rem;
+            color: #f06e6e;
+            cursor: pointer;
+        }
+
+        .LF-header_section .title h1 {
+            display: inline;
+            padding-left: 15px;
+            font-size: 1.5rem;
+            color: black;
+        }
+
+        .LF-header_section .title a{
+            text-decoration: none;
+        }
+
+        .LF-header_section .title {
+            font-size: small;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 12px;
+            left: 25px;
+        }
+
+
+        .LF-header_section .section-heder-two {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            gap: 15px;
+        }
+
+        .LF-header_section .icons {
+            display: flex;
+            gap: 15px;
+            position: absolute;
+            right: 160px;
+            top: 18px;
+            align-items: center;
+            justify-content: center; 
+            padding: 5px;
+            font-size: larger;
+            color: black;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .LF-header_section .user_profile {
+            display: flex;
+            position: absolute;
+            right: 0px;
+            align-items: center;
+            justify-content: right;
+            text-align: left;
+            padding: 5px;
+            margin-right: 35px;
+            font-family: "vazir";
+            gap: 10px;
+            font-size: small;
+            color: black;
+            transition: 0.3s;
+        }
+
+        .LF-header_section .user_profile:hover {
+            border-radius: 12px;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+        }
+
+        .LF-header_section .user_profile>div p {
+            position: relative;
+            top: 5px;
+        }
+
+        .LF-header_section .user_profile>div span {
+            color: gray !important;
+            font-size: x-small;
+            position: relative;
+            top: -3px;
+        }
+
+        .LF-header_section .user_profile .profile {
+            position: relative;
+            top: 3px;
+        }
+
+        .LF-header_section .user_profile .profile img {
+            width: 35px;
+            height: 35px;
+            border-radius: 10px;
+        }
         section {
             display: flex;
             justify-content: center;
@@ -144,6 +256,23 @@
             clip-path: ellipse(350px 350px at 10% 50%);
             height: 290px;
         }
+
+        .links{
+            width: 100%;
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            color: #F6BA05;
+            font-size: large;
+            font-family: "vazir";
+            font-weight: 500;
+        }
+
+        .links a{
+            text-decoration: none;
+            color: white;
+        }
+
     </style>
     <script>
         function toggle() {
@@ -157,6 +286,33 @@
 
 <body>
     <main class="container">
+        <!-- User Header Section -->
+        <div class="LF-header_section">
+            <div class="title" id="title">
+                <i class="uil uil-apps" id="menu-icon" onclick="openMenu()"></i>
+                <a href="base.html"><h1>amirooo</h1></a>
+            </div>
+            <div class="section-heder-two">
+                <div class="icons">
+                    <div>
+                        <i class="uil uil-envelope"></i>
+                    </div>
+                    <div>
+                        <i class="uil uil-bell"></i>
+                    </div>
+                </div>
+                <div class="user_profile">
+                    <div class="profile">
+                        <img src="https://cdn2.f-cdn.com/files/download/40990929/88eaef.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>amirooo</p>
+                        <span>@amirooo42</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of User Header Section by Amiran -->
         <section>
             <aside>
                 <div id="login" class="show">
@@ -188,6 +344,11 @@
                 </div>
             </aside>
         </section>
+        <div class="links">
+            <a href="#">راهنمای ثبت نام </a>|
+            <a href="#"> ارتباط با پشتیبانی </a>|
+            <a href="#"> ارتباط با سازندگان</a>
+        </div>
     </main>
 </body>
 
