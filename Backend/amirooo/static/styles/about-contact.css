@@ -1,26 +1,24 @@
 @font-face {
     font-family: "vazir";
-    src: url(/Frontend/fonts/Vazir.eot)format("eot"), url(/Frontend/fonts/Vazir.woff)format("woff"), url(/Frontend/fonts/Vazir.woff2)format("woff2");
+    src: url(../fonts/Vazir.eot)format("eot"), url(../fonts/Vazir.woff)format("woff"), url(../fonts/Vazir.woff2)format("woff2");
 }
 
 @font-face {
     font-family: "vazir-light";
-    src: url(/Frontend/fonts/Vazir-Light.eot)format("eot"), url(/Frontend/fonts/Vazir-Light.woff)format("woff"), url(/Frontend/fonts/Vazir-Light.woff2)format("woff2");
+    src: url(../fonts/Vazir-Light.eot)format("eot"), url(../fonts/Vazir-Light.woff)format("woff"), url(../fonts/Vazir-Light.woff2)format("woff2");
 }
 
 @font-face {
     font-family: "vazir-medium";
-    src: url(/Frontend/fonts/Vazir-Medium.eot)format("eot"), url(/Frontend/fonts/Vazir-Medium.woff)format("woff"), url(/Frontend/fonts/Vazir-Medium.woff2)format("woff2");
+    src: url(../fonts/Vazir-Medium.eot)format("eot"), url(../fonts/Vazir-Medium.woff)format("woff"), url(../fonts/Vazir-Medium.woff2)format("woff2");
 }
 
 @font-face {
     font-family: "vazir-thin";
-    src: url(/Frontend/fonts/Vazir-Thin.eot)format("eot"), url(/Frontend/fonts/Vazir-Thin.woff)format("woff"), url(/Frontend/fonts/Vazir-Thin.woff2)format("woff2");
+    src: url(../fonts/Vazir-Thin.eot)format("eot"), url(../fonts/Vazir-Thin.woff)format("woff"), url(../fonts/Vazir-Thin.woff2)format("woff2");
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-/* end of projects needs */
-
 * {
     margin: 0;
     padding: 0;
@@ -337,7 +335,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    height: 100px;
+    height: 60px;
     width: 32vw;
     color: black;
     padding: 10px;
@@ -354,7 +352,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    height: 100px;
+    height: 60px;
     width: 32vw;
     color: black;
     padding: 10px;
@@ -371,7 +369,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    height: 100px;
+    height: 60px;
     width: 32vw;
     color: black;
     padding: 10px;
@@ -388,7 +386,7 @@ body {
     flex-direction: row;
 }
 .icon-contact{
-    font-size: 65px;
+    font-size: 35px;
     padding-top: 5px;
 }
 

@@ -8,9 +8,9 @@
 
 @font-face {
   font-family: "vazir";
-  src: url(/Frontend/fonts/Vazir.eot) format("eot"),
-    url(/Frontend/fonts/Vazir.woff) format("woff"),
-    url(/Frontend/fonts/Vazir.woff2) format("woff2");
+  src: url(../fonts/Vazir.eot) format("eot"),
+    url(../fonts/Vazir.woff) format("woff"),
+    url(../fonts/Vazir.woff2) format("woff2");
 }
 
 .container {
