@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def Index(request):
     return render(request, 'Index/Index.html')
+
+def about(request):
+    return render(request, 'Index/about.html')
