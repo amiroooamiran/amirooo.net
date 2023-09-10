@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/about-contact.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dcea8a19ca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="https://icons8.com/icon/UNLQZThgLcfv/user-circle">
+    <title>amirooo.net Contact</title>
+</head>
+
+<body>
+    <main class="container">
+        <img class="bg-contact" src="{% static 'images/ContactUs-BG.jpg' %}">
+        <div class="contact-header">
+            <h1>با ما در ارتباط باشید</h1>
+            <h3>سؤالی دارید یا با مشکلی روبه‌رو شده‌اید؟ خوشحال می‌شویم با ما تماس بگیرید. ما هر روز هفته، از ۸ صبح تا ۱ بامداد به همه‌ی تلفن‌ها پاسخ می‌دهیم. به ایمیل‌ها معمولاً ظرف چهار ساعت، و در موارد استثنایی،‌ حداکثر یک روز کاری، رسیدگی می‌شود.</h3>
+            <div class="contact-section">
+                <div class="help-center">
+                    <div class="contact-detail">
+                        <i class="uil uil-question-circle icon-contact" style="color:#58BAAB;"></i>                    
+                        <h3 class="contact-text">پشتیبان آنلاین</h3>
+                    </div>
+                    <button class="contact-btn" style="font-size: 12px;font-weight: 900;" >با پشتیبان آنلاین تماس بگیرید</button>
+                </div>
+                <div class="chat">
+                    <div class="contact-detail">
+                        <i class="uil uil-comments icon-contact" style="color:#FB6B58;"></i>
+                        <h3 class="contact-text">چت</h3>
+                    </div>
+                    <button class="contact-btn">با ما چت کنید</button>
+                </div>
+                <div class="email">
+                    <div class="contact-detail">
+                        <i class="uil uil-envelope icon-contact" style="color:#F6BA05;"></i>
+                        <h3 class="contact-text">ایمیل</h3>
+                    </div>
+                    <button class="contact-btn">به ما ایمیل بزنید</button>
+                </div>
+            </div>
+            <div class="social-media">
+                <i class="uil uil-twitter-alt" style="color: #1D9BEA;"></i>
+                <i class="uil uil-instagram" style="color: #F600D2;"></i>
+                <i class="uil uil-telegram-alt" style="color: #26A4E2;"></i>
+                <i class="uil uil-reddit-alien-alt" style="color: #F74302;"></i>
+            </div>
+            <div class="Survey">
+                    <h2>دیدگاهتان را بیان کنید</h2><br>
+                    <p>نشانی ایمیل شما منتشر نخواهد شد. بخش های مورد نیاز علامت گذاری شده اند*</p><br>
+                    <div class="Survey-details">
+                    <label for="username">نام کاربری :</label>
+                    <input type="text" name="username" id="username" placeholder="نام کاربری خود را وارد کنید*"><br><br>
+                    <label for="email">ایمیل :</label>
+                    <input type="email" name="email" id="email" placeholder="ایمیل خود را وارد کنید*"><br><br>
+                    </div>
+                    <label for="comment">دیدگاه :</label>
+                    <textarea id="comment" name="comment" placeholder="دیدگاه خود را وارد کنید*"></textarea>
+                    <button type="submit" id="">ارسال دیدگاه</button>
+                </form>
+            </div>
+        </div>
+
+       
+
+
+
+        <!--start side menu made by Saba -->
+        {% include "../siedbar.html" %}
+        <!--end side menu made by Saba -->
+    </main>
+    <script>
+        const tabs=document.querySelectorAll(".tabs");
+        const content=document.querySelectorAll(".content");
+        tabs.forEach((tab , index)=>{
+            tab.addEventListener('click',(e)=>{
+                tabs.forEach(tab=>{tab.classList.remove('active')});
+                tab.classList.add('active');
+
+                content.forEach(con=>{con.classList.remove('active')});
+                content[index].classList.add('active');
+            })
+        })
+
+    </script>
+</body>
+
+</html>
