@@ -1073,7 +1073,7 @@ option {
 }
 
 .product-card {
-    width: 24%;
+    width: 27%;
     height: fit-content;
     position: relative;
     float: left;
@@ -1235,7 +1235,7 @@ option {
     justify-content:space-between;
     align-items: center;
     gap: 25px;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     position: relative;
     float: left;
@@ -1256,6 +1256,11 @@ option {
     font-family: "vazir";
     font-size: 12px;
 }
+.product-details .dic_course{
+    margin-top: 15px;
+    height: 50px;
+    position: relative;
+}
 .product-details p {
     display: inline-block;
     direction: rtl;
@@ -1264,6 +1269,16 @@ option {
     line-height: 20px;
     margin-top: -35px;
     margin-bottom: 10px;
+    color: #999;
+}
+
+.product-details .dic_course p {
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    direction: rtl;
+    font-size: 12px;
+    font-family: "vazir";
     color: #999;
 }
 
