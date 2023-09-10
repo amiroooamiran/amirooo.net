@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 
 # importing Cloud Librari 
-import cloudinary_storage
+import cloudinary
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.humanize',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -143,5 +144,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dykicmzym',
     'API_KEY': '355482681166642',
-    'API_SECRET': 'iMLjLiBh3EIYYVVTz128Lc'
+    'API_SECRET': '8bcr-iMLjLiBh3EIYYVVTz128Lc'
 }
