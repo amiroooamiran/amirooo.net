@@ -22,22 +22,47 @@
         <!--start side menu made by Saba -->
         {% include "../siedbar.html" %}
         <!--end side menu made by Saba -->
+        <div class="header_section">
+            <div class="search">
+                <input type="text">
+                <i class="uil uil-search-alt"></i>
+            </div>
+            <div class="section-heder-two">
+                <div class="icons">
+                    <div>
+                        <i class="uil uil-envelope"></i>
+                    </div>
+                    <div>
+                        <i class="uil uil-bell"></i>
+                    </div>
+                </div>
+                <div class="user_profile">
+                    <div class="profile">
+                        <img src="https://cdn2.f-cdn.com/files/download/40990929/88eaef.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>amirooo</p>
+                        <span>@amirooo42</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <!-- start of productCard by rastindesign -->
         <div class="cards">
             <div class="product-card-header">
-            <h2>دوره های برنامه نویسی</h2>
-            <h3>4,454,23 دانشجو</h3>
-            <div class="PC-Course-type">
-                <select name="CourseType" id="orderType">
-                    <option value="">تمام دوره ها</option>
-                    <option value="طراحی frontend">برنامه نویسی frontend</option>
-                    <option value="برنامه نویسی backend">برنامه نویسی backend</option>
-                    <option value="ایمن سازی وبسایت">ایمن سازی وبسایت</option>
-                    <option value="برنامه نویسی پایتون">برنامه نویسی پایتون</option>
-                    <option value="هک">هک و امنیت</option>
-                    <option value="پردازش تصویر">پردازش تصویر</option>
-                </select>
+                <h2 style="color:#fff;">دوره های برنامه نویسی</h2>
+                <h3>4,454,23 دانشجو</h3>
+                <div class="PC-Course-type">
+                    <select name="CourseType" id="orderType">
+                        <option value="">تمام دوره ها</option>
+                        <option value="طراحی frontend">برنامه نویسی frontend</option>
+                        <option value="برنامه نویسی backend">برنامه نویسی backend</option>
+                        <option value="ایمن سازی وبسایت">ایمن سازی وبسایت</option>
+                        <option value="برنامه نویسی پایتون">برنامه نویسی پایتون</option>
+                        <option value="هک">هک و امنیت</option>
+                        <option value="پردازش تصویر">پردازش تصویر</option>
+                    </select>
             </div>
             </div>
 
@@ -50,7 +75,7 @@
                 {% endif %}
                 <div class="product-tumb">
                     <img src="{{course.banner.url}}" alt="">
-                        <button class="markbtn"><i class="uil uil-star"></i></button>
+                        <button class="markbtn"><i class="uil uil-star"></i> <span>12</span> </button>
                         <button class="likebtn"><i class="uil uil-thumbs-up"></i></button>
                         <div class="level">
                             
