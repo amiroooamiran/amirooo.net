@@ -1010,22 +1010,24 @@ option {
 
 /* start of course-card by rastin design  */
 .product-card-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 18vh;
+    position: relative;
+    left: 40%;
+    top: 90px;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 180px;
+    border-radius: 30px;
     background-image: url(../images/banners/amirooo.net_courses.png);
-    border-radius: 10px;
-    padding: 20px 40px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199);
+    padding: 15px;
     color: #fff;
     font-family: "vazir";
 }
 
 .PC-Course-type select {
     position: absolute;
-    top: 90px;
-    left: 25px;
+    top: 130px;
+    left: 15px;
     margin: 0px !important;
     margin-left: 0px !important;
     width: fit-content;
@@ -1122,9 +1124,11 @@ option {
 
 .markbtn {
     position: absolute;
+    display: flex;
     top: 30px;
     right: 20px;
-    width: 30px;
+    text-align: center;
+    width: 60px;
     height: 30px;
     flex-shrink: 0;
     font-size: 1.25rem;
@@ -1134,7 +1138,20 @@ option {
     cursor: pointer;
     background-color: #FAFAFA;
     border: 1px solid #999;
-    border-radius: 50%;
+    border-radius: 20px;
+}
+
+.markbtn i{
+    position: relative;
+    top: 2px;
+    right: 5px;
+}
+
+.markbtn span{
+    position: relative;
+    font-size: large;
+    top: 4px;
+    right: 8px;
 }
 
 .markbtn:hover {
