@@ -5,6 +5,7 @@ from user.models import User
 class Course(models.Model):
     teacher = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length= 150, null=True)
+    name = models.CharField(max_length= 150, null=True)
     banner = models.ImageField(upload_to='course/', blank=True)
     description = HTMLField(null=True)
     price = models.IntegerField(default=0.0, null=False)
