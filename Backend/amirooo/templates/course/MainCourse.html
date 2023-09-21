@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load humanize %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dcea8a19ca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="https://icons8.com/icon/UNLQZThgLcfv/user-circle">
+    <title>amirooo.net about</title>
+</head>
+
+<body>
+    <main class="container">
+        <!--start side menu made by Saba -->
+        {% include "../siedbar.html" %}
+        <!--end side menu made by Saba -->
+        <div class="header_section">
+            <div class="search">
+                <input type="text">
+                <i class="uil uil-search-alt"></i>
+            </div>
+            <div class="section-heder-two">
+                <div class="icons">
+                    <div>
+                        <i class="uil uil-envelope"></i>
+                    </div>
+                    <div>
+                        <i class="uil uil-bell"></i>
+                    </div>
+                </div>
+                <div class="user_profile">
+                    <div class="profile">
+                        <img src="https://cdn2.f-cdn.com/files/download/40990929/88eaef.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>amirooo</p>
+                        <span>@amirooo42</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- start of productCard by rastindesign -->
+        <div class="cards">
+            <div class="product-card-header">
+                <h2 style="color:#fff;">دوره های برنامه نویسی</h2>
+                <h3>4,454,23 دانشجو</h3>
+                <div class="PC-Course-type">
+                    <select name="CourseType" id="orderType">
+                        <option value="">تمام دوره ها</option>
+                        <option value="طراحی frontend">برنامه نویسی frontend</option>
+                        <option value="برنامه نویسی backend">برنامه نویسی backend</option>
+                        <option value="ایمن سازی وبسایت">ایمن سازی وبسایت</option>
+                        <option value="برنامه نویسی پایتون">برنامه نویسی پایتون</option>
+                        <option value="هک">هک و امنیت</option>
+                        <option value="پردازش تصویر">پردازش تصویر</option>
+                    </select>
+            </div>
+            </div>
+
+            {% for course in courses %}
+            <div class="product-card">
+                {% if course.active == True %}
+                <div class="badge">درحال برگذاری</div>
+                {% else %}
+                <div class="badge">اتمام دوره</div>
+                {% endif %}
+                <div class="product-tumb">
+                    <img src="{{course.banner.url}}" alt="">
+                        <button class="markbtn"><i class="uil uil-star"></i> <span>12</span> </button>
+                        <button class="likebtn"><i class="uil uil-thumbs-up"></i></button>
+                        <div class="level">
+                            
+                            {% if course.length == 1 %}
+                            <p>مبتدی</p>
+                            <i class="uil uil-nerd"></i>
+
+                            {% elif course.length == 2 %}
+                            <p>متوسط</p>
+                            <i class="uil uil-nerd"></i>
+                            <i class="uil uil-nerd"></i>
+
+                            {% elif course.length == 3 %}
+                            <p>پیشرفته</p>
+                            <i class="uil uil-nerd"></i>
+                            <i class="uil uil-nerd"></i>
+                            <i class="uil uil-nerd"></i>
+                            {% endif %}
+                        </div>
+                    </div>
+                <div class="product-details">
+                    <span class="product-catagory">
+                        {% for tag in tags %}
+                            {% if tag.course.id == course.id %}
+                                {{tag.description}}
+                            {% endif %}
+                        {% endfor %}
+                    </span>
+                    <h4><a href="">{{course.title}}</a></h4>
+                    <br><br>
+                    <br><br>
+                    <div class="product-owner">
+                        <img src="{{course.teacher.Profile.url}}" alt="">
+                        <div>
+                            <h5>مدرس : {{course.teacher.Fullname}}</h5>
+                            <p>{{course.teacher.Nikname}}</p>
+                        </div>
+                    </div>
+                    <div class="dic_course">
+                        <p style="margin-top:0">{{course.description | truncatewords_html:15 | safe}}</p>
+                    </div>
+
+                    {% if course.discount != 0 %}
+                    <h4 style="text-decoration: line-through;" class="product-price" >قیمت دوره: {{course.price | intcomma}} تومان</h4>
+                    {% else %}
+                    <h4 class="product-price" >قیمت دوره: {{course.price | intcomma}} تومان</h4>
+                    {% endif %}
+                    
+                    {% if course.discount == 0 %}
+                    
+                    {% else %}
+                    <h4 class="product-price" style="color:red;">تخفیف: {{course.discount | intcomma}}%</h4>
+                    {% endif %}
+                    <button class="buybtn" style="background-color: #58BAAB;" >خرید دوره</button>
+                    <button class="buybtn" style="background-color: #FB6B58;margin-top:3px;" >
+                        <a style="color:#fff;text-decoration:none;" href="{% url "CoursesDetails" course.name %}">مشاهده دوره</a>
+                    </button>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <!-- end of cards by rastindesign -->
+    </main>
+</body>
+
+
+</html>
