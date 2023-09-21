@@ -1353,12 +1353,15 @@ cursor: pointer;
 
 .Course-poster img {
     position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0px;
-    right: 0px;
-    height: 30vh;
+    height: 50vh;
     width: 100%;
-    /* border-radius: 20px; */
+    border-top-right-radius: 22px;
     z-index: 1;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.258);
 }
 
 .CD-section{
@@ -1367,9 +1370,9 @@ cursor: pointer;
 
 .teacher {
     position: absolute;
-    right: 60px;
-    top: 22%;
-    width: 20%;
+    right: 50px;
+    top: 42%;
+    width: 23%;
     height: 60vh;
     border-radius: 20px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
@@ -1415,8 +1418,9 @@ cursor: pointer;
 
 .chapter-summery {
     position: absolute;
-    top: 40%;
+    top: 55%;
     right: 30%;
+    border-radius: 15px;
     width: 67%;
     height: fit-content;
     background-image: linear-gradient(to right, rgba(201, 201, 201, 0.1), rgba(201, 201, 201, 0.4), rgba(201, 201, 201, 0.1));
@@ -1443,8 +1447,9 @@ cursor: pointer;
     gap: 20px;
     position: absolute;
     right: 30%;
-    top: 595px;
+    top: 109%;
     direction: rtl;
+    padding-bottom: 25px;
 }
 
 .chapter {
@@ -1452,7 +1457,7 @@ cursor: pointer;
     flex-direction: row;
     gap: 20px;
     width: 100%;
-    height: 14vh;
+    height: 10vh;
     color: black;
     padding: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
