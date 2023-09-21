@@ -1,11 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
+from tinymce.models import HTMLField
 
 # Create your models here.
 class User (models.Model):
     Profile = models.ImageField(upload_to="profiles", default="defultProfile.jpg")
     User = models.ForeignKey(User, on_delete=models.CASCADE)
+    Bio = HTMLField(blank=True)
     Fullname = models.CharField(max_length=250, blank=True)
     Nikname = models.CharField(max_length=100, blank=True)
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
