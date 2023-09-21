@@ -13,8 +13,8 @@ class Course(models.Model):
     active = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)
     length = models.IntegerField(null=False)
-    likes = models.ManyToManyField(User, related_name='Likes')
-    Star = models.ManyToManyField(User, related_name='Star')
+    likes = models.ManyToManyField(User, related_name='Likes', blank=True)
+    Star = models.ManyToManyField(User, related_name='Star', blank=True)
 
     def __str__(self):
         return self.title
