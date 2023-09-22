@@ -11,6 +11,7 @@ class Course(models.Model):
     price = models.IntegerField(default=0.0, null=False)
     discount = models.IntegerField(null=False, default=0)
     active = models.BooleanField(default=False)
+    Bought = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)
     length = models.IntegerField(null=False)
     likes = models.ManyToManyField(User, related_name='Likes', blank=True)
