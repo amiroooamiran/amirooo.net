@@ -27,10 +27,16 @@
             <div class="CD-section">
                 <div class="teacher">
                     <div class="teacher-pic">
-                    <img src="{{ course.teacher.Profile.url}}" alt="">
+                        <div class="teacher-profile">
+                            <img src="{{ course.teacher.Profile.url}}" alt="">
+                            <div>
+                                <h5>{{course.teacher.Fullname}}</h5>
+                                <a href="mailto:{{course.teacher.Email}}">پست الکترونیک</a>
+                            </div>
+                        </div>
+                        <hr>
                         <div class="teacher-info">
-                            <h5>{{course.teacher.Fullname}}</h5>
-                            <h5>{{course.teacher.Email}}</h5>
+                            
                             <h4 class="teacher-titr">درباره مدرس</h4>
                             <div style="font-size:small;direction:rtl;padding:10px;">
                                 {{course.teacher.Bio | safe | truncatewords_html:75 }}</div>
@@ -46,46 +52,25 @@
                 </div>
     
                 <div class="chapters-section">
-                    <div class="chapter">
-                        <i class="uil uil-expand-alt" style="background-color: #58BAAB;"></i>
-                        <div>
-                            <h3 style="display:flex; gap:5px;"> فصل اول | <span style="font-size:small;margin-top:5px;">آشنایی با اجزا سایت</span></h3>
-                            
-                            <div class="chapter-desc">
-                                زمان مورد نیاز برای گذارندن دوره: 3 جلسه
+                   {% for chapters in chapter %}
+                    {% if chapters.course_id.id == course.id %}
+                        <div class="chapter">
+                            <i class="uil uil-expand-alt" style="background-color: #58BAAB;"></i>
+                            <div>
+                                <h3 style="display:flex; gap:5px;"> فصل {{chapters.chapter_id}} | <span style="font-size:small;margin-top:5px;">{{ chapters.title }}</span></h3>
+                                
+                                <div class="chapter-desc">
+                                    {% for videos in video %}
+                                        {% if videos.chapter.id == chapters.id %}
+                                         تعداد جلسات: {{ videos | length }} جلسه
+                                         {% endif %}
+                                    {% endfor %}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="chapter">
-                        <i class="uil uil-expand-alt" style="background-color: #FB6B58;"></i>
-                        <div>
-                            <h3>فصل دوم</h3>
-                            <div class="chapter-header">طراحی صفحه اول</div>
-                            <div class="chapter-desc">
-                                زمان مورد نیاز برای گذارندن دوره: 5 جلسه
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chapter">
-                        <i class="uil uil-expand-alt" style="background-color: #F6BA05;"></i>
-                        <div>
-                            <h3>فصل سوم</h3>
-                            <div class="chapter-header">استایل دهی صفحه اول</div>
-                            <div class="chapter-desc">
-                                زمان مورد نیاز برای گذارندن دوره: 5 جلسه
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chapter">
-                        <i class="uil uil-expand-alt" style="background-color: #FDBBBD;"></i>
-                        <div>
-                            <h3>فصل چهارم</h3>
-                            <div class="chapter-header">طراحی صفحه دوم</div>
-                            <div class="chapter-desc">
-                                زمان مورد نیاز برای گذارندن دوره: 4 جلسه
-                            </div>
-                        </div>
-                    </div>
+                    {% endif %}
+                   {% endfor %}
+
                 </div>
             </div>
         </div>    

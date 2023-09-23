@@ -14,8 +14,12 @@ def MainCourses(request):
 
 def CourseDitails(request, name):
     course = Course.objects.get(name=name)
+    chapter = Chapter.objects.all()
+    video = Video.objects.all()
 
     context={
-        'course' : course
+        'course' : course,
+        'chapter' : chapter,
+        'video' : video,
     }
     return render(request, 'course/CoursesDetails.html', context)

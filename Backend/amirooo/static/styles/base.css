@@ -1382,14 +1382,34 @@ cursor: pointer;
 
 .teacher-pic img {
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background-color: #58BAAB;
-    position: absolute;
+    position: relative;
     top: 2%;
     right: 3%;
 }
 
+.teacher-profile{
+    display: flex;
+    padding: 10px;
+    gap: 15px;
+    color: black;
+}
+
+.teacher-profile > div{
+    position: relative;
+    padding-top: 5px;
+}
+
+.teacher-profile h5{
+    font-family: "vazir";
+    font-size: larger !important;
+}
+.teacher-profile a{
+    color: gray;
+    font-family: "vazir";
+}
 .teacher-info {
     position: absolute;
     top: 21%;
