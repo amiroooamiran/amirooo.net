@@ -50,9 +50,9 @@ class Video(models.Model):
 
 class Chapter(models.Model):
     course_id = models.ForeignKey(Course, null=False, on_delete=models.CASCADE)
-    chapter_id = models.IntegerField(default=0)
-    chapter_title = models.CharField(max_length=300)
+    chapter_id = models.IntegerField(null=False, default=0)
+    title = models.CharField(max_length=300)
     chapter_videos = models.ManyToManyField(Video, blank=True)
 
     def __str__(self):
-        return self.chapter_id
+        return self.title
