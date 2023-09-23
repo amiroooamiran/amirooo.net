@@ -1,6 +1,8 @@
 from django.db import models
 from tinymce.models import HTMLField
 from user.models import User
+from django.core.files.storage import FileSystemStorage
+
 # Create your models here.
 class Course(models.Model):
     teacher = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
@@ -40,7 +42,7 @@ class Video(models.Model):
     course = models.ForeignKey(Course, null=False, on_delete=models.CASCADE)
     serial_number = models.IntegerField()
     resource = models.FileField(upload_to="course/resource", blank=True)
-    video_file = models.FileField(upload_to="course/videos")
+    video_file = models.FileField(upload_to=f'course/video')
     is_prwview = models.BooleanField(default=False)
     
     def __str__(self):
@@ -49,7 +51,7 @@ class Video(models.Model):
 class Chapter(models.Model):
     course_id = models.ForeignKey(Course, null=False, on_delete=models.CASCADE)
     chapter_id = models.IntegerField(default=0)
-    chapter_title = models.CharField(max_length=250)
+    chapter_title = models.CharField(max_length=300)
     chapter_videos = models.ManyToManyField(Video, blank=True)
 
     def __str__(self):
