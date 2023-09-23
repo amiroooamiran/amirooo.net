@@ -36,10 +36,19 @@ class Prerequisite(CourseProperty):
 class Learning(CourseProperty):
     pass
 
+# chapters Video
+class Chapter(models.Model):
+    course_id = models.ForeignKey(Course, null=False, on_delete=models.CASCADE)
+    chapter_id = models.IntegerField(null=False, default=0)
+    title = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.title
+
 # Courses Video Model
 class Video(models.Model):
     title = models.CharField(max_length=100, null=False)
-    course = models.ForeignKey(Course, null=False, on_delete=models.CASCADE)
+    chapter = models.ForeignKey(Chapter, null=False, on_delete=models.CASCADE)
     serial_number = models.IntegerField()
     resource = models.FileField(upload_to="course/resource", blank=True)
     video_file = models.FileField(upload_to=f'course/video')
@@ -48,11 +57,3 @@ class Video(models.Model):
     def __str__(self):
         return self.title
 
-class Chapter(models.Model):
-    course_id = models.ForeignKey(Course, null=False, on_delete=models.CASCADE)
-    chapter_id = models.IntegerField(null=False, default=0)
-    title = models.CharField(max_length=300)
-    chapter_videos = models.ManyToManyField(Video, blank=True)
-
-    def __str__(self):
-        return self.title

@@ -17,5 +17,13 @@ class CourseAdmin(admin.ModelAdmin):
     inlines = [TagAdmin, LearnAdmin, PrerequisiteAdmin]
 
 admin.site.register(Course, CourseAdmin)
-admin.site.register(Chapter)
-admin.site.register(Video)
+
+# Chapters and Video
+
+class VideoInline(admin.TabularInline):
+    model = Video
+
+class VideoAdmin(admin.ModelAdmin):
+    inlines = [VideoInline]
+
+admin.site.register(Chapter, VideoAdmin)
