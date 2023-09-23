@@ -50,23 +50,45 @@
                     <h4>مقدمه دوره:</h4>
                     {{ course.description | safe }}
                 </div>
-    
+
                 <div class="chapters-section">
                    {% for chapters in chapter %}
                     {% if chapters.course_id.id == course.id %}
                         <div class="chapter">
-                            <i class="uil uil-expand-alt" style="background-color: #58BAAB;"></i>
+                            <i class="uil uil-letter-english-a" style="background-color: rgb(0, 247, 0); border: 2px solid rgb(0, 75, 0);"></i>
                             <div>
                                 <h3 style="display:flex; gap:5px;"> فصل {{chapters.chapter_id}} | <span style="font-size:small;margin-top:5px;">{{ chapters.title }}</span></h3>
                                 
                                 <div class="chapter-desc">
-                                    {% for videos in video %}
-                                        {% if videos.chapter.id == chapters.id %}
-                                         تعداد جلسات: {{ videos | length }} جلسه
-                                         {% endif %}
-                                    {% endfor %}
+                                    تعداد جلسات: {{ chapters.videos_lenth }} جلسه
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="videos">
+                           {% for videos in video %}
+                           {% if videos.chapter.id == chapters.id %}
+                            <div class="video">
+                                <div class="video_title">
+                                    <strong onclick="open_video_part(this)">{{videos.title}}</strong>
+                                    <span>{{videos.serial_number}}</span>
+                                </div>
+                                <div class="video_part">
+                                    <hr>
+                                    <br>
+                                    <div class="video_file" id="video_file">
+                                        <video controls controlsList="nodownload" oncontextmenu="return false;">
+                                            <source src="{{videos.video_file.url}}" type="video/mp4">
+                                        </video>
+                                    </div>
+
+                                    <div class="video_sorce">
+                                        <input type="file">
+                                    </div>
+                                    </div>
+                            </div>
+                           {% endif %}
+                           {% endfor %}
                         </div>
                     {% endif %}
                    {% endfor %}
@@ -75,5 +97,36 @@
             </div>
         </div>    
         <!--end of CoursesDetails by rastin design -->
+
+        <script>
+            (function () {
+            // Get all the video parts
+            let video_parts = document.getElementsByClassName("video_part");
+            // Define a function to toggle the visibility of a video part
+            function open_video_part(origin) {
+                // Get the parent element of the clicked element
+                let parent = origin.parentElement;
+                // Get the next sibling element of the parent, which is the video part
+                let video_part = parent.nextElementSibling;
+                // Check if the video part is hidden or not
+                if (video_part.style.display === 'none') {
+                    // If hidden, show it
+                    video_part.style.display = 'block';
+                    document.getElementById("video_file").load();
+                } else {
+                    // If not hidden, hide it
+                    video_part.style.display = 'none';
+                }
+            }
+            // Loop over all the video parts and hide them by default
+            for (let video_part of video_parts) {
+                video_part.style.display = 'none';
+            }
+            // Assign the toggle function to the global scope so it can be accessed by the onclick attribute
+            window.open_video_part = open_video_part;
+        })();
+        
+
+        </script>
 
     </main>
