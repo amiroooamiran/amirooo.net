@@ -70,6 +70,9 @@
                             <input type="text" name="fullname" placeholder="نام کامل" />
                         </div>
                         <div class="form-group">
+                            <input type="text" name="email" placeholder="پست الکترونیک" />
+                        </div>
+                        <div class="form-group">
                             <input type="text" name="username_up" placeholder="نام کاربری" />
                         </div>
                         <div class="form-group">
@@ -77,6 +80,12 @@
                         </div>
                         <button type="submit">عضویت</button>
                     </form>
+                </div>
+
+                <div class="message_errore">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
                 </div>
             </aside>
         </section>

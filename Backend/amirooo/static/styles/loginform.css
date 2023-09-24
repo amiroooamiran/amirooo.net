@@ -245,7 +245,7 @@ section aside div#reg {
 section aside div#reg.show {
   background-color: #fff;
   clip-path: ellipse(350px 350px at 10% 50%);
-  height: 290px;
+  height: 350px;
 }
 
 .links {
