@@ -6,7 +6,7 @@ from tinymce.models import HTMLField
 # Create your models here.
 class User (models.Model):
     Profile = models.ImageField(upload_to="profiles", default="defultProfile.jpg")
-    User = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     Bio = HTMLField(blank=True)
     Fullname = models.CharField(max_length=250, blank=True)
     Nikname = models.CharField(max_length=100, blank=True)
@@ -15,4 +15,4 @@ class User (models.Model):
     Email = models.EmailField(max_length=254, blank=True)
 
     def __str__(self):
-        return self.User.username
+        return self.user.username
