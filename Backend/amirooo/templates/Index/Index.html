@@ -21,31 +21,7 @@
         {% include "../siedbar.html" %}
         <!--end side menu made by Saba -->
         <!-- User Header Section -->
-        <div class="header_section">
-            <div class="search">
-                <input type="text">
-                <i class="uil uil-search-alt"></i>
-            </div>
-            <div class="section-heder-two">
-                <div class="icons">
-                    <div>
-                        <i class="uil uil-envelope"></i>
-                    </div>
-                    <div>
-                        <i class="uil uil-bell"></i>
-                    </div>
-                </div>
-                <div class="user_profile">
-                    <div class="profile">
-                        <img src="https://cdn2.f-cdn.com/files/download/40990929/88eaef.jpg" alt="">
-                    </div>
-                    <div>
-                        <p>amirooo</p>
-                        <span>@amirooo42</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% include "../header.html" %}
         <!-- end of User Header Section by Amiran -->
         <div class="main-section">
             <!-- start of Main Banner by Amiran -->
@@ -122,50 +98,24 @@
                         </div>
                     </div>
                     <div class="main_course">
+
+                        {% for course in courses %}
                         <div class="course">
                             <div class="courseicon" style="background-color: #F6BA05;"></div>
                             <div class="description">
-                                <p class="coursetitle">Ul/Ux طراحی</p>
-                                <p class="grey">30+ دوره آموزشی</p>
+                                {% for tag in tags %}
+                                {% if tag.course.id == course.id %}
+                                <p class="coursetitle"><strong>{{ tag.description }}</strong></p>
+                                {% endif %}
+                                {% endfor %}
+                                <p class="grey">{{ course.teacher.Fullname }}</p>
                             </div>
                             <div class="coursebuttons">
                                 <button class="coursebtn">مشاهده دوره</button>
                                 <button class="morebtn"><i class="uil uil-ellipsis-v morebtndetail"></i></button>
                             </div>
                         </div>
-                        <div class="course">
-                            <div class="courseicon" style="background-color: #f06e6e;"></div>
-                            <div class="description">
-                                <p class="coursetitle">Ul/Ux طراحی</p>
-                                <p class="grey">30+ دوره آموزشی</p>
-                            </div>
-                            <div class="coursebuttons">
-                                <button class="coursebtn">مشاهده دوره</button>
-                                <button class="morebtn"><i class="uil uil-ellipsis-v morebtndetail"></i></button>
-                            </div>
-                        </div>
-                        <div class="course">
-                            <div class="courseicon" style="background-color: #58BAAB;"></div>
-                            <div class="description">
-                                <p class="coursetitle">Ul/Ux طراحی</p>
-                                <p class="grey">30+ دوره آموزشی</p>
-                            </div>
-                            <div class="coursebuttons">
-                                <button class="coursebtn">مشاهده دوره</button>
-                                <button class="morebtn"><i class="uil uil-ellipsis-v morebtndetail"></i></button>
-                            </div>
-                        </div>
-                        <div class="course">
-                            <div class="courseicon" style="background-color: #FDBBBD;"></div>
-                            <div class="description">
-                                <p class="coursetitle">Ul/Ux طراحی</p>
-                                <p class="grey">30+ دوره آموزشی</p>
-                            </div>
-                            <div class="coursebuttons">
-                                <button class="coursebtn">مشاهده دوره</button>
-                                <button class="morebtn"><i class="uil uil-ellipsis-v morebtndetail"></i></button>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
                 <!-- End of Populer Curses Section -->
@@ -175,11 +125,11 @@
                     </div>
                     <div class="big-activity"></div>
                     <div class="small-activity first">
-                        <p class="avtivitytitle">45K+</p>
-                        <p class="activityDes">دوره های تکمیل شده</p>
+                        <p class="avtivitytitle">220+</p>
+                        <p class="activityDes">پروژهای تکمیل شده</p>
                     </div>
                     <div class="small-activity second">
-                        <p class="avtivitytitle">20K+</p>
+                        <p class="avtivitytitle">1+</p>
                         <p class="activityDes">دوره های ویدیویی</p>
                         <button class="activitybtn"><i class="uil uil-play playbtn"></i></button>
                     </div>
@@ -192,46 +142,22 @@
                         <h4 id="seeAll">بیشتر...</h4>
                     </div>
                     <div class="main_Instructor">
+
+                        {% for techer in techers %}
+                        {% if techer.Nikname != '' %}
                         <div class="Instructor">
                             <img class="avatar"
-                                src="https://img.icons8.com/external-thin-kawalan-studio/48/external-user-circle-users-thin-kawalan-studio.png"
-                                alt="external-user-circle-users-thin-kawalan-studio" />
+                                src="{{ techer.Profile.url }}"
+                                alt="{{ techer.Fullname }}" />
                             <div class="description">
-                                <p class="Instructortitle">امیرو</p>
-                                <p class="grey">سلام</p>
+                                <p class="Instructortitle">{{techer.Fullname}}</p>
+                                <p class="grey">{{ techer.Nikname }}</p>
                             </div>
                             <button class="Instructorbtn" style="border: 1px solid #F6BA05;">دوره ها</button>
                         </div>
-                        <div class="Instructor">
-                            <img class="avatar"
-                                src="https://img.icons8.com/external-thin-kawalan-studio/48/external-user-circle-users-thin-kawalan-studio.png"
-                                alt="external-user-circle-users-thin-kawalan-studio" />
-                            <div class="description">
-                                <p class="Instructortitle">صبا</p>
-                                <p class="grey">سلام</p>
-                            </div>
-                            <button class="Instructorbtn" style="border: 1px solid #f06e6e;">دوره ها</button>
-                        </div>
-                        <div class="Instructor">
-                            <img class="avatar"
-                                src="https://img.icons8.com/external-thin-kawalan-studio/48/external-user-circle-users-thin-kawalan-studio.png"
-                                alt="external-user-circle-users-thin-kawalan-studio" />
-                            <div class="description">
-                                <p class="Instructortitle">مریم</p>
-                                <p class="grey">سلام</p>
-                            </div>
-                            <button class="Instructorbtn" style="border: 1px solid #58BAAB;">دوره ها</button>
-                        </div>
-                        <div class="Instructor">
-                            <img class="avatar"
-                                src="https://img.icons8.com/external-thin-kawalan-studio/48/external-user-circle-users-thin-kawalan-studio.png"
-                                alt="external-user-circle-users-thin-kawalan-studio" />
-                            <div class="description">
-                                <p class="Instructortitle">فلانی</p>
-                                <p class="grey">سلام</p>
-                            </div>
-                            <button class="Instructorbtn" style="border: 1px solid #FDBBBD;">دوره ها</button>
-                        </div>
+                        {% endif %}
+                        {% endfor %}
+
                     </div>
                 </div>
             </div>
