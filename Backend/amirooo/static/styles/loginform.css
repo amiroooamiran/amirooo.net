@@ -263,3 +263,40 @@ section aside div#reg.show {
   text-decoration: none;
   color: white;
 }
+
+
+.message_errore{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 350px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.404);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  color: black;
+  font-family: "vazir";
+  animation: 5s messagelogin;
+  opacity: 0;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+@keyframes messagelogin {
+  0%{
+    opacity:0;
+  }
+
+  30%{
+    opacity:1;
+  }
+
+  70%{
+    opacity:1;
+  }
+
+  100%{
+    opacity:0;
+  }
+}
