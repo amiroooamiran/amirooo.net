@@ -1,0 +1,37 @@
+
+<div class="header_section">
+    <div class="search">
+        <input type="text">
+        <i class="uil uil-search-alt"></i>
+    </div>
+
+    {% if user.is_authenticated %}
+    <div class="section-heder-two">
+        <div class="icons">
+            <div>
+                <i class="uil uil-envelope"></i>
+            </div>
+            <div>
+                <i class="uil uil-bell"></i>
+            </div>
+        </div>
+
+        <div class="user_profile">
+            <div>
+                <p>{{user_profile.user.username}}</p>
+                <hr>
+                <span>کاربر شماره : {{user_profile.user.id }} </span>
+            </div>
+            <div class="profile">
+                <img src="{{ user_profile.Profile.url }}" alt="">
+            </div>
+        </div>
+
+    </div>
+    {% else %}
+    <button class="sin-up-singin-btn"><a href="/LoginSingup">ثبت نام | ورود</a></button>
+
+    {% endif %}
+</div>
+
+
