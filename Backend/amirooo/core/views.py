@@ -1,9 +1,32 @@
 from django.shortcuts import render
 
+# importing Models from other applications
+from user.models import User as us
+from courses.models import *
 # Create your views here.
 
 def Index(request):
-    return render(request, 'Index/Index.html')
+
+    if request.user.is_authenticated:
+        # Get a single user profile object that matches the logged-in user
+        user_profile = us.objects.get(user=request.user)
+    else:
+        # Do something else for anonymous users, such as showing a default profile or a message
+        user_profile = None
+    
+    # courses Models
+    courses = Course.objects.all()
+    tags = Tag.objects.all()
+    techers = us.objects.all()
+
+    context = {
+        'user_profile' : user_profile,
+        'courses' : courses,
+        'tags' : tags,
+        'techers': techers
+    }
+    return render(request, 'Index/Index.html', context)
+
 
 def about(request):
     return render(request, 'Index/about.html')
