@@ -8,15 +8,30 @@
     {% if user.is_authenticated %}
     <div class="section-heder-two">
         <div class="icons">
+            
             <div>
                 <i class="uil uil-envelope"></i>
             </div>
             <div>
                 <i class="uil uil-bell"></i>
             </div>
+            {% if user.id == user_profile.user.id %}
+            <div>
+                <a href="{% url "logout" %}">
+                    <i class="uil uil-sign-out-alt"></i>
+                </a>
+            </div>
+            <div>
+                <i class="uil uil-setting"></i>
+            </div>
+            {% else %}
+
+            {% endif %}
         </div>
 
         <div class="user_profile">
+
+            
             <div>
                 <p>{{user_profile.user.username}}</p>
                 <hr>
@@ -29,7 +44,7 @@
 
     </div>
     {% else %}
-    <button class="sin-up-singin-btn"><a href="/LoginSingup">ثبت نام | ورود</a></button>
+    <button class="sin-up-singin-btn"><a href="/user/">ثبت نام | ورود</a></button>
 
     {% endif %}
 </div>
