@@ -201,6 +201,10 @@ body {
     gap: 15px;
 }
 
+.header-section .section-heder-two  a{
+    color: black !important;
+}
+
 .header_section .search {
     font-size: larger;
     position: relative;
@@ -853,10 +857,10 @@ option {
 .sidebar {
     position: absolute;
     right: 0;
-    top: 33%;
+    top: 8%;
     width: 20%;
-    height: 72%;
-    border-radius: 20px 0 20px 0;
+    height: 95%;
+    border-radius: 20px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
 }
 
@@ -905,10 +909,10 @@ option {
     flex-direction: column;
     direction: rtl;
     width: 56vw;
-    height: 62vh;
+    height: 85vh;
     position: absolute;
     right: 22%;
-    top: 33%;
+    top:6%;
     background-color: white;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
     padding-left: 10px;
@@ -990,6 +994,8 @@ option {
     font-size: small;
     color: black;
     padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
     border-radius: 20px;
     transition: 0.5s;
@@ -1001,14 +1007,21 @@ option {
 }
 
 .user-crs .crs img {
-    width: 30%;
+    width: 50px;
     height: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.274);
 }
 
 .user-crs .crs div {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.user-crs .crs a{
+    text-decoration: none;
+    color: black;
 }
 
 .main-div {
