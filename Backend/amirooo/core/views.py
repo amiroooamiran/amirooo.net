@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # importing Models from other applications
 from user.models import User as us
 from courses.models import *
+
+from django.contrib.auth import logout
 # Create your views here.
 
 def Index(request):
@@ -33,3 +35,7 @@ def about(request):
 
 def contact(request):
     return render(request, 'Index/contact.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('/')
