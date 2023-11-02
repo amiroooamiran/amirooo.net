@@ -4,9 +4,11 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 
-import re
+from user.models import User as us
+from courses.models import Course
 
-from user.models import User as Us
+# filtering strings with regex
+import re
 # Create your views here.
 def singInSingUp(request):
     if request.method == 'POST':
@@ -40,7 +42,7 @@ def singInSingUp(request):
 
                     if our_user is not None:
                         login(request, user)
-                        new_profile = Us.objects.create(user=user)
+                        new_profile = us.objects.create(user=user)
                         new_profile.save()
                         messages.success(request, ".ثبت نام با موفقیت انجام شد")
                         return redirect('/')
@@ -52,3 +54,24 @@ def singInSingUp(request):
     
         
     return render(request, 'user/SingInSingUp.html')
+
+def UserProfile(request, username):
+    user = User.objects.get(username=username)
+
+    if request.user.is_authenticated:
+        # Get a single user profile object that matches the logged-in user
+        user_profile = us.objects.get(user=request.user)
+    else:
+        # Do something else for anonymous users, such as showing a default profile or a message
+        user_profile = None
+        url_name = request.path #filtering path with regex.
+
+    
+    course_ditails = Course.objects.all()
+
+    context ={
+        'user' : user,
+        'user_profile' : user_profile,
+        'course_ditails' : course_ditails,
+    }
+    return render(request, 'user/UserProfile.html', context)
