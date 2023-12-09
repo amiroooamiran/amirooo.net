@@ -10,4 +10,8 @@ urlpatterns = [
     path('logout/', logout_view, name='logout'),
 
     path('tinymce/', include('tinymce.urls')),
+
+    # order Segment
+    path('Succes_payment', succes_payment, name="succesful_payment"),
+    path('UnSucces_payment', un_succes_payment, name="UnSuccesful_payment")
 ]

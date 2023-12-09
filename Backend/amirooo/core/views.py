@@ -40,6 +40,11 @@ def about(request):
 def contact(request):
     return render(request, 'Index/contact.html')
 
+def succes_payment(request):
+    return render(request, 'Orders/successful.html')
+
+def un_succes_payment(request):
+    return render(request, 'Orders/unsuccessful.html')
 def logout_view(request):
     logout(request)
     return redirect('/')
