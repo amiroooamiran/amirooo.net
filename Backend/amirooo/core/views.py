@@ -3,7 +3,10 @@ from django.shortcuts import render, redirect
 # importing Models from other applications
 from user.models import User as us
 from courses.models import *
+<<<<<<< HEAD
 from core.models import *
+=======
+>>>>>>> 142e890c90a6b9db12ae3e641f3d195377e8b077
 
 from django.contrib.auth import logout
 # Create your views here.
