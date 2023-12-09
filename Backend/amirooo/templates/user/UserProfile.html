@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <title>profile | {{ user.username }}</title>
+</head>
+
+<body>
+    <main class="container">
+
+        <!--start side menu made by Saba -->
+        {% include "../siedbar.html" %}
+        <!--end side menu made by Saba -->
+        <!-- User Header Section -->
+        {% include "../header.html" %}
+        <!-- end of User Header Section by Amiran -->
+        
+        
+        <div class="main-div">
+            <div class="sidebar">
+                <h3>امتیازات و گواهینامه ها</h3>
+                <hr>
+                <ul>
+                </ul>
+            </div>
+            <div class="profile-tabs">
+                <div class="profile-options">
+                    <a href="#" class="tabs active">دوره های من </a>
+                    <a href="#" class="tabs">دستاوردها</a>
+                    <a href="#" class="tabs">سوابق تراکنش ها</a>
+                    <a href="#" class="tabs">پیام ها</a>
+                </div>
+                <hr>
+                <div class="user-crs content active">
+
+                    {% for course in user_profile.User_course.all %}
+                    <div class="crs">
+                        <img src="{{ course.banner.url }}" alt="">
+                        <a href="">
+                            <div>
+                                <h2> {{ course.title }} </h2>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+
+                </div>
+                <div class="content">
+                    <h3>دستاورد ها</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae doloremque necessitatibus delectus pariatur sunt quod excepturi! Doloremque delectus voluptatum adipisci quam! Obcaecati velit maiores suscipit hic sint modi ipsam temporibus.</p>
+                </div>
+                <div class="content">
+                    <h3>سوابق تراکنش ها</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae doloremque necessitatibus delectus pariatur sunt quod excepturi! Doloremque delectus voluptatum adipisci quam! Obcaecati velit maiores suscipit hic sint modi ipsam temporibus.</p>
+                </div>
+                <div class="content">
+                    <h3>پیام ها</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae doloremque necessitatibus delectus pariatur sunt quod excepturi! Doloremque delectus voluptatum adipisci quam! Obcaecati velit maiores suscipit hic sint modi ipsam temporibus.</p>
+                </div>
+            </div>
+        </div>
+        
+
+    </main>
+
+    <script>
+        let icon = document.getElementById("menu-icon")
+        let menu = document.getElementById("menu")
+
+        function openMenu() {
+            if (menu.style.width === "0px") {
+                menu.style.width = "300px";
+                menu.style.overflow = "visible";
+            }
+            else {
+                menu.style.width = "0px";
+                menu.style.overflow = "hidden"
+
+            }
+
+        }
+
+        const tabs = document.querySelectorAll(".tabs");
+        const content = document.querySelectorAll(".content");
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', (e) => {
+                tabs.forEach(tab => { tab.classList.remove('active') });
+                tab.classList.add('active');
+
+                content.forEach(con => { con.classList.remove('active') });
+                content[index].classList.add('active');
+            })
+        })
+    </script>
+</body>
+
+</html>

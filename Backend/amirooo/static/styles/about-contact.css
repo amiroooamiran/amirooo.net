@@ -50,6 +50,7 @@ body {
 .container .title h1 {
     font-size: 1.5rem;
     color: black;
+    font-family: 'Comfortaa', cursive !important; 
 }
 
 .container .title {

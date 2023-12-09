@@ -1,3 +1,95 @@
+<!-- this style for after of aoutentication -->
+<style>
+    .icons> div:hover{
+        cursor: pointer;
+        height: 20px;
+        border-radius: 3px;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.411);
+    }
+    .updates{
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        font-size: x-small;
+        margin-left: 8px;
+        top: 5px;
+        background-color: red;
+        border-radius: 50px;
+    }
+    .summary_update{
+        font-family: "vazir-medium";
+        position: absolute;
+        margin-left: -100%;
+        margin-top: 25px;
+        background-color: rgb(243, 250, 249);
+        width: auto 10px;
+        border-radius: 10px;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.39);
+        padding: 15px;
+        width: 300px;
+        max-width: 300px;
+        max-height: 210px;
+        overflow-y: auto;
+        text-align: right;
+        display: none;
+    }
+
+    .update_msg{
+        width: 100%;
+        height: fit-content;
+        padding: 10px;
+        justify-content: space-between;
+        border-radius: 10px;
+        transition: 0.5s ease-in-out;
+        direction: rtl;
+    }
+
+    .update_msg:hover{
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.199) !important;
+        transform: scale(1.02) !important;
+        transition: 0.5s ease-in-out !important;
+        cursor: pointer !important;
+    }
+
+    .summary_update .update_title{
+        font-size: small;
+    }
+    .summary_update .sub{
+        margin-top: 3px;
+        color: rgb(255, 109, 89);    
+        cursor: pointer; 
+        font-size: x-small;
+    }
+    .message{
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        font-size: x-small;
+        margin-left: 13px;
+        top: 5px;
+        background-color: red;
+        border-radius: 50px;
+    }
+
+    .update_detale{
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        left: 50%;
+        background-color: red;
+    }
+
+    @media only screen and (max-width:500px){
+        .summary_update{
+            position: absolute;
+            margin: 0;
+            bottom:300%;
+            left: 92%;
+            transform: translateX(-50%);
+        }
+    }
+</style>
+
 
 <div class="header_section">
     <div class="search">
@@ -8,15 +100,48 @@
     {% if user.is_authenticated %}
     <div class="section-heder-two">
         <div class="icons">
+
             <div>
+                <!-- <span class="message"></span> -->
+                <i class="uil uil-shopping-bag"></i>
+            </div>
+
+            <div>
+                <!-- <span class="message"></span> -->
                 <i class="uil uil-envelope"></i>
             </div>
+
             <div>
-                <i class="uil uil-bell"></i>
+                <span class="updates"></span>
+                <i onclick="bell_update()" class="uil uil-bell"></i>
+                <div id="sum_update" class="summary_update">
+
+                    {% for update in updates %}
+                    <div class="update_msg">
+                        <p class="update_title"><b> {{update.title}} </b></p>
+                        <p class="sub">نوع استفادش چه جوریه ؟</p>
+                    </div>
+                    {% endfor %}
+
+                </div>
             </div>
+            {% if user.id == user_profile.user.id %}
+            <div>
+                <a href="{% url 'logout' %}">
+                    <i class="uil uil-sign-out-alt"></i>
+                </a>
+            </div>
+            <div>
+                <i class="uil uil-setting"></i>
+            </div>
+            {% else %}
+
+            {% endif %}
         </div>
 
         <div class="user_profile">
+
+            
             <div>
                 <p>{{user_profile.user.username}}</p>
                 <hr>
@@ -29,9 +154,17 @@
 
     </div>
     {% else %}
-    <button class="sin-up-singin-btn"><a href="/LoginSingup">ثبت نام | ورود</a></button>
+    <button class="sin-up-singin-btn"><a href="/user/">ثبت نام | ورود</a></button>
 
     {% endif %}
 </div>
 
-
+<script>
+    function bell_update(){
+        if (document.getElementById("sum_update").style.display == "none"){
+            document.getElementById("sum_update").style.display = "block";
+        }else{
+            document.getElementById("sum_update").style.display = "none";
+        }
+    }
+</script>

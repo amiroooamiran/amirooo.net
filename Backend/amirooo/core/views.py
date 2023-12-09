@@ -1,8 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # importing Models from other applications
 from user.models import User as us
 from courses.models import *
+from core.models import *
+
+from django.contrib.auth import logout
 # Create your views here.
 
 def Index(request):
@@ -19,11 +22,14 @@ def Index(request):
     tags = Tag.objects.all()
     techers = us.objects.all()
 
+    updates = Updates.objects.all()
+
     context = {
         'user_profile' : user_profile,
         'courses' : courses,
         'tags' : tags,
-        'techers': techers
+        'techers': techers,
+        'updates': updates
     }
     return render(request, 'Index/Index.html', context)
 
@@ -33,3 +39,7 @@ def about(request):
 
 def contact(request):
     return render(request, 'Index/contact.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('/')

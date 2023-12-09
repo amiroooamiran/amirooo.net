@@ -6,8 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include "../hed.html" %}
-    <meta name="description" content="{{ course.description | truncatewords_html:180 | safe  }}">
-    <meta property="og:description" content="{{ course.description | truncatewords_html:180 | safe  }}">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="{% static 'styles/base.css' %}">
     <title>amirooo.net | {{course.title}}</title>
@@ -33,7 +31,7 @@
                         <div class="teacher-profile">
                             <img src="{{ course.teacher.Profile.url}}" alt="">
                             <div>
-                                <h5>{{course.teacher.Fullname}}</h5>
+                                <h5><strong>{{course.teacher.Fullname}}</strong></h5>
                                 <a href="mailto:{{course.teacher.Email}}">پست الکترونیک</a>
                             </div>
                         </div>
@@ -52,13 +50,25 @@
                 <div class="chapter-summery">
                     <h4>مقدمه دوره:</h4>
                     {{ course.description | safe }}
+
+                    
+                    {% if user.is_authenticated %}
+                    {% else %}
+                    <br>
+                    <hr>
+                    <a class="if_user_is_none" href="/LoginSingup/">
+                        <p>
+                            <b>برای مشاهده دوره ابتدا در وب سایت ثبت نام کنید و یا وارد حساب کاربری خود بشوید.</b>
+                        </p>
+                    </a>
+                    {% endif %}
                 </div>
 
+                {% if user.is_authenticated %}
                 <div class="chapters-section">
                    {% for chapters in chapter %}
                     {% if chapters.course_id.id == course.id %}
                         <div class="chapter">
-                            <i class="uil uil-letter-english-a" style="background-color: rgb(0, 247, 0); border: 2px solid rgb(0, 75, 0);"></i>
                             <div>
                                 <h3 style="display:flex; gap:5px;"> فصل {{chapters.chapter_id}} | <span style="font-size:small;margin-top:5px;">{{ chapters.title }}</span></h3>
                                 
@@ -68,14 +78,51 @@
                             </div>
                         </div>
 
+                        <!-- Config video section -->
                         <div class="videos">
                            {% for videos in video %}
                            {% if videos.chapter.id == chapters.id %}
+
+                           {% if videos.is_prwview == True %}
+                           <div class="video">
+                                <div class="video_title">
+                                    <strong onclick="open_video_part(this)">{{videos.title}}</strong>
+                                    <span>{{videos.serial_number}}</span>
+                                </div>
+                                
+                                <!-- this section for videos -->
+                                <div class="video_part">
+                                <hr>
+                                <br>
+                                    <div class="video_file" id="video_file">
+                                        <video controls controlsList="nodownload" oncontextmenu="return false;">
+                                            <source src="{{videos.video_file.url}}" type="video/mp4">
+                                        </video>
+                                    </div>
+                                {% if videos.resource %}
+                                
+                                <hr>
+                                    <div class="video_sorce">
+                                        
+                                        <a href="{{videos.resource.url}}" download> <i class="uil uil-file-download"></i> دانلود منابع </a>
+                                        
+                                    </div>
+                                {% endif %}
+                                </div>
+                                
+                            </div>
+                            <!-- end of section for videos -->
+                            {% elif videos.is_prwview == False %}
+                            {% for courseIN in user_profile.User_course.all %}
+                            {% if courseIN.id == course.id%}
+
                             <div class="video">
                                 <div class="video_title">
                                     <strong onclick="open_video_part(this)">{{videos.title}}</strong>
                                     <span>{{videos.serial_number}}</span>
                                 </div>
+                                
+                                <!-- this section for videos -->
                                 <div class="video_part">
                                     <hr>
                                     <br>
@@ -84,19 +131,40 @@
                                             <source src="{{videos.video_file.url}}" type="video/mp4">
                                         </video>
                                     </div>
-
+                                    {% if videos.resource %}
+                                    
+                                    <hr>
                                     <div class="video_sorce">
-                                        <input type="file">
+                                        
+                                        <a href="{{videos.resource.url}}" download> <i class="uil uil-file-download"></i> دانلود منابع </a>
+                                        
                                     </div>
+                                    {% endif %}
                                     </div>
+                                    
+                                <!-- end of section for videos -->
+
+                                
                             </div>
+
+                            
+
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+
+
                            {% endif %}
                            {% endfor %}
                         </div>
+
+
                     {% endif %}
                    {% endfor %}
 
                 </div>
+                {% endif %}
             </div>
         </div>    
         <!--end of CoursesDetails by rastin design -->

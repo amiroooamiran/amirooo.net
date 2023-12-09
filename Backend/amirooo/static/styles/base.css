@@ -201,6 +201,10 @@ body {
     gap: 15px;
 }
 
+.header-section .section-heder-two  a{
+    color: black !important;
+}
+
 .header_section .search {
     font-size: larger;
     position: relative;
@@ -231,6 +235,10 @@ body {
     color: black;
 }
 
+.header_section a{
+    color: black;
+    text-decoration: none;
+}
 .header_section .icons {
     display: flex;
     gap: 15px;
@@ -238,7 +246,7 @@ body {
     top: 10px;
     padding: 5px;
     font-size: larger;
-    color: black;
+    color: black !important;
     border-radius: 10px;
 }
 
@@ -853,10 +861,10 @@ option {
 .sidebar {
     position: absolute;
     right: 0;
-    top: 33%;
+    top: 8%;
     width: 20%;
-    height: 72%;
-    border-radius: 20px 0 20px 0;
+    height: 95%;
+    border-radius: 20px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
 }
 
@@ -905,10 +913,10 @@ option {
     flex-direction: column;
     direction: rtl;
     width: 56vw;
-    height: 62vh;
+    height: 85vh;
     position: absolute;
     right: 22%;
-    top: 33%;
+    top:6%;
     background-color: white;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
     padding-left: 10px;
@@ -990,6 +998,8 @@ option {
     font-size: small;
     color: black;
     padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
     border-radius: 20px;
     transition: 0.5s;
@@ -1001,14 +1011,21 @@ option {
 }
 
 .user-crs .crs img {
-    width: 30%;
+    width: 50px;
     height: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.274);
 }
 
 .user-crs .crs div {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.user-crs .crs a{
+    text-decoration: none;
+    color: black;
 }
 
 .main-div {
@@ -1451,6 +1468,12 @@ cursor: pointer;
     width: 60%;
 }
 
+.CD-main-section .if_user_is_none{
+    font-family: "vazir";
+    direction: rtl;
+    color: #f06e6e;
+    text-decoration: none;
+}
 .chapter-summery {
     position: absolute;
     top: 55%;
@@ -1747,6 +1770,21 @@ cursor: pointer;
     appearance: none;
 }
 
+.video_sorce{
+    margin-top: 10px;
+    padding: 5px;
+    width: 120px;
+    font-size: large;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+}
+
+.video_sorce a{
+    color: black;
+    font-family: "vazir";
+    font-weight: 10px;
+    text-decoration: none;
+}
 .upload-img i {
     height: fit-content;
     font-size: x-large;
@@ -2105,11 +2143,20 @@ input[type=checkbox]:hover {
     .container {
         padding: 0;
         overflow-y: scroll;
-
+        height: 100vh;
+        border-radius: 0;
     }
 
     .sin-up-singin-btn{
-        display: none;
+        display: block;
+        position: absolute;
+        top: 85vh;
+        border-radius: 15px;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        box-shadow: 1px 1px rgba(0, 0, 0, 0.425);
     }
 
     .side-menu {
@@ -2198,7 +2245,7 @@ input[type=checkbox]:hover {
         padding: 0;
         right: 0;
         left: 0;
-        margin-right: 0;
+        margin-right: 15px;
         padding: 10px;
         transform: translateX(0%);
     }
@@ -2244,7 +2291,6 @@ input[type=checkbox]:hover {
     .header_section {
         flex-direction: column-reverse;
         height: 19vh;
-        width: 100vw;
         top: 15px;
         padding: 8px;
         margin: 0;
@@ -2266,7 +2312,13 @@ input[type=checkbox]:hover {
     .header_section .section-heder-two {
         margin-left: 50%;
         top: 10px;
-
+        position: absolute;
+        top: 85vh;
+        background-color: white;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.281);
+        left: 0%;
+        border-radius: 10px;
+        transform: translateX(-50%);
     }
 
     .banner-title {

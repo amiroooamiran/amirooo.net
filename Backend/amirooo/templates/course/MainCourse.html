@@ -26,12 +26,9 @@
         {% include "../header.html" %}
         
         <!-- start of productCard by rastindesign -->
+
+        <br>
         <div class="cards">
-            <div class="product-card-header">
-                <h2 style="color:#fff;">دوره های برنامه نویسی</h2>
-                <div class="PC-Course-type">
-            </div>
-            </div>
 
             {% for course in courses %}
             <div class="product-card">
@@ -96,7 +93,9 @@
                     {% else %}
                     <h4 class="product-price" style="color:red;">تخفیف: {{course.discount | intcomma}}%</h4>
                     {% endif %}
-                    <button class="buybtn" style="background-color: #58BAAB;" >خرید دوره</button>
+                    <button class="buybtn" style="background-color: #58BAAB;" >
+                        <a style="color:#fff;text-decoration:none;" href="{% url "add_to_cart" course.name %}">خرید دوره</a>
+                    </button>
                     <button class="buybtn" style="background-color: #FB6B58;margin-top:3px;" >
                         <a style="color:#fff;text-decoration:none;" href="{% url "CoursesDetails" course.name %}">مشاهده دوره</a>
                     </button>
