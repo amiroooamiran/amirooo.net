@@ -193,7 +193,7 @@ body {
     z-index: 989;
     justify-content: space-between;
     background-color: white;
-    border-radius: 25px 0px 0px 0px;
+    border-radius: 25px;
 }
 
 .header_section .section-heder-two {
@@ -2138,6 +2138,154 @@ input[type=checkbox]:hover {
 }
 
 
+/* order main styles */
+.om-main-div{
+    position: absolute;
+    right: 0;
+    width: 80%;
+    max-height: 75%;
+    align-items: center;
+    margin: 20px;
+    overflow-y: auto;
+    padding-bottom: 15px;
+}
+
+.om-final{
+    position: absolute;
+    right: 0;
+    width: 80%;
+    max-height: 50%;
+    align-items: center;
+    margin: 20px;
+    top: 75%;
+    overflow-y: auto;
+    padding-bottom: 15px;
+}
+
+.om-final .om-div{
+    background-color: #fdfcfc;
+    box-shadow: none;
+}
+
+
+.om-final .om-div img:nth-child(2){
+    position: absolute;
+    left: 75px;
+    rotate: 20deg;
+}
+
+.om-delited button{
+    padding: 10px;
+    font-family: "vazir";
+    font-weight: 700;
+    background-color: #F6BA05;
+    border: none;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.om-delited button:hover{
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.267);
+}
+
+.om-delited button a{
+    color: black;
+    text-decoration: none;
+}
+.om-final .om-div img:nth-child(3){
+    position: absolute;
+    left: 80px;
+    rotate: -10deg;
+}
+
+
+.om-main-div::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    background-color: rgb(228, 225, 225);
+
+}
+
+.om-main-div::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    border-left: 0.1px solid white;
+    background-color: #FF6D59;
+    cursor: pointer;
+}
+
+.om-div{
+    margin: 0 auto;
+    gap: 10px;
+    text-align: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    border-radius: 5px;
+    padding: 8px;
+    width: 90%;
+    background-color: white;
+    align-items: center;
+    color: black;
+    font-family: "vazir";
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.267);
+}
+
+.om-div:nth-child(1){
+    margin-top: 50px;
+}
+
+.om-div .om-img img{
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.267);
+}
+
+.om-div .om-title_desc{
+    width: 310px;
+    text-align: right !important;
+}
+
+.om-div .om-total{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.om-div .om-total a{
+    text-decoration: none;
+    color: black;
+    width: 5px;
+    height: 5px;
+    text-align: center;
+    align-items: center;
+}
+
+.om-div .om-total  .minez, .plus{
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.om-div .om-total  .minez:hover{
+    background-color: #f06e6e;
+}
+.om-div .om-total .plus:hover{
+    background-color: #58BAAB;
+}
+.om-div .om-delited i{
+    padding: 5px;
+    border-radius: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.om-div  .om-delited i:hover{
+    background-color:#f06e6e;
+}
+
 @media only screen and (max-width:500px) {
 
     .container {
@@ -2591,6 +2739,26 @@ input[type=checkbox]:hover {
         transform: translateX(20%);
         top: 700px;
         direction: rtl;
+    }
+
+    .om-main-div{
+        width: 100%;
+        align-items: center;
+    }
+
+    .om-div{
+        gap: 0;
+        margin: 0 auto;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+
+    .om-title_desc{
+        width: 100% !important;
+        border-bottom: 1px solid black;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
     }
     
     .chapter {
