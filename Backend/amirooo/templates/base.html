@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tag
+  -->
+  <title>amirooo.net | Index</title>
+  <meta name="title" content="EduWeb - The Best Program to Enroll for Exchange">
+  <meta name="description" content="This is an education html template made by codewithsadee">
+
+  <!-- 
+    - favicon
+  -->
+  {% comment %} <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> {% endcomment %}
+  <!-- ICONS -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="{% static '/assets/css/style.css' %}">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="{% static '/assets/images/hero-bg.svg' %}">
+  <link rel="preload" as="image" href="{% static '/assets/images/hero-banner-1.jpg' %}">
+  <link rel="preload" as="image" href="{% static '/assets/images/hero-banner-2.jpg' %}">
+  <link rel="preload" as="image" href="{% static '/assets/images/hero-shape-1.svg' %}">
+  <link rel="preload" as="image" href="{% static '/assets/images/hero-shape-2.png' %}">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+  {% include "./siedbar.html" %}
+  <main class="main_s">
+    {% block content %}
+    {% endblock content %}
+  </main>
+
+  
+
+  <div class="cursor"></div>
+  <div class="cursor2"></div>
+
+  <script>
+    var cursor = document.querySelector(".cursor");
+    var cursor2 = document.querySelector(".cursor2");
+    document.addEventListener("mousemove",function(e){
+      cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+    });
+  </script>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-image: url('{% static '/assets/images/footer-bg.png' %}')">
+
+    <div class="footer-top section">
+      <div class="container grid-list">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="{% static '/assets/images/logo-light.svg' %}" width="162" height="50" alt="EduWeb logo">
+          </a>
+
+          <p class="footer-brand-text">
+            وبسایت امیرو با هدف ساخت جامعه ایی امن تر و تربیت هکرهای با اخلاق مشغول فعالیت میباشد, این مجموعه تمرکز ویژه ایی بر بررسی بدافزارها دارد درصورت مشاهده بدافزاری به ما اطلاع بدهید.
+          </p>
+
+          <div class="wrapper">
+            <span class="span">تلگرام:</span>
+
+            <a href="https://t.me/amirhosseinamiran" class="footer-link">@amirhosseinamiran</a>
+          </div>
+
+          <div class="wrapper">
+            <span class="span">ایمیل:</span>
+
+            <a href="mailto:amiranamirooo@gmial.com" class="footer-link">amiranamirooo@gmial.com</a>
+          </div>
+          <!-- بخش گذاشتن اینماد -->
+          <div class="wrapper">
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">پلتفرم آنلاین</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">درباره ما</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">دوره های آموزشی</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">اساتید</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">رویدادها</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">محصولات هکری</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">لینک ها</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">ارتباط با ما</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">پروژه ها</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">اخبار و مقالات</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">سوالات مهم</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">ورود و ثبت نام</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">به زودی ...</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">ارتباط با ما</p>
+
+          <p class="footer-list-text">
+            برای دریافت خلاصه اخبار هکری ایمیل خود را بگذارید
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email_address" placeholder="ایمیل شما" required class="input-field">
+
+            <button type="submit" class="btn has-before">
+              <span class="span">اشتراک</span>
+
+              <i class="ph-bold ph-paper-plane-tilt" aria-hidden="true"></i>
+            </button>
+          </form>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          Copyright 2024 All Rights Reserved by <a href="#" class="copyright-link">amirooo.net</a>
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+  integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+  crossorigin="anonymous"
+></script>
+  <script src="{% static '/assets/js/script.js' %} " defer></script>
+  <script src="{% static '/assets/js/script-bar.js' %} "></script>
+
+  <script>
+    var positiveWords = ["متخصص", "کارآزموده", "بااخلاق", "مسلط", "خلاق"];
+    var index = 0;
+
+    function typeWriter() {
+      var randomPositiveWord = positiveWords[Math.floor(Math.random() * positiveWords.length)];
+      $(".typewriter").empty().append("<span class='span'>" + randomPositiveWord + "</span>");
+    }
+
+    $(document).ready(function() {
+      setInterval(typeWriter, 1000); // Set the interval between words (in milliseconds)
+    });
+
+    // تعریف observer
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate'); // اضافه کردن کلاس animate به عنصر هنگام دیدن
+          observer.unobserve(entry.target); // مشاهده‌گر را از عنصر برداشته
+        }
+      });
+    });
+
+    // انتخاب همه عناصری که باید انیمیشن داشته باشند
+    const sections = document.querySelectorAll('.section');
+
+    // اعمال observer برای هر بخش
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+  </script>
+
+
+
+
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+
+</body>
+
+</html>
