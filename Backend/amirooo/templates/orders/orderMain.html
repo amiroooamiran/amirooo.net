@@ -1,276 +1,181 @@
-<!DOCTYPE html>
-<html lang="en">
-    {% load static %}
-    {% load humanize %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static "styles/base.css" %}">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <title>سبد خرید</title>
-</head>
+{% extends "../base.html" %}
+{% block title %} سبد خرید {% endblock title %}
+{% load humanize %}
+{% load static %}
+{% block content %}
+<article>
 
-<body>
-    <main class="container">
-        <!--start side menu made by Saba -->
-        {% include "../siedbar.html" %}
-        <!--end side menu made by Saba -->
-        <!-- User Header Section -->
-        {% include "../header.html" %}
-        <div class="title" id="title">
-            <i class="uil uil-apps" id="menu-icon" onclick="openMenu()"></i>
-            <h1>amirooo</h1>
-        </div>
-        <div class="om-main-div">
-
-            <!-- my order section -->
-            <div class="om-div">
-                <div class="om-img">
-                    <img src="{% static "images/saba.jpg" %}" alt="">
-                </div>
-
-                <div class="om-title_desc">
-                    <h5><b>محصول هکری اشمنتز ئدمسن زمنئسمیئر</b></h5>
-                    <p>جزعبات محصول</p>
-                </div>
-
-                <div class="om-total">
-                    <div class="minez">
-                        <a href="-">-</a>
-                    </div>
-
-                    <p>1</p>
-
-                    <div class="plus">
-                        <a href="+">+</a>
-                    </div>
-                </div>
-
-                <div class="om-price">
-                    <p class="proce">120.101 تومان </p>
-                </div>
-
-                <div class="om-delited">
-                    <i class="uil uil-trash"></i>
-                </div>
-            </div>
-
-
-            <!-- my order section -->
-            <div class="om-div">
-                <div class="om-img">
-                    <img src="{% static "images/saba.jpg" %}" alt="">
-                </div>
-
-                <div class="om-title_desc">
-                    <h5><b>محصول هکری اشمنتز ئدمسن زمنئسمیئر</b></h5>
-                    <p>جزعبات محصول</p>
-                </div>
-
-                <div class="om-total">
-                    <div class="minez">
-                        <a href="-">-</a>
-                    </div>
-
-                    <p>1</p>
-
-                    <div class="plus">
-                        <a href="+">+</a>
-                    </div>
-                </div>
-
-                <div class="om-price">
-                    <p class="proce">120.101 تومان </p>
-                </div>
-
-                <div class="om-delited">
-                    <i class="uil uil-trash"></i>
-                </div>
-            </div>
-
-
-            <!-- my order section -->
-            <div class="om-div">
-                <div class="om-img">
-                    <img src="{% static "images/saba.jpg" %}" alt="">
-                </div>
-
-                <div class="om-title_desc">
-                    <h5><b>محصول هکری اشمنتز ئدمسن زمنئسمیئر</b></h5>
-                    <p>جزعبات محصول</p>
-                </div>
-
-                <div class="om-total">
-                    <div class="minez">
-                        <a href="-">-</a>
-                    </div>
-
-                    <p>1</p>
-
-                    <div class="plus">
-                        <a href="+">+</a>
-                    </div>
-                </div>
-
-                <div class="om-price">
-                    <p class="proce">120.101 تومان </p>
-                </div>
-
-                <div class="om-delited">
-                    <i class="uil uil-trash"></i>
-                </div>
-            </div>
-
-
-            <!-- my order section -->
-            <div class="om-div">
-                <div class="om-img">
-                    <img src="{% static "images/saba.jpg" %}" alt="">
-                </div>
-
-                <div class="om-title_desc">
-                    <h5><b>محصول هکری اشمنتز ئدمسن زمنئسمیئر</b></h5>
-                    <p>جزعبات محصول</p>
-                </div>
-
-                <div class="om-total">
-                    <div class="minez">
-                        <a href="-">-</a>
-                    </div>
-
-                    <p>1</p>
-
-                    <div class="plus">
-                        <a href="+">+</a>
-                    </div>
-                </div>
-
-                <div class="om-price">
-                    <p class="proce">120.101 تومان </p>
-                </div>
-
-                <div class="om-delited">
-                    <i class="uil uil-trash"></i>
-                </div>
-            </div>
-
-
-
-            <!-- my order section -->
-            <div class="om-div">
-                <div class="om-img">
-                    <img src="{% static "images/saba.jpg" %}" alt="">
-                </div>
-
-                <div class="om-title_desc">
-                    <h5><b>محصول هکری اشمنتز ئدمسن زمنئسمیئر</b></h5>
-                    <p>جزعبات محصول</p>
-                </div>
-
-                <div class="om-total">
-                    <div class="minez">
-                        <a href="-">-</a>
-                    </div>
-
-                    <p>1</p>
-
-                    <div class="plus">
-                        <a href="+">+</a>
-                    </div>
-                </div>
-
-                <div class="om-price">
-                    <p class="proce">120.101 تومان </p>
-                </div>
-
-                <div class="om-delited">
-                    <i class="uil uil-trash"></i>
-                </div>
-            </div>
-
-
-
-            <!-- my order section -->
-            <div class="om-div">
-                <div class="om-img">
-                    <img src="{% static "images/saba.jpg" %}" alt="">
-                </div>
-
-                <div class="om-title_desc">
-                    <h5><b>محصول هکری اشمنتز ئدمسن زمنئسمیئر</b></h5>
-                    <p>جزعبات محصول</p>
-                </div>
-
-                <div class="om-total">
-                    <div class="minez">
-                        <a href="-">-</a>
-                    </div>
-
-                    <p>1</p>
-
-                    <div class="plus">
-                        <a href="+">+</a>
-                    </div>
-                </div>
-
-                <div class="om-price">
-                    <p class="proce">120.101 تومان </p>
-                </div>
-
-                <div class="om-delited">
-                    <i class="uil uil-trash"></i>
-                </div>
-            </div>
-
-
-        </div>
-        
-        <div class="om-final">
-            <!-- my order section -->
-            <div class="om-div">
-                <div class="om-img">
-                    <img src="{% static "images/saba.jpg" %}" alt="">
-                    <img src="{% static "images/saba.jpg" %}" alt="">
-                    <img src="{% static "images/saba.jpg" %}" alt="">
-                </div>
-
-                <div class="om-price">
-                    <p class="proce"> <i class="uil uil-dollar-alt"></i> 120.101 تومان </p>
-                </div>
-
-                <div class="om-price discount">
-                    <p class="proce"> <i class="uil uil-percentage"></i>  120.101 درصد تخفیفات </p>
-                </div>
-
-                <div class="om-price">
-                    <p class="proce"> <i class="uil uil-arrow-circle-right"></i>  120.101 قیمت نهایی</p>
-                </div>
-
-                <div class="om-delited">
-                    <button><a href=""> <i class="uil uil-transaction"></i> پرداخت کنید </a></button>
-                </div>
-            </div>
-        </div>
-
-    </main>
-    <script>
-        let icon = document.getElementById("menu-icon")
-        let menu = document.getElementById("menu")
-
-        function openMenu() {
-            if (menu.style.width === "0px") {
-                menu.style.width = "300px";
-                menu.style.overflow = "visible";
-            }
-            else {
-                menu.style.width = "0px";
-                menu.style.overflow = "hidden"
-
-            }
-
+    <style>
+        .cart-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            direction:rtl;
         }
-    </script>
-</body>
+        
+        .cart-item, .cart-total {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            border-top:1px solid gray;
+            border-bottom:1px solid gray;
+            padding: 10px;
+        }
+        
+        .item-image, .total-image {
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        
+        .item-image img, .total-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .item-details, .total-details {
+            flex-grow: 1;
+            margin-left: 10px;
+            display:flex;
+            gap:20px;
+            margin-right:50px;
+        }
+        
+        .item-details h5 {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .item-details p, .total-details p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #777;
+        }
+        
+        .item-quantity {
+            display: flex;
+            align-items: center;
+            margin-left:50px;
+        }
+        
+        .item-quantity button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .item-quantity p {
+            margin: 0 10px;
+        }
+        
+        .item-price {
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .item-actions button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cart-total {
+            padding: 20px;
+            background-color: #4d4d4f;
+            border-radius:3px;
+        }
+        
+        .cart-total p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #fff;
+        }
+        
+        .total-action button {
+            background-color: hsl(170, 75%, 41%);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .total-action button:hover {
+            background-color: #2980b9;
+        }
 
-</html>
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            .cart-item, .cart-total {
+                flex-direction: column;
+                text-align: center;
+                align-items: centerW;
+            }
+
+            .item-details, .total-details {
+                margin-left: 0;
+                margin-right:0;
+                margin-top: 10px;
+            }
+
+
+            .total-action {
+                margin-top: 20px;
+            }
+        }
+    </style>
+    
+    <div class="cart-container">
+        <!-- Product 1 -->
+        {% if order.items.exists %}
+        {% for orders in order.items.all %}
+        <div class="cart-item">
+            
+            <div class="item-image">
+                <img src="{{ orders.course.banner.url }}" alt="Product Image">
+            </div>
+    
+            <div class="item-price">
+                <a href="/Course/remove_item/{{ orders.course.name }}" > <i class=" icon ph-bold ph-trash"></i> <a>
+            </div>
+    
+            <div class="item-details">
+                <h5><a href="/Course/{{ orders.course.name }}">{{ orders.course.title }}</a></h5>
+            </div>
+            
+    
+            <div class="item-price">
+                <p class="price">{{ orders.course.discount_price | intcomma }} تومان</p>
+            </div>
+    
+            <div class="item-actions">
+                <button><i class="uil uil-trash"></i></button>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+            <p style="text-align: center; display: flex;gap: 2px;font-size: large; align-items: center;margin: 0 auto;" >سبد خرید شما خالی است از این  <a style="color: #2980b9;" href="/Course/hackmirooo/"> لینک </a>  دوره مورد نظر خود را انتخواب کنید.</p>
+        {% endif %}
+
+        <!-- Total -->
+        <div class="cart-total">
+
+            <div class="total-details">
+                <p><i class="uil uil-dollar-alt"></i> {{ order.get_total_price | intcomma }} تومان</p>
+                <p><i class="uil uil-percentage"></i> {{ order.final_total_descount  }} درصد تخفیفات</p>
+                <p><i class="uil uil-arrow-circle-right"></i> {{ order.get_total_descount | intcomma }} قیمت نهایی</p>
+            </div>
+
+            <div class="total-action">
+                <button> پرداخت کنید <i class="ph-bold ph-credit-card"></i></button>
+            </div>
+        </div>
+    </div>
+</article>
+{% endblock content %}
