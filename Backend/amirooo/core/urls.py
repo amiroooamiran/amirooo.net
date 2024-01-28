@@ -14,5 +14,5 @@ urlpatterns = [
     # order Segment
     path('SuccesP', succes_payment, name="succesful_payment"),
     path('unSuccesP', un_succes_payment, name="UnSuccesful_payment"),
-    path('cart/<str:username>', cart, name="carts")
+    path('cart/<str:username>', cart, name="carts"),
 ]
