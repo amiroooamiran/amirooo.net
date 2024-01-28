@@ -1,39 +1,150 @@
 {% load static %}
-<div class="side-menu" id="menu">
-  <div class="items">
+<div class="sidebar active">
+  <div class="menu-btn">
+    <i class="ph-bold ph-caret-left"></i>
+  </div>
+  <div class="head">
+    <!-- if not -->
 
-    <div class="item">
-      <i class="uil uil-books"></i>
-      <a href="/Course/">دوره ها</a>
+    {% if user.is_authenticated %}
+    <!-- if authenticate -->
+    <div class="user-img">
+      <img src="{{ user_profile.Profile.url }}" alt="" />
+    </div>
+    <div class="user-details">
+      <p class="name"><a href="">{{user.username}}</a></p>
+      <p class="title">ID: {{user.id}}</p>
+    </div>
+    {% else %}
+    <div class="user-login">
+    <i class="ph-bold ph-alien"></i>
+    </div>
+    <div class="user-details">
+      <p class="name"><a href="/user/">ورود</a></p>
+      <p class="title">یا ثبت نام</p>
+    </div>
+    {% endif %}
+    <!-- endif -->
+  </div>
+  <div class="nav">
+    <div class="menu last">
+      <p class="title">Main</p>
+      <ul>
+        <li class="active">
+          <a href="{% url 'Index' %}">
+            <i class="icon ph-bold ph-house-simple"></i>
+            <span class="text">خانه هکری </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="icon ph-bold ph-monitor-play"></i>
+            <i class="arrow ph-bold ph-caret-down"></i>
+            <span class="text">دوره هکری</span>
+            
+          </a>
+          <ul class="sub-menu">
+            <li>
+              <a href="/Course/hackmirooo/">
+                <span class="text">هک و امنیت </span>
+              </a>
+            </li>
+            <li>
+              <a href="/Course/programmirooo/">
+                <span class="text">برنامه نویسی</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="/store/">
+            <i class="icon ph-bold ph-storefront"></i>
+            <span class="text">فروشگاه</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="icon ph-bold ph-kanban"></i>
+            <i class="arrow ph-bold ph-caret-down"></i>
+            <span class="text">پروژه امیرو</span>
+            
+          </a>
+          <ul class="sub-menu">
+            <li>
+              <a href="#">
+                <span class="text">پروژه های جنگویی</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="text">پروژه های ریکتی</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="text">پروژه های Full Stack</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="icon ph-bold ph-ny-times-logo"></i>
+            <span class="text">مقالات و اخبار هکری</span>
+          </a>
+        </li>
+        
+
+
+        <li>
+          <a href="{% url 'contact' %}">
+            <i class="icon ph-bold ph-phone"></i>
+            <span class="text">ارتباط با ما</span>
+          </a>
+        </li>
+
+
+      </ul>
     </div>
     
-    <div class="item">
-      <i class="uil uil-user-arrows"></i>
-      <a href="">پروژه تو</a>
+    {% if user.is_authenticated %}
+    <div class="menu last">
+      <p class="title">Settings</p>
+      <ul>
+        <li>
+          <a href="#">
+            <i class="icon ph-bold ph-shopping-bag-open"></i>
+            <span class="text">سبد خرید</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="icon ph-bold ph-user"></i>
+            <span class="text">حساب هکری</span>
+          </a>
+        </li>
+      </ul>
     </div>
+    {% endif %}
 
-    <div class="item">
-      <i class="uil uil-book-reader"></i>
-      <a href="/user/{{user.username}}">پروفایل من</a>
-    </div>
-
-    
-    <div class="item">
-      <i class="uil uil-setting"></i>
-      <a href="{% url 'contact' %}">ارتباط با ما</a>
-    </div>
-    <div class="item">
-      <i class="uil uil-user"></i>
-      <a href="{% url 'about' %}">درباره ما</a>
-    </div>
   </div>
-  <div class="image">
-    <img src=" {% static 'images/JoineUs.png' %}" />
-    <button>عضویت در درس</button>
-  </div>
-</div>
+  <div class="menu">
+    {% if user.is_authenticated %}
+    <p class="title">Account</p>
+    <ul>
+      <li>
+        <a href="logout/">
+          <i class="icon ph-bold ph-sign-out"></i>
+          <span class="text">خروج</span>
+        </a>
+      </li>
+    </ul>
+    {% endif %}
 
-<div class="title" id="title">
-  <i class="uil uil-apps" id="menu-icon" onclick="openMenu()"></i>
-  <a href="{% url 'Index' %}"><h1>amirooo</h1></a>
+  </div>
+  
 </div>
