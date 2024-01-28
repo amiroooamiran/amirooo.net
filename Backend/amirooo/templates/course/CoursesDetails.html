@@ -20,16 +20,6 @@
 
         <div>
           <div class="hero-content">
-  
-            <div>
-              <h1 class="h1 section-title">
-                <span class="fixed-text"><span class="span">مدرس: </span> {{course.teacher.Fullname}} </span>
-              </h1>
-    
-              <p style="text-align: center;" class="hero-text">
-                {{course.teacher.Bio | safe | truncatewords_html:75 }}
-              </p>
-            </div>
             
   
           </div >
@@ -41,7 +31,7 @@
                 <span class="fixed-text">{{course.title}}</span>
               </h1>
     
-              <div  style="text-align: right; max-height: 150px; overflow-y: auto;padding: 5px;">
+              <div  style="text-align: right; max-height: 300px; overflow-y: auto;padding: 5px;margin-bottom:5px;">
                 {{ course.description | safe }}
               </div>
 
@@ -71,7 +61,11 @@
 
           <div class="img-holder two" style="--width: 240; --height: 370;">
             <img src="{{ course.teacher.Profile.url}}" width="240" height="370" alt="hero banner" class="img-cover">
+            <div class="teacher_bio">
+              {{ course.teacher.Bio | safe }}
+            </div>
           </div>
+
 
 
           <img src="{% static 'assets/images/hero-shape-2.png' %}" width="622" height="551" alt="" class="shape hero-shape-2">

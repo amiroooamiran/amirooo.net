@@ -711,8 +711,25 @@ canvas{
     transition: 0.5s;
 }
 
+.teacher_bio{
+  position: absolute;
+  background-color: #3e3e3e;
+  padding: 15px;
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  color: hsl(151, 58%, 46%);
+  left: 0px;
+  top: 0px;
+  display: none;
+  font-size: small;
+  margin: 0 auto;
+  z-index: 9999;
+}
 
-
+.hero-banner .img-holder.two:hover .teacher_bio{
+  display: block;
+}
 /*-----------------------------------*\
   #CATEGORY
 \*-----------------------------------*/
