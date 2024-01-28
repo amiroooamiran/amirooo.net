@@ -10,10 +10,23 @@
   <!-- 
     - primary meta tag
   -->
-  <title>amirooo.net | Index</title>
-  <meta name="title" content="EduWeb - The Best Program to Enroll for Exchange">
-  <meta name="description" content="This is an education html template made by codewithsadee">
+  <title>amirooo.net | {% block title %}{% endblock title %}</title>
+  <meta name="title" content="{% block title_dsc %}{% endblock title_dsc %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{% block description %}{% endblock description %}">
+  <meta name="keywords" content="{% block keywords %}{% endblock keywords %}">
+  <meta name="author" content="امیرحسین امیران ">
+  <meta name="robots" content="index, follow">
 
+  <link rel="icon" type="image/x-icon" href="{% static 'assets/images/logo.svg' %}">
+  
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:type" content="website">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:image:width" content="1080">
+  <meta property="og:url" content="https://amirooo.net">
+  <meta property="og:image" content="{% static 'assets/images/logo.svg' %}">
   <!-- 
     - favicon
   -->
@@ -83,7 +96,7 @@
         <div class="footer-brand">
 
           <a href="#" class="logo">
-            <img src="{% static '/assets/images/logo-light.svg' %}" width="162" height="50" alt="EduWeb logo">
+            <img src="{% static '/assets/images/logo-light.svg' %}" width="302"  alt="EduWeb logo">
           </a>
 
           <p class="footer-brand-text">

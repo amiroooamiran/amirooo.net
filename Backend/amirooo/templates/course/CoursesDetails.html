@@ -1,5 +1,10 @@
 {% extends "../base.html" %}
 
+{% block title %} {{course.title}} {% endblock title %}
+{% block title_dsc %} آموزش امنیت سایبری {% endblock title_dsc %}
+{% block description %}  {{ course.description | truncatewords_html:28  }}  {% endblock description %}
+{% block keywords %}  {% endblock keywords %}
+
 {% load humanize %}
 {% load static %}
 {% block content %}
