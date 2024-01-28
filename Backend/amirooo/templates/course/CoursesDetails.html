@@ -189,13 +189,28 @@
             </div>
 
       </section>
+      {% if user.is_authenticated %}
+      {% if not user_profile.User_course.all %}
+        <a style="margin: 0 auto;margin-bottom: 20px;" href="{% url 'add_to_cart' course.name %}" class="btn has-before">
+          <i class="ph-bold ph-shopping-bag-open"></i>
+          <span class="span">خرید دوره به صورت اتوماتیک</span>
+        </a>
 
-      <a style="margin: 0 auto;margin-bottom: 20px;" href="https://t.me/amirhosseinamiran" class="btn has-before">
-        <i class="ph-bold ph-shopping-bag-open"></i>
-        <span class="span">خرید دوره به صورت اتوماتیک</span>
+        {% for message in messages %}
+        <div class="message">
+          <i class="ph-bold ph-hand-coins"></i>
+          <span style="color:black;" class="span">{{ message }}</span>
+        </div>
+        {% endfor %}
+      {% endif %}
+    {% else %}
+      <a style="margin: 0 auto;margin-bottom: 20px;" href="/user/" class="btn has-before">
+        <i class="ph-bold ph-fingerprint"></i>
+        <span class="span">برای مشاهده دوره ابتدا ثبت نام کنید</span>
       </a>
+    {% endif %}
 </article>  
         <!--end of CoursesDetails by rastin design -->
 
-        <script src="{% static '/js/coursDitails.js' %}"></script>
+<script src="{% static '/js/coursDitails.js' %}"></script>
 {% endblock content %}
