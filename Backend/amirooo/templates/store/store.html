@@ -1,0 +1,129 @@
+{% extends "../base.html" %} {% load humanize %} {% load static %} 
+{% block content %}
+<article>
+
+  <!-- 
+      - #CATEGORY
+    -->
+
+  <section style="margin-top: -80px;" class="section category" aria-label="category">
+    <div class="container">
+      <p class="section-subtitle">Importent</p>
+
+      <h2 class="h2 section-title"><span class="span"> محصولات نفوذ</span>
+      </h2>
+
+      <p class="section-text">
+        <b>سلب مسئولیت قانونی</b>
+
+        این وب‌سایت به عنوان یک منبع معتبر برای فروش محصولات تست نفوذ در اختیار شما قرار داده شده است. تمامی محصولات اینجانب با دقت و با رعایت استانداردهای امنیتی تهیه شده و ارائه شده‌اند. لطفاً توجه داشته باشید که استفاده نادرست یا ناپسند از این محصولات، به عهده خریدار می‌باشد و تیم امیرو هیچ مسئولیتی در قبال استفاده نادرست از محصولات فروشی ندارد. با خرید از این وب‌سایت، شما موافقت خود را با این شرایط اعلام می‌کنید.
+
+
+      </p>
+
+    </div>
+  </section>
+
+
+      <!-- 
+        - #COURSE
+      -->
+
+    
+      <section class="section course" id="courses" aria-label="course">
+        <div class="container">
+  
+          <p class="section-subtitle">Products</p>
+  
+          <h2 class="h2 section-title"> محصولات هکری با قیمت های مناسب <span class="span">خوفناک</span></h2>
+  
+          <ul class="grid-list">
+  
+          {% for course in courses %}
+          {% for tag in tags %}
+          {% if tag.course.id == course.id and tag.description == "hack" %}
+
+          <li>
+            <div class="course-card">
+
+              <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
+                <img src="{{course.banner.url}}" width="370" height="220" loading="lazy"
+                  alt="Build Responsive Real- World Websites with HTML and CSS" class="img-cover">
+              </figure>
+
+              <div class="card-content">
+
+                {% if course.length == 1 %}
+                <span class="badge">مبتدی</span>
+
+                {% elif course.length == 2 %}
+                <span class="badge">متوسط</span>
+
+                {% elif course.length == 3 %}
+                <span class="badge">پیشرفته</span>
+                {% endif %}
+
+                <h3 class="h3">
+                  <a href="{% url 'CoursesDetails' course.name %}" class="card-title">{{ course.title }}</a>
+                </h3>
+
+                <div class="wrapper">
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="rating-text">(5.0/7 Rating)</p>
+
+                </div>
+
+                <data class="price" value="{{ course.price | intcomma }}">{{ course.price | intcomma }} </data>
+                {% if course.active == True %}
+                <span style="font-size:small;text-align: right;">درحال برگذاری</span>
+                {% else %}
+                <span style="font-size:small;text-align: right;">اتمام دوره</span>
+                {% endif %}
+                
+                <ul class="card-meta-list">
+
+                  <li class="card-meta-item">
+                    <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
+                    {% with chapters=course.chapter_set.all %}
+                    <span class="span">{{ chapters|length }}</span>
+                    {% endwith %}
+                  </li>
+
+                  <li class="card-meta-item">
+                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                    <span class="span">{{ course.total_video_duration }} Minutes</span>
+                  </li>
+
+                  <li class="card-meta-item">
+                    <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                    {% with enrolled_users=course.user_set.all %}
+                    <span class="span">{{ enrolled_users.count }} Students</span>
+                    {% endwith %}
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+  
+          </ul>
+        </div>
+      </section>
+
+
+
+</article>
+{% endblock content %}
