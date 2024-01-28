@@ -69,10 +69,7 @@ class OrderItem(models.Model):
     def fina_price(self):
         price = self.course.price
         return price
-    
-    def final_discount(self):
-        discount = self.course.discount_price
-        return discount
+
 
     def __str__(self):
         return f'{self.user.username} {self.course.title}'
@@ -107,10 +104,23 @@ class Order(models.Model):
             total += order_item.fina_price()
         return total
     
+    def final_total_descount(self):
+        total_discount = 0
+        total_items = self.items.count()  # Get the total number of items in the cart
+        if total_items == 0:
+            return 0  # Avoid division by zero if there are no items in the cart
+
+        for order_item in self.items.all():
+            total_discount += order_item.course.discount
+
+        average_discount_per_item = total_discount / total_items
+        return average_discount_per_item
+    
+    
     def get_total_descount(self):
         total = 0
         for order_item in self.items.all():
-            total += order_item.final_discount()
+            total += order_item.course.discount_price()  # Call final_discount() as a method
         return total
     
     def __str__(self):
