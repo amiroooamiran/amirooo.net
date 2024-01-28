@@ -18,8 +18,17 @@ class CourseAdmin(admin.ModelAdmin):
 
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Teacher)
-admin.site.register(OrderItem)
-admin.site.register(Order)
+
+# Orders Category
+class CourseOrderItem(admin.ModelAdmin):
+    list_display = ("user", "course", "ordered")
+
+class CourseOrder(admin.ModelAdmin):
+    list_display = ("user", "start_date", "ordered_date", "ordered", "order_delivered", "razorpay_order_id")
+
+
+admin.site.register(OrderItem, CourseOrderItem)
+admin.site.register(Order, CourseOrder)
 
 # Chapters and Video
 
