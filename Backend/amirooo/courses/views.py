@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.shortcuts import render, get_object_or_404, redirect
 from courses.models import *
 from user.models import User as us
 
@@ -91,3 +92,27 @@ def add_to_cart(request, name):
         messages.info(request, "این دوره در سبد خرید شما اضافه شد")
         return redirect("CoursesDetails", name=name)
 
+
+def remove_item(request, name):
+    # Get the product based on name
+    course = get_object_or_404(Course, name=name)
+
+    # Check if there's an open order for the user
+    order_qs = Order.objects.filter(user=request.user, ordered=False)
+
+    if order_qs.exists():
+        order = order_qs.first()
+
+        # Check if the product is in the order
+        if order.items.filter(course=course).exists():
+            # Remove the OrderItem for the product from the order
+            order_item = order.items.filter(course=course, user=request.user, ordered=False).first()
+            order_item.delete()
+
+            messages.info(request, "The product has been removed")
+        else:
+            messages.info(request, "This product is not in your shopping cart")
+    else:
+        messages.info(request, "You have not customized any records")
+
+    return redirect("carts", username=request.user.username)
