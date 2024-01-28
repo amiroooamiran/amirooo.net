@@ -1,299 +1,665 @@
-<!DOCTYPE html>
-<html lang="en">
-{% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
-    {% include "../hed.html" %}
-    <meta property="og:description" content=".آموزش برنامه نویسی و امنیت سایبری با هدف با سواد سازی جامعه سایبری ایران برای آینده بهتره مملکت">
-    <title>amirooo.net | Index</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/dcea8a19ca.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link href="https://icons8.com/icon/UNLQZThgLcfv/user-circle">
-</head>
+{% extends "../base.html" %} {% load humanize %} {% load static %} 
+{% block content %}
+<article>
+  <!-- 
+      - #HERO
+    -->
 
-<body>
-    <main class="container">
-        <!--start side menu made by Saba -->
-        {% include "../siedbar.html" %}
-        <!--end side menu made by Saba -->
-        <!-- User Header Section -->
-        {% include "../header.html" %}
-        <!-- end of User Header Section by Amiran -->
+  <section
+    class="section hero has-bg-image"
+    id="home"
+    aria-label="home"
+    style="background-image: url('{% static '/assets/images/hero-bg.svg' %}')"
+  >
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="h1 section-title">
+          <span class="fixed-text"
+            >آدم های عادی هم با آموزش درست میتونن هکرهای
+            <span class="typewriter"></span> بشن.
+          </span>
+        </h1>
 
-        <div class="enamd_section">
-            <style>
-                .enamd_section{
-                    position: fixed;
-                    width: 30px;
-                    height: 30px;
-                    right: 10px;
-                    bottom: 10px;
-                    z-index: 999;
-                    border-radius: 10px;
-                    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.205);
-                    transition: 1s;
-                }
-                .enamd_section:hover{
-                    width: 70px;
-                    height: 70px;
-                }
-                .enamd_section a img{
-                    width: 30px;
-                }
-            </style>
-            <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=386273&Code=gZFWYKErAW34gj6LM5X4YO0uisR3awo4'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=386273&Code=gZFWYKErAW34gj6LM5X4YO0uisR3awo4' alt='' style='cursor:pointer' Code='gZFWYKErAW34gj6LM5X4YO0uisR3awo4'></a>
+        <p class="hero-text">
+          نیمگم بهترین کیفیت ویدیوهارو ما داریم اما کیفیت هم آموزش ها و هم کیفیت
+          محتوا را سیع کردیم در بالاترین حالت ممکن بسازیم.
+        </p>
+
+        <a href="/Course/hackmirooo/" class="btn has-before">
+          <span class="span">دوره ایی که میخوایی</span>
+
+          <i class="ph-bold ph-cursor-click"></i>
+        </a>
+      </div>
+
+      <figure class="hero-banner">
+        <div class="img-holder one" style="--width: 270; --height: 300">
+          <img
+            src="{% static 'assets/images/hero-banner-1.jpg' %}"
+            width="270"
+            height="300"
+            alt="hero banner"
+            class="img-cover"
+          />
         </div>
 
-        <div class="main-section">
-            <!-- start of Main Banner by Amiran -->
-            <div class="main-banner">
-                <div class="main-images">
-                    <img style="margin-right: -20px;" src="{% static 'images/banners/Main-poster2.png' %}" alt="">
-                    <img src="{% static 'images/banners/Main-poster.png' %}" alt="">
-                </div>
-                <div class="banner-title">
-                    <h2>پروژه های برنامه نویسی خود را به <u>باحال ترین</u> تیم برنامه نویسی دنیا بسپارید</h2>
-                    <br>
-                    <span>آیا ما از نظر شما باحال ترین هستیم ؟ | <b style="color: #F6BA05;"> نظر خود را با ستاره دادن به
-                            ما
-                            اعلام کنید </b></span>
-                </div>
-                <div class="we-options">
-                    <div class="options">
-                        <div>
-                            <img src="{% static 'images/icons/icons8-web-design-64.png' %}" alt="">
-                        </div>
-                        <div>
-                            <p>Web Design</p>
-                            <span>220+</span>
-                        </div>
-                    </div>
-                    <div class="options">
-                        <div>
-                            <img src="{% static 'images/icons/icons8-hips-64.png' %}" alt="">
-                        </div>
-                        <div>
-                            <p>Web Security</p>
-                            <span>31+</span>
-                        </div>
-                    </div>
-                    <div class="options">
-                        <div>
-                            <img src="{% static 'images/icons/icons8-network-drive-64.png' %}" alt="">
-                        </div>
-                        <div>
-                            <p>Cloud Services</p>
-                            <span>5+</span>
-                        </div>
-                    </div>
-                    <div class="options">
-                        <div>
-                            <img src="{% static 'images/icons/icons8-wacom-tablet-64.png' %}" alt="">
-                        </div>
-                        <div>
-                            <p>Graphic Design</p>
-                            <span>480+</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End of Main Banner by Amiran -->
-            <!-- start of first page by rastin design -->
-            <div class="firstpage">
-                <!-- Populer courses Section -->
-                <div id="popular-courses">
-                    <div class="Sections_header">
-                        <h2>محبوب ترین دوره ها</h2>
-                        <div id="courses-dropdown">
-                            <div class="Course-type">
-                                <select name="CourseType" id="orderType">
-                                    <option value="">تمام دوره ها</option>
-                                    <option value="طراحی frontend">طراحی frontend</option>
-                                    <option value="برنامه نویسی backend">برنامه نویسی backend</option>
-                                    <option value="ایمن سازی وبسایت">ایمن سازی وبسایت</option>
-                                    <option value="برنامه نویسی پایتون">برنامه نویسی پایتون</option>
-                                    <option value="هک">هک</option>
-                                    <option value="پردازش تصویر">پردازش تصویر</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main_course">
-
-                        {% for course in courses %}
-                        <div class="course">
-                            <div class="courseicon" style="background-color: #F6BA05;"></div>
-                            <div class="description">
-                                {% for tag in tags %}
-                                {% if tag.course.id == course.id %}
-                                <p class="coursetitle"><strong>{{ tag.description }}</strong></p>
-                                {% endif %}
-                                {% endfor %}
-                                <p class="grey">{{ course.teacher.Fullname }}</p>
-                            </div>
-                            <div class="coursebuttons">
-                                <button class="coursebtn">مشاهده دوره</button>
-                                <button class="morebtn"><i class="uil uil-ellipsis-v morebtndetail"></i></button>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                <!-- End of Populer Curses Section -->
-                <div id="current-activity">
-                    <div class="Sections_header">
-                        <h2>فعالیت ما</h2>
-                    </div>
-                    <div class="big-activity"></div>
-                    <div class="small-activity first">
-                        <p class="avtivitytitle">220+</p>
-                        <p class="activityDes">پروژهای تکمیل شده</p>
-                    </div>
-                    <div class="small-activity second">
-                        <p class="avtivitytitle">1+</p>
-                        <p class="activityDes">دوره های ویدیویی</p>
-                        <button class="activitybtn"><i class="uil uil-play playbtn"></i></button>
-                    </div>
-                </div>
-
-                <!-- Instructor Section -->
-                <div id="best-instructors">
-                    <div class="Sections_header">
-                        <h2 >برترین اساتید</h2>
-                        <h4 id="seeAll">بیشتر...</h4>
-                    </div>
-                    <div class="main_Instructor">
-
-                        {% for techer in techers %}
-                        {% if techer.Nikname != '' %}
-                        <div class="Instructor">
-                            <img class="avatar"
-                                src="{{ techer.Profile.url }}"
-                                alt="{{ techer.Fullname }}" />
-                            <div class="description">
-                                <p class="Instructortitle">{{techer.Fullname}}</p>
-                                <p class="grey">{{ techer.Nikname }}</p>
-                            </div>
-                            <button class="Instructorbtn" style="border: 1px solid #F6BA05;">دوره ها</button>
-                        </div>
-                        {% endif %}
-                        {% endfor %}
-
-                    </div>
-                </div>
-            </div>
-            <!-- End of Instructor Section -->
-            <!-- end of first page by rastin design -->
-            <!-- start of system abzar by rastin design -->
-            <div class="abzar-con">
-                <div class="abzar-detail">
-                    <h2>ابزارک های سیستمی</h2>
-                    <p class="gray-a">ابزارک های سیستمی برنامه های کوچک اما کاربردی هستند
-                    <p>
-                    <p class="gray-a">به زودی ...</p>
-                </div>
-                {% comment %} <div class="tools">
-                    <div class="abzar"><a>
-                            <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/unlock-2.png"
-                                alt="unlock-2" />
-                            <div class="abzar-head">
-                                <h3>پسورد ساز</h3>
-                                <h4 class="gray-a">امنیت</h4>
-                            </div>
-                        </a></div>
-                    <div class="abzar"><a>
-                            <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/ghost.png"
-                                alt="ghost" />
-                            <div class="abzar-head">
-                                <h3>هش ساز</h3>
-                                <h4 class="gray-a">امنیت</h4>
-                            </div>
-                        </a></div>
-                    <div class="abzar"><a>
-                            <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/network-cable.png"
-                                alt="network-cable" />
-                            <div class="abzar-head">
-                                <h3>محاسبه آی پی</h3>
-                                <h4 class="gray-a">شبکه</h4>
-                            </div>
-                        </a></div>
-                    <div class="abzar"><a>
-                            <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/user-credentials.png"
-                                alt="user-credentials" />
-                            <div class="abzar-head">
-                                <h3>محاسبه کرک رمز</h3>
-                                <h4 class="gray-a">امنیت</h4>
-                            </div>
-                        </a></div>
-                    <div class="abzar"><a>
-                            <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/coins.png"
-                                alt="coins" />
-                            <div class="abzar-head">
-                                <h3>محاسبه درصد تخفیف</h3>
-                                <h4 class="gray-a">مالی</h4>
-                            </div>
-                        </a></div>
-                    <div class="abzar"><a>
-                            <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/documents.png"
-                                alt="documents" />
-                            <div class="abzar-head">
-                                <h3>متن به base64</h3>
-                                <h4 class="gray-a">امنیت</h4>
-                            </div>
-                        </a></div>
-                    <div class="abzar"><a>
-                            <img width="50" height="50"
-                                src="https://img.icons8.com/dusk/64/frankensteins-monster--v1.png"
-                                alt="frankensteins-monster--v1" />
-                            <div class="abzar-head">
-                                <h3>تست webRTC</h3>
-                                <h4 class="gray-a">امنیت</h4>
-                            </div>
-                        </a></div>
-                    <div class="abzar"><a>
-                            <img width="50" height="50" src="https://img.icons8.com/bubbles/50/gun.png" alt="gun" />
-                            <div class="abzar-head">
-                                <h3>تیرانداز فضایی</h3>
-                                <h4 class="gray-a">بازی</h4>
-                            </div>
-                        </a></div>
-                    <div class="abzar"><a>
-                            <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/network-card.png"
-                                alt="network-card" />
-                            <div class="abzar-head">
-                                <h3>تولید آدرس مک</h3>
-                                <h4 class="gray-a">شبکه</h4>
-                            </div>
-                        </a></div>
-                </div> {% endcomment %}
-            </div>
-            <!-- end of system abzar by rastin design -->
+        <div class="img-holder two" style="--width: 240; --height: 370">
+          <img
+            src="{% static '/assets/images/hero-banner-2.jpg' %}"
+            width="240"
+            height="370"
+            alt="hero banner"
+            class="img-cover"
+          />
         </div>
-    </main>
 
-    <script>
-        let icon = document.getElementById("menu-icon")
-        let menu = document.getElementById("menu")
+        <div class="shape hero-shape-1">
+          <div>
+            <a
+              href="https://t.me/amirhosseinamiran"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Online Support</a
+            >
+            <div>
+              <i class="ph-bold ph-telegram-logo"></i>
+            </div>
+          </div>
+        </div>
 
-        function openMenu() {
-            if (menu.style.width === "0px") {
-                menu.style.width = "300px";
-                menu.style.overflow = "visible";
-            }
-            else {
-                menu.style.width = "0px";
-                menu.style.overflow = "hidden"
+        <img
+          src="{% static 'assets/images/hero-shape-2.png' %}"
+          width="622"
+          height="551"
+          alt=""
+          class="shape hero-shape-2"
+        />
+      </figure>
+    </div>
+  </section>
 
-            }
+  <!-- 
+      - #CATEGORY
+    -->
 
-        }
-    </script>
-</body>
+  <section class="section category" aria-label="category">
+    <div class="container">
+      <p class="section-subtitle">Categories</p>
 
-</html>
+      <h2 class="h2 section-title">
+        برای یادگیری از هر جایی که هستی <span class="span">کلاسهای آنلاین</span>
+      </h2>
+
+      <p class="section-text">
+        <b>سلب مسئولیت قانونی</b>
+        این سایت حاوی مباحث و منابعی میباشد که به طور بالقوه مخرب یا خطرناک است
+        و تنها برای اهداف آموزشی میباشد. مطالب آموزشی این سایت در ساختاری کاملا
+        قانونمند و اخلاقی ارائه شده و تیم امیرو هیچگونه مسئولیتی در برابر تبعات
+        ناشی از هرگونه استفاده از مضامین این سایت را بر عهده نمیگیرد. استفاده از
+        محتوای این سایت به منزله پذیرش این پیام میباشد .
+      </p>
+
+      <ul class="grid-list">
+        <li>
+          <div class="category-card" style="--color: 170, 75%, 41%">
+            <div class="card-icon">
+              <img
+                src="{% static 'assets/images/category-1.svg' %}"
+                width="40"
+                height="40"
+                loading="lazy"
+                alt="Online Degree Programs"
+                class="img"
+              />
+            </div>
+
+            <h3 class="h3">
+              <a href="#" class="card-title">هوش مصنوعی و امنیت</a>
+            </h3>
+
+            <p class="card-text">
+              آموزش استفاده از یادگیری ماشین در ساخت سیستنهای هکری.
+            </p>
+
+            <span class="card-badge">1 Courses</span>
+          </div>
+        </li>
+
+        <li>
+          <div class="category-card" style="--color: 351, 83%, 61%">
+            <div class="card-icon">
+              <img
+                src="{% static 'assets/images/category-2.svg' %}"
+                width="40"
+                height="40"
+                loading="lazy"
+                alt="Non-Degree Programs"
+                class="img"
+              />
+            </div>
+
+            <h3 class="h3">
+              <a href="#" class="card-title">طراحی و ساخت ابزار هکری </a>
+            </h3>
+
+            <p class="card-text">
+              شما یاد خواهید گرفت که انواع ابزارهای هکری را طراحی تولید کنید.
+            </p>
+
+            <span class="card-badge">3 Courses</span>
+          </div>
+        </li>
+
+        <li>
+          <div class="category-card" style="--color: 229, 75%, 58%">
+            <div class="card-icon">
+              <img
+                src="{% static 'assets/images/category-3.svg' %}"
+                width="40"
+                height="40"
+                loading="lazy"
+                alt="Off-Campus Programs"
+                class="img"
+              />
+            </div>
+
+            <h3 class="h3">
+              <a href="#" class="card-title">برنامه نویسی و امنیت وبسایت</a>
+            </h3>
+
+            <p class="card-text">
+              در این مجموعه شما برنامه نویسی بکند و امنیت سایت را فرا میگیرد.
+            </p>
+
+            <span class="card-badge">2 Courses</span>
+          </div>
+        </li>
+
+        <li>
+          <div class="category-card" style="--color: 42, 94%, 55%">
+            <div class="card-icon">
+              <img
+                src="{% static 'assets/images/category-4.svg' %}"
+                width="40"
+                height="40"
+                loading="lazy"
+                alt="Hybrid Distance Programs"
+                class="img"
+              />
+            </div>
+
+            <h3 class="h3">
+              <a href="#" class="card-title">مجموعه هکری خارج از ماتریکس</a>
+            </h3>
+
+            <p class="card-text">
+              از امنیت شبکه تا نوشتن بدافزارهای اندرویدی و هک سیستم عامل ها.
+            </p>
+
+            <span class="card-badge">1 Courses</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 
+      - #ABOUT
+    -->
+
+  <section class="section about" id="about" aria-label="about">
+    <div class="container">
+      <figure class="about-banner">
+        <div class="img-holder" style="--width: 520; --height: 370">
+          <img
+            src="{% static 'assets/images/amirhossein.amiran.jpg' %}"
+            width="520"
+            height="370"
+            loading="lazy"
+            alt="about banner"
+            class="img-cover"
+          />
+        </div>
+
+        <img
+          src="{% static 'assets/images/about-shape-1.png' %}"
+          width="360"
+          height="420"
+          loading="lazy"
+          alt=""
+          class="shape about-shape-1"
+        />
+
+        <img
+          src="{% static 'assets/images/about-shape-3.png' %}"
+          width="722"
+          height="528"
+          loading="lazy"
+          alt=""
+          class="shape about-shape-3"
+        />
+      </figure>
+
+      <div class="about-content">
+        <p class="section-subtitle">About Us</p>
+
+        <h2 class="h2 section-title">
+          تجربه چندین ساله من را در
+          <span class="span">هک و امنیت سایبری</span> فرابگیرید
+        </h2>
+
+        <p class="section-text">
+          من <b><strong>امیرو</strong></b> هستم یه هکر که در آمدش از برنامه
+          نویسی و عاشق دوچرخه سواریه, تجربیات چندین ساله منو در
+          <b>امنیت سایبری</b> و <b>برانامه نویسی جنگو </b> میتونید توی این سایت
+          ببینید.
+        </p>
+
+        <ul class="about-list">
+          <li class="about-item">
+            <ion-icon
+              name="checkmark-done-outline"
+              aria-hidden="true"
+            ></ion-icon>
+
+            <span class="span">یه فوق باهوش خلاق</span>
+          </li>
+
+          <li class="about-item">
+            <ion-icon
+              name="checkmark-done-outline"
+              aria-hidden="true"
+            ></ion-icon>
+
+            <span class="span">تجربه حرفه ایی 6 ساله</span>
+          </li>
+
+          <li class="about-item">
+            <ion-icon
+              name="checkmark-done-outline"
+              aria-hidden="true"
+            ></ion-icon>
+
+            <span class="span">و البته یه گیک بنیادگرا</span>
+          </li>
+        </ul>
+        <p style="text-align: right" class="section-text">
+          برای دیدن تجربیات دقیق کاری من میتونید به صفحه
+          <a href=""><b>پروژه های امیرو </b>بروید.</a>
+        </p>
+
+        <img
+          src="{% static '' %}assets/images/about-shape-4.svg"
+          width="100"
+          height="100"
+          loading="lazy"
+          alt=""
+          class="shape about-shape-4"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+      - #COURSE
+    -->
+
+  <section class="section course" id="courses" aria-label="course">
+    <div class="container">
+      <p class="section-subtitle">Popular Courses</p>
+
+      <h2 class="h2 section-title">
+        ترین دوره های آموزشی وبسایت <span class="span">خوفناک</span>
+      </h2>
+
+      <ul class="grid-list">
+        {% for course in courses|slice:"3" %}
+        <li>
+          <div class="course-card">
+            <figure
+              class="card-banner img-holder"
+              style="--width: 370; --height: 220"
+            >
+              <img
+                src="{{course.banner.url}}"
+                width="370"
+                height="220"
+                loading="lazy"
+                alt="Build Responsive Real- World Websites with HTML and CSS"
+                class="img-cover"
+              />
+            </figure>
+
+            <div class="card-content">
+              {% if course.length == 1 %}
+              <span class="badge">مبتدی</span>
+
+              {% elif course.length == 2 %}
+              <span class="badge">متوسط</span>
+
+              {% elif course.length == 3 %}
+              <span class="badge">پیشرفته</span>
+              {% endif %}
+
+              <h3 class="h3">
+                <a
+                  href="{% url 'CoursesDetails' course.name %}"
+                  class="card-title"
+                  >{{ course.title }}</a
+                >
+              </h3>
+
+              <div class="wrapper">
+                <div class="rating-wrapper">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+
+                <p class="rating-text">(5.0/7 Rating)</p>
+              </div>
+
+              <data class="price" value="{{ course.price | intcomma }}"
+                >{{ course.price | intcomma }}
+              </data>
+              {% if course.active == True %}
+              <span style="font-size: small; text-align: right"
+                >درحال برگذاری</span
+              >
+              {% else %}
+              <span style="font-size: small; text-align: right"
+                >اتمام دوره</span
+              >
+              {% endif %}
+
+              <ul class="card-meta-list">
+                <li class="card-meta-item">
+                  <ion-icon
+                    name="library-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+                  {% with chapters=course.chapter_set.all %}
+                  <span class="span">{{ chapters|length }}</span>
+                  {% endwith %}
+                </li>
+
+                <li class="card-meta-item">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                  <span class="span"
+                    >{{ course.total_video_duration }} Minutes</span
+                  >
+                </li>
+
+                <li class="card-meta-item">
+                  <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                  {% with enrolled_users=course.user_set.all %}
+                  <span class="span">{{ enrolled_users.count }} Students</span>
+                  {% endwith %}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <a href="/Course/hackmirooo/" class="btn has-before">
+        <span class="span">مشهاده همه دوره ها</span>
+
+        <i class="ph-bold ph-cursor-click"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- 
+      - #STATE
+    -->
+
+  <section class="section stats" aria-label="stats">
+    <div class="container">
+      <ul class="grid-list">
+        <li>
+          <div class="stats-card" style="--color: 170, 75%, 41%">
+            <h3 class="card-title">{{ total_users }}</h3>
+
+            <p class="card-text">تعداد دانشجویان</p>
+          </div>
+        </li>
+
+        <li>
+          <div class="stats-card" style="--color: 351, 83%, 61%">
+            <h3 class="card-title">102</h3>
+
+            <p class="card-text">ساعت آموزش</p>
+          </div>
+        </li>
+
+        <li>
+          <div class="stats-card" style="--color: 260, 100%, 67%">
+            <h3 class="card-title">96%</h3>
+
+            <p class="card-text">رضایت داشجویان</p>
+          </div>
+        </li>
+
+        <li>
+          <div class="stats-card" style="--color: 42, 94%, 55%">
+            <h3 class="card-title">35+</h3>
+
+            <p class="card-text">مشتریان فروشگاه</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 
+      - #BLOG
+    -->
+
+  <section
+    class="section blog has-bg-image"
+    id="blog"
+    aria-label="blog"
+    style="background-image: url('{% static '' %}assets/images/blog-bg.svg')"
+  >
+    <div class="container">
+      <p class="section-subtitle">Latest Articles</p>
+
+      <h2 style="text-align: center !important" class="h2 section-title">
+        اخبار هک و امنیت سایبری دنیا <span class="span">مهم ترین</span>
+      </h2>
+
+      <ul class="grid-list">
+        <li>
+          <div class="blog-card">
+            <figure
+              class="card-banner img-holder has-after"
+              style="--width: 370; --height: 370"
+            >
+              <img
+                src="{% static '' %}assets/images/blog-1.jpg"
+                width="370"
+                height="370"
+                loading="lazy"
+                alt="Become A Better Blogger: Content Planning"
+                class="img-cover"
+              />
+            </figure>
+
+            <div class="card-content">
+              <a href="#" class="card-btn" aria-label="read more">
+                <ion-icon
+                  name="arrow-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+
+              <a href="#" class="card-subtitle">Online</a>
+
+              <h3 class="h3">
+                <a href="#" class="card-title"
+                  >Become A Better Blogger: Content Planning</a
+                >
+              </h3>
+
+              <ul class="card-meta-list">
+                <li class="card-meta-item">
+                  <ion-icon
+                    name="calendar-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+
+                  <span class="span">Oct 10, 2021</span>
+                </li>
+
+                <li class="card-meta-item">
+                  <ion-icon
+                    name="chatbubbles-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+
+                  <span class="span">Com 09</span>
+                </li>
+              </ul>
+
+              <p class="card-text">
+                Lorem Ipsum Dolor Sit Amet Cons Tetur Adipisicing Sed.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="blog-card">
+            <figure
+              class="card-banner img-holder has-after"
+              style="--width: 370; --height: 370"
+            >
+              <img
+                src="{% static '' %}assets/images/blog-2.jpg"
+                width="370"
+                height="370"
+                loading="lazy"
+                alt="Become A Better Blogger: Content Planning"
+                class="img-cover"
+              />
+            </figure>
+
+            <div class="card-content">
+              <a href="#" class="card-btn" aria-label="read more">
+                <ion-icon
+                  name="arrow-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+
+              <a href="#" class="card-subtitle">Online</a>
+
+              <h3 class="h3">
+                <a href="#" class="card-title"
+                  >Become A Better Blogger: Content Planning</a
+                >
+              </h3>
+
+              <ul class="card-meta-list">
+                <li class="card-meta-item">
+                  <ion-icon
+                    name="calendar-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+
+                  <span class="span">Oct 10, 2021</span>
+                </li>
+
+                <li class="card-meta-item">
+                  <ion-icon
+                    name="chatbubbles-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+
+                  <span class="span">Com 09</span>
+                </li>
+              </ul>
+
+              <p class="card-text">
+                Lorem Ipsum Dolor Sit Amet Cons Tetur Adipisicing Sed.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="blog-card">
+            <figure
+              class="card-banner img-holder has-after"
+              style="--width: 370; --height: 370"
+            >
+              <img
+                src="{% static '' %}assets/images/blog-3.jpg"
+                width="370"
+                height="370"
+                loading="lazy"
+                alt="Become A Better Blogger: Content Planning"
+                class="img-cover"
+              />
+            </figure>
+
+            <div class="card-content">
+              <a href="#" class="card-btn" aria-label="read more">
+                <ion-icon
+                  name="arrow-forward-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </a>
+
+              <a href="#" class="card-subtitle">Online</a>
+
+              <h3 class="h3">
+                <a href="#" class="card-title"
+                  >Become A Better Blogger: Content Planning</a
+                >
+              </h3>
+
+              <ul class="card-meta-list">
+                <li class="card-meta-item">
+                  <ion-icon
+                    name="calendar-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+
+                  <span class="span">Oct 10, 2021</span>
+                </li>
+
+                <li class="card-meta-item">
+                  <ion-icon
+                    name="chatbubbles-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+
+                  <span class="span">Com 09</span>
+                </li>
+              </ul>
+
+              <p class="card-text">
+                Lorem Ipsum Dolor Sit Amet Cons Tetur Adipisicing Sed.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <img
+        src="{% static 'assets/images/blog-shape.png' %}"
+        width="186"
+        height="186"
+        loading="lazy"
+        alt=""
+        class="shape blog-shape"
+      />
+    </div>
+  </section>
+</article>
+{% endblock content %}
