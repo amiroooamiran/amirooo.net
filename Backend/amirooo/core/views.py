@@ -48,28 +48,22 @@ def contact(request):
 
 # hier we have a orders pages
 def cart(request, username):
+
     if request.user.is_authenticated:
         # Get a single user profile object that matches the logged-in user
         user_profile = us.objects.get(user=request.user)
     else:
         # Do something else for anonymous users, such as showing a default profile or a message
         user_profile = None
-    
-    # courses Models
-    courses = Course.objects.all()
-    tags = Tag.objects.all()
-    techers = us.objects.all()
 
-    updates = Updates.objects.all()
+    if Order.objects.filter(user=request.user, ordered=False).exists():
+        order = Order.objects.get(user=request.user, ordered=False)
+        context ={
+            'order':order,
+            'user_profile' : user_profile,
+        }
+        return render(request, 'Orders/orderMain.html', context)
 
-    context = {
-        'user_profile' : user_profile,
-        'courses' : courses,
-        'tags' : tags,
-        'techers': techers,
-        'updates': updates
-    }
-    return render(request, 'Orders/orderMain.html', context)
 
 
 def succes_payment(request):
