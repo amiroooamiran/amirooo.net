@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.utils import timezone
 # Create your views here.
 
-def MainCourses(request):
+def MainCoursesH(request):
     courses = Course.objects.all()
     tags = Tag.objects.all()
 
@@ -23,7 +23,26 @@ def MainCourses(request):
         'tags' : tags,
         'user_profile' : user_profile
     }
-    return render(request, 'course/MainCourse.html', context)
+    return render(request, 'course/CoursesH-main.html', context)
+
+
+def MainCoursesP(request):
+    courses = Course.objects.all()
+    tags = Tag.objects.all()
+
+    if request.user.is_authenticated:
+        # Get a single user profile object that matches the logged-in user
+        user_profile = us.objects.get(user=request.user)
+    else:
+        # Do something else for anonymous users, such as showing a default profile or a message
+        user_profile = None
+
+    context ={
+        'courses' : courses,
+        'tags' : tags,
+        'user_profile' : user_profile
+    }
+    return render(request, 'course/CoursesP-main.html', context)
 
 def CourseDitails(request, name):
     course = Course.objects.get(name=name)
