@@ -1,0 +1,224 @@
+{% extends "../base.html" %}
+
+{% load humanize %}
+{% load static %}
+{% block content %}
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+      
+
+      <section class="section hero has-bg-image" id="home" aria-label="home"
+        style="background-image: url('{% static '/assets/images/hero-bg.svg' %}')">
+
+        
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 section-title">
+              <span class="fixed-text">آیا هکر شدن سخته ؟ </span>
+            </h1>
+
+            <p class="hero-text">
+                توی تمام دوره ها ما بخشی های اول رو رایگان کردیم ببینید اگر سخت بود پس برید سراغ یه چیز دیگه برای مغز شما هکر شدن خوب نیست. <b>امیرو رو راسته
+                </b>
+            </p>
+
+            <a href="https://t.me/amirhosseinamiran" class="btn has-before">
+              <span class="span">مشاوره میخوایی </span>
+
+              <i class="ph-bold ph-cursor-click"></i>
+            </a>
+
+          </div>
+
+          <figure class="hero-banner">
+
+            <div class="img-holder one" style="--width: 270; --height: 300;">
+              <img src="{% static '/assets/images/hero-banner-course-2.jpg' %}" width="270" height="300" alt="hero banner" class="img-cover">
+            </div>
+
+            <div class="img-holder two" style="--width: 240; --height: 370;">
+              <img src="{% static '/assets/images/hero-banner-course-1.jpg' %}" width="240" height="370" alt="hero banner" class="img-cover">
+            </div>
+
+            <div class="shape hero-shape-1">
+              
+             <div>
+              <a href="https://t.me/amirhosseinamiran" target="_blank" rel="noopener noreferrer">Online Support</a>
+              <div>
+                <i class="ph-bold ph-telegram-logo"></i>
+              </div>
+             </div>
+
+            </div>
+
+            <img src="{% static 'assets/images/hero-shape-2.png' %}" width="622" height="551" alt="" class="shape hero-shape-2">
+
+          </figure>
+
+        </div>
+      </section>
+
+
+            <!-- 
+        - #STATE
+      -->
+
+      <section class="section stats" aria-label="stats">
+        <div class="container">
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="stats-card" style="--color: 170, 75%, 41%">
+                <h3 class="card-title">80</h3>
+
+                <p class="card-text">تعداد دانشجویان</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="stats-card" style="--color: 351, 83%, 61%">
+                <h3 class="card-title">102</h3>
+
+                <p class="card-text">ساعت آموزش</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="stats-card" style="--color: 260, 100%, 67%">
+                <h3 class="card-title">96%</h3>
+
+                <p class="card-text">رضایت داشجویان</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="stats-card" style="--color: 42, 94%, 55%">
+                <h3 class="card-title">35+</h3>
+
+                <p class="card-text">مشتریان فروشگاه</p>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+      <!-- 
+        - #COURSE
+      -->
+
+    
+      <section class="section course" id="courses" aria-label="course">
+        <div class="container">
+  
+          <p class="section-subtitle">Popular Courses</p>
+  
+          <h2 class="h2 section-title"> ترین دوره های آموزشی وبسایت <span class="span">خوفناک</span></h2>
+  
+          <ul class="grid-list">
+  
+          {% for course in courses %}
+          {% for tag in tags %}
+          {% if tag.course.id == course.id and tag.description == "hack" %}
+
+          <li>
+            <div class="course-card">
+
+              <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
+                <img src="{{course.banner.url}}" width="370" height="220" loading="lazy"
+                  alt="Build Responsive Real- World Websites with HTML and CSS" class="img-cover">
+              </figure>
+
+              <div class="card-content">
+
+                {% if course.length == 1 %}
+                <span class="badge">مبتدی</span>
+
+                {% elif course.length == 2 %}
+                <span class="badge">متوسط</span>
+
+                {% elif course.length == 3 %}
+                <span class="badge">پیشرفته</span>
+                {% endif %}
+
+                <h3 class="h3">
+                  <a href="{% url 'CoursesDetails' course.name %}" class="card-title">{{ course.title }}</a>
+                </h3>
+
+                <div class="wrapper">
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="rating-text">(5.0/7 Rating)</p>
+
+                </div>
+
+                <data class="price" value="{{ course.price | intcomma }}">{{ course.price | intcomma }} </data>
+                {% if course.active == True %}
+                <span style="font-size:small;text-align: right;">درحال برگذاری</span>
+                {% else %}
+                <span style="font-size:small;text-align: right;">اتمام دوره</span>
+                {% endif %}
+                
+                <ul class="card-meta-list">
+
+                  <li class="card-meta-item">
+                    <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
+                    {% with chapters=course.chapter_set.all %}
+                    <span class="span">{{ chapters|length }}</span>
+                    {% endwith %}
+                  </li>
+
+                  <li class="card-meta-item">
+                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                    <span class="span">{{ course.total_video_duration }} Minutes</span>
+                  </li>
+
+                  <li class="card-meta-item">
+                    <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                    {% with enrolled_users=course.user_set.all %}
+                    <span class="span">{{ enrolled_users.count }} Students</span>
+                    {% endwith %}
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+  
+          </ul>
+  
+          <a href="#" class="btn has-before">
+            <span class="span">مشهاده همه دوره ها</span>
+  
+            <i class="ph-bold ph-cursor-click"></i>
+          </a>
+  
+        </div>
+      </section>
+
+
+
+    </article>
+
+{% endblock content %}
