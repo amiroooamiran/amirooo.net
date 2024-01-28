@@ -1,82 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "../base.html" %}
+
+{% load humanize %}
 {% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <title>amirooo.net-Login</title>
-    <link rel="stylesheet" href="{% static 'styles/loginform.css' %}">
-    <script>
-        function toggle() {
-            let login = document.getElementById('login');
-            let reg = document.getElementById('reg');
-            login.classList.toggle('show');
-            reg.classList.toggle('show');
-        }
-    </script>
-</head>
+{% block content %}
+    <article>
 
-<body>
-    <main class="container">
-        <!-- User Header Section -->
-        <div class="LF-header_section">
-            <div class="title" id="title">
-                <i class="uil uil-apps" id="menu-icon" onclick="openMenu()"></i>
-                <a href="/"><h1>amirooo</h1></a>
+
+            <!-- 
+        - #STATE
+      -->
+
+      <section class="section stats" aria-label="stats">
+        
+        <div class="container" id="singin">
+            <div class="screen">
+            <div class="screen-header">
+                <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+                </div>
+                <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                </div>
             </div>
-        </div>
-        <!-- end of User Header Section by Amiran -->
-        <section>
-            <aside>
-                <div id="login" class="show">
+            <div class="screen-body">
+                <div class="screen-body-item left">
+                <div class="app-title">
+                    <span> ورود به حساب هکری  </span>
+                </div>
+                <div class="app-contact">
+                    .در صورتی که حساب هکری دارید وارد شوید و استفاده کنید و در غیر این صورت از دکمه زیر برای خود حسابی ایجاد کنید
+                    <hr>
+                    <style>
+                        .message_errore{
+                            color: hsl(351, 83%, 61%);
+                            font-size: 25px !important;
+                            direction: rtl;
+                          }
+                    </style>
+                    {% for message in messages %}
+                    <div class="message_errore">
+                        <h6>{{ message }}</h6>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="app-form-group buttons">
+                    <button style="color:white;" type="submit">ثبت نام هکری</button>
+                </div>
+                </div>
+                <div class="screen-body-item">
+                <div class="app-form">
+                    
                     <form method="post" action="">
                         {% csrf_token %}
-                        <h2 onclick="toggle()">ورود <br /><small>یا</small></h2>
-                        <div class="form-group">
-                            <input type="text" name="username" placeholder="نام کاربری" />
+                        <div class="app-form-group">
+                            <input class="app-form-control" type="text" name="username" placeholder="نام کاربری" />
                         </div>
-                        <div class="form-group">
-                            <input type="password" name="password" placeholder="رمز ورود" />
+                        <div class="app-form-group">
+                            <input class="app-form-control" type="password" name="password" placeholder="رمز ورود" />
                         </div>
-                        <button type="submit">ورود</button>
+                        <div class="app-form-group buttons">
+                            <button style="color:white;" type="submit">ورود</button>
+                        </div>
                     </form>
+                    
                 </div>
-                <div id="reg">
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div style="display:none;" class="container" id="singup">
+            <div class="screen">
+            <div class="screen-header">
+                <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+                </div>
+                <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                </div>
+            </div>
+            <div class="screen-body">
+                <div class="screen-body-item left">
+                <div class="app-title">
+                    <span>ساخت حساب هکری</span>
+                </div>
+                <div class="app-contact">
+                    در صورتی که قبلا حساب کاربری ایجاد کرده اید لطفا با زدن دکمه زیر وارد حساب خود بشوید.
+                    <hr>
+                    
+                    {% for message in messages %}
+                    <div class="message_errore">
+                        <h6>{{ message }}</h6>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="app-form-group buttons">
+                    <button style="color:white;" type="submit">ورود به حساب هکری</button>
+                </div>
+                </div>
+                <div class="screen-body-item">
+                <div class="app-form">
+                    
+
                     <form method="post" action="">
                         {% csrf_token %}
-                        <h2 onclick="toggle()"><small>یا</small><br />ثبت نام</h2>
-                        <div class="form-group">
-                            <input type="text" name="fullname" placeholder="نام کامل" />
+                        <div class="app-form-group">
+                            <input class="app-form-control" type="text" name="fullname" placeholder="نام کامل" />
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="email" placeholder="پست الکترونیک" />
+                        <div class="app-form-group">
+                            <input class="app-form-control" type="text" name="email" placeholder="پست الکترونیک" />
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="username_up" placeholder="نام کاربری" />
+                        <div class="app-form-group">
+                            <input class="app-form-control" type="text" name="username_up" placeholder="نام کاربری" />
                         </div>
-                        <div class="form-group">
-                            <input type="password" name="password_up" placeholder="رمز ورود" />
+                        <div class="app-form-group">
+                            <input class="app-form-control" type="password" name="password_up" placeholder="رمز ورود" />
                         </div>
-                        <button type="submit">عضویت</button>
+                        <div class="app-form-group buttons">
+                            <button style="color:white;" type="submit">عضویت</button>
+                        </div>
                     </form>
+
                 </div>
-            </aside>
-
-            {% for message in messages %}
-            <div class="message_errore">
-                <h6>{{ message }}</h6>
+                </div>
             </div>
-            {% endfor %}
-
-        </section>
-        <div class="links">
-            <a href="#">راهنمای ثبت نام </a>|
-            <a href="#"> ارتباط با پشتیبانی </a>|
-            <a href="#"> ارتباط با سازندگان</a>
+            </div>
         </div>
-    </main>
-</body>
 
-</html>
+
+      </section>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const signInButton = document.querySelector('#singin button[type="submit"]');
+            const signUpButton = document.querySelector('#singup button[type="submit"]');
+            const signInContainer = document.querySelector('#singin');
+            const signUpContainer = document.querySelector('#singup');
+        
+            signUpButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                signInContainer.style.display = 'block';
+                signUpContainer.style.display = 'none';
+            });
+        
+            signInButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                signUpContainer.style.display = 'block';
+                signInContainer.style.display = 'none';
+            });
+        });        
+      </script>
+
+
+
+      <!-- 
+        - #COURSE
+      -->
+
+    
+
+
+
+    </article>
+
+{% endblock content %}
+
