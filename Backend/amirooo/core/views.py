@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 
 # importing Models from other applications
 from user.models import User as us
+from django.contrib.auth.models import User
 from courses.models import *
 
 from core.models import *
@@ -23,13 +24,18 @@ def Index(request):
     techers = us.objects.all()
 
     updates = Updates.objects.all()
+    total_users = User.objects.count()
+
+    for course in courses:
+        course.total_video_duration = course.total_video_duration()
 
     context = {
         'user_profile' : user_profile,
         'courses' : courses,
         'tags' : tags,
         'techers': techers,
-        'updates': updates
+        'updates': updates,
+        'total_users' : total_users
     }
     return render(request, 'Index/Index.html', context)
 
