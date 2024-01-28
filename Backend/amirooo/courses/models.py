@@ -4,6 +4,7 @@ from django.core.validators import RegexValidator
 from user.models import User
 from django.core.files.storage import FileSystemStorage
 import uuid
+from datetime import timedelta
 
 class Teacher(models.Model):
     Profile = models.ImageField(upload_to="profiles", default="defultProfile.jpg")
@@ -39,6 +40,18 @@ class Course(models.Model):
         return reversed("courses:add-to-cart", kwargs={
             "pk" : self.title
         })
+    
+    def total_video_duration(self):
+        total_duration = timedelta()
+
+        # Iterate through all videos associated with the course
+        for chapter in self.chapter_set.all():
+            for video in chapter.video_set.all():
+                # Check if video duration is not None before adding
+                if video.duration:
+                    total_duration += video.duration
+
+        return total_duration
     
     def discount_price(self):
         descount = 100 - self.discount
@@ -134,6 +147,7 @@ class Video(models.Model):
     resource = models.FileField(upload_to="course/resource", blank=True)
     video_file = models.FileField(upload_to=f'course/video')
     is_prwview = models.BooleanField(default=False)
+    duration = models.DurationField(null=True, blank=True)
     
     def __str__(self):
         return self.title
