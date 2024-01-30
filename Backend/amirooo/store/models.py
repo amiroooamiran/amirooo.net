@@ -9,6 +9,11 @@ class Product(models.Model):
     discount = models.IntegerField(default=0)
     dics = HTMLField(blank=True)
 
+    def calculate_total_price(self):
+        selected_product_types = self.product_types.filter(select=True)
+        total_addition_price = sum(product_type.addition_price for product_type in selected_product_types)
+        return self.price + total_addition_price
+    
     def __str__(self):
         return self.title
 
@@ -21,10 +26,11 @@ class ProductImage(models.Model):
         return f"{self.product.name} - Image {self.id}"
     
 class ProductType(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='product_types')
     title = models.CharField(max_length=200)
     addition_price = models.IntegerField(default=0)
     file = models.FileField(upload_to=f'products/fiels/')
+    select = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.product.name} - File {self.title}"
