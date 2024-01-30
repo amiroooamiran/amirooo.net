@@ -62,7 +62,7 @@ def cart(request, username):
             'order':order,
             'user_profile' : user_profile,
         }
-        return render(request, 'Orders/orderMain.html', context)
+        return render(request, 'orders/orderMain.html', context)
 
 
 

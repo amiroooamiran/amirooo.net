@@ -102,8 +102,40 @@
                            {% for videos in video %}
                            {% if videos.chapter.id == chapters.id %}
 
-                           {% if videos.is_prwview == True %}
-                           <div class="video">
+                            {% if videos.is_prwview == True %}
+                              <div class="video">
+                                  <div class="video_title">
+                                      <strong onclick="open_video_part(this)">{{videos.title}}</strong>
+                                      <span>{{videos.serial_number}}</span>
+                                  </div>
+                                  
+                                  <!-- this section for videos -->
+                                  <div class="video_part">
+                                  <hr>
+                                  <br>
+                                      <div class="video_file" id="video_file">
+                                          <video controls controlsList="nodownload" oncontextmenu="return false;">
+                                              <source src="{{videos.video_file.url}}" type="video/mp4">
+                                          </video>
+                                      </div>
+                                  {% if videos.resource %}
+                                  
+                                  <hr>
+                                      <div class="video_sorce">
+                                          
+                                          <a href="{{videos.resource.url}}" download> <i class="uil uil-file-download"></i> دانلود منابع </a>
+                                          
+                                      </div>
+                                  {% endif %}
+                                  </div>
+                                  
+                              </div>
+                            <!-- end of section for videos -->
+                            {% elif videos.is_prwview == False %}
+                            {% for courseIN in user_profile.User_course.all %}
+                            {% if courseIN.id == course.id%}
+
+                              <div class="video">
                                 <div class="video_title">
                                     <strong onclick="open_video_part(this)">{{videos.title}}</strong>
                                     <span>{{videos.serial_number}}</span>
@@ -128,43 +160,6 @@
                                     </div>
                                 {% endif %}
                                 </div>
-                                
-                            </div>
-                            <!-- end of section for videos -->
-                            {% elif videos.is_prwview == False %}
-                            {% for courseIN in user_profile.User_course.all %}
-                            {% if courseIN.id == course.id%}
-
-                            <div class="video">
-                                <div class="video_title">
-                                    <strong onclick="open_video_part(this)">{{videos.title}}</strong>
-                                    <span>{{videos.serial_number}}</span>
-                                </div>
-
-                                <!-- this section for videos -->
-                                <div class="video_part">
-                                    <hr>
-                                    <br>
-                                    <div class="video_file" id="video_file">
-                                        <video controls controlsList="nodownload" oncontextmenu="return false;">
-                                            <source src="{{videos.video_file.url}}" type="video/mp4">
-                                        </video>
-                                    </div>
-                                    {% if videos.resource %}
-                                    
-                                    <hr>
-                                    <div class="video_sorce">
-                                        
-                                        <a href="{{videos.resource.url}}" download> <i class="uil uil-file-download"></i> دانلود منابع </a>
-                                        
-                                    </div>
-                                    {% endif %}
-                                    </div>
-                                    
-                                <!-- end of section for videos -->
-
-                                </div>
-
                                 
                             </div>
 
